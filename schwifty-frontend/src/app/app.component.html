@@ -1,4 +1,22 @@
-<div class="main">
-    <img [src]="'../assets/logos/modus-logo.png'" alt="modus-logo">
-    <div> ...hat gepupst</div>
-</div>
+<mat-toolbar id="navbar">
+    <span>
+        <div class="navigation-item-wrapper">
+            <a class="navigation-item" [routerLink]="['/home']">Schwifty Records</a>
+        </div>
+    </span>
+    <span class="navigation-items">
+        <div class="navigation-item-wrapper">
+            <a class="navigation-item" [routerLink]="['/artists']">Artists</a>
+        </div>
+        <div class="navigation-item-wrapper">
+           <a class="navigation-item" [routerLink]="['/releases']">Releases</a>
+        </div>
+        <div class="navigation-item-wrapper">
+            <a class="navigation-item" [routerLink]="['/events']">Events</a>
+        </div>
+
+
+
+    </span>
+</mat-toolbar>
+<router-outlet></router-outlet>

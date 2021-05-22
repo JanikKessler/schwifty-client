@@ -6,3 +6,23 @@
   height: 80vh;
   width: 100%;
 }
+
+#navbar.mat-toolbar-single-row{
+  justify-content: space-between;
+}
+
+.navigation-item-wrapper{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  .navigation-item {
+    text-decoration: none;
+    color: rgba(0,0,0,0.87);
+    margin: 0 5px 0 5px;
+  }
+  &:hover{
+    background-color: gray;
+  }
+}
+

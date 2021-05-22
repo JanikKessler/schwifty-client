@@ -9,6 +9,13 @@
 
 #navbar.mat-toolbar-single-row{
   justify-content: space-between;
+  height: 100px;
+  img{
+    height: 100px;
+    width: auto;
+    position: absolute;
+    top: 0;
+  }
 }
 
 .navigation-item-wrapper{

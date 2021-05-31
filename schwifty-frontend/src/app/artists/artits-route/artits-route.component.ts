@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Artist } from '../../model/Artist';
+import { ARTISTS_ROUTES } from '../artists-routes';
+import { ARTIST_DATA } from '../../data/artist.data';
+import { Observable } from 'rxjs';
+import { ArtistService } from '../../services/artist.service';
 
 @Component({
   selector: 'app-artits-route',
@@ -6,10 +11,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./artits-route.component.scss']
 })
 export class ArtitsRouteComponent implements OnInit {
+  artists$!: Observable<Artist[]>;
 
-  constructor() { }
+  constructor(private artistService: ArtistService) { }
 
   ngOnInit(): void {
+    this.artists$ = this.artistService.getAllArtists();
+    this.artists$.subscribe(artist => console.log(artist))
   }
 
 }

@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SidenavListComponent } from './sidenav-list/sidenav-list.component';
 import { RouterModule } from '@angular/router';
-import { MatCardModule } from '@angular/material/card';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { HeadenavComponent } from './headenav/headenav.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @NgModule({
-  declarations: [SidenavListComponent],
+  declarations: [HeadenavComponent],
   imports: [
     CommonModule,
     RouterModule,
+    MatSidenavModule,
+    MatToolbarModule,
   ],
   exports:[
-    SidenavListComponent
+    HeadenavComponent
   ]
 })
 export class NavigationModule { }

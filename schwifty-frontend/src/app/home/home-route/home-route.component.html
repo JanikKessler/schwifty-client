@@ -1,4 +1,14 @@
 <div class="main">
-    <img [src]="'../assets/logos/modus-logo.png'" alt="modus-logo">
-    <div> ...hat gepupst</div>
+    <app-home-section [sectionHeader]="'Schwift of the week'">
+        <app-schwift-otw></app-schwift-otw>
+    </app-home-section>
+    <app-home-section [sectionHeader]="'Artist'">
+        <app-artists></app-artists>
+    </app-home-section>
+    <app-home-section [sectionHeader]="'Releases'" [sectionSubHeader]="'Albums'">
+        <app-releases-albums></app-releases-albums>
+    </app-home-section>
+    <app-home-section [sectionHeader]="'Releases'" [sectionSubHeader]="'Songs'" [withoutTopMargin]="true">
+        <app-releases-songs></app-releases-songs>
+    </app-home-section>
 </div>

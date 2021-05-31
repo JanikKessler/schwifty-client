@@ -1,0 +1,28 @@
+
+#navbar.mat-toolbar-single-row{
+  height: 100px;
+  img{
+    height: 100px;
+    width: auto;
+  }
+}
+.navigation-items{
+  width:100%;
+  display: inline-flex;
+  justify-content: space-evenly;
+  .navigation-item-wrapper{
+    display: inline-flex;
+    align-items: center;
+    height: 64px;
+    .navigation-item {
+      text-decoration: none;
+      color: rgba(0,0,0,0.87);
+      margin: 0 5px 0 5px;
+    }
+    &:hover{
+      background-color: gray;
+    }
+  }
+}
+
+

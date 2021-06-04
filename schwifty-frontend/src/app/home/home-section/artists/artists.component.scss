@@ -1,0 +1,22 @@
+.artists-wrapper{
+  padding: 40px;
+
+  .scroll-left-button, .scroll-right-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mat-icon{
+      font-size: 3rem;
+      cursor: pointer;
+    }
+  }
+
+  app-artist-tile{
+    cursor: pointer;
+  }
+
+  drag-scroll {
+    height: 500px;
+    width: 100%;
+  }
+}

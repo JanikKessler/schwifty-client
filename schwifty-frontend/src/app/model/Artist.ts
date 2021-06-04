@@ -7,7 +7,7 @@ export interface Artist {
   biografie: string;
   mitglieder: Musiker[];
   gruendungsDatum: string;
-  artistCover: string;
+  cover: string;
   albums?: Album []
   soundcloudLink?: Link;
   youtubeLink?: Link;

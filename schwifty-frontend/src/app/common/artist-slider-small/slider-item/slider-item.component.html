@@ -1,0 +1,9 @@
+<div class="slider-item-wrapper" (mouseenter)="showOverlay()" (mouseleave)="hideOverlay()">
+    <div class="img-wrapper">
+        <img [src]="contentItem?.cover" alt="contentCover">
+    </div>
+    <div class="titleOverlay" *ngIf="!overlayHidden">
+        {{contentItem?.name}}
+    </div>
+</div>
+

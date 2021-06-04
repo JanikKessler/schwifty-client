@@ -1,1 +1,46 @@
-<p>events-route works!</p>
+<app-artist-slider-small [sliderContent]="artists$ | async" (sliderItemSelected)="filterEvents($event)"></app-artist-slider-small>
+<div class="events-wrapper">
+    <ng-container *ngFor="let event of filteredEvents">
+        <mat-card class="event-card">
+            <mat-card-content>
+                <div class="row">
+                    <div class="date-info col-1">
+                        <span class="day">
+                            {{event.date | date:'dd'}}
+                        </span>
+                        <span class="month-year">
+                            {{event.date | date:'MMMM yyyy'}}
+                        </span>
+                        <span class="weekday-time">
+                            {{event.time}}
+                        </span>
+                    </div>
+                    <div class="divider">
+                    </div>
+                    <div class="event-info col-3">
+                        <span class="event-name">
+                            {{event.eventTitle}}
+                        </span>
+                        <span class="event-location">
+                            {{event.location}}
+                        </span>
+                    </div>
+                    <div class="divider">
+                    </div>
+                    <div class="artist-info-wrapper row">
+                        <div class="artists-info col-6" *ngFor="let artist of event.artists">
+                            <div class="artist-image">
+                                <img [src]="artist?.cover">
+                            </div>
+                            <div class="artist-data">
+                                {{artist?.name}}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </ng-container>
+
+</div>

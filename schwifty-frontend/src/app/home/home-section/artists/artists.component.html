@@ -1,0 +1,16 @@
+<div class="artists-wrapper row">
+    <div class="scroll-left-button col-1">
+        <mat-icon *ngIf="!positionLeftBound" (click)="moveLeft()">arrow_back_ios</mat-icon>
+    </div>
+    <div class="drag-scroll-container col-10">
+        <drag-scroll (reachesLeftBound)="positionLeftBoundReached($event)"
+                     (reachesRightBound)="positionRightBoundReached($event)" #artistSlider>
+            <ng-container *ngFor="let artist of (allArtists$ | async ) ">
+                <app-artist-tile drag-scroll-item class="col-xl-4 col-lg-6 col-md-12" [artist]="artist"></app-artist-tile>
+            </ng-container>
+        </drag-scroll>
+    </div>
+    <div class="scroll-right-button col-1">
+        <mat-icon *ngIf="!positionRightBound" (click)="moveRight()">arrow_forward_ios</mat-icon>
+    </div>
+</div>

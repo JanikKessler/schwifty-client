@@ -6,6 +6,9 @@ import { ArtitsRouteComponent } from './artits-route/artits-route.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { ArtistTileRouteCompontentComponent } from './artist-tile-route-compontent/artist-tile-route-compontent.component';
 import { UiElementsModule } from '../common/ui-elements.module';
+import { MatCardModule } from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDividerModule } from '@angular/material/divider';
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import { UiElementsModule } from '../common/ui-elements.module';
     CommonModule,
     ArtistsRoutingModule,
     MatSidenavModule,
-    UiElementsModule
+    UiElementsModule,
+    MatCardModule,
+    MatExpansionModule,
+    MatDividerModule,
   ],
 })
 export class ArtistsModule { }

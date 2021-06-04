@@ -1,0 +1,44 @@
+.schwift-otw-wrapper {
+  position: relative;
+  padding: 40px;
+
+  .cover-image {
+    img {
+      height: 180px;
+      width: auto;
+    }
+  }
+
+  .content {
+    padding: 0 0 0 40px;
+    .song-title {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      color: #1b1b1b;
+      height: 80px;
+      font-size: 3rem;
+    }
+
+    .shoutout {
+      display: flex;
+      align-items: center;
+      color: #1b1b1b;
+      height: 80px;
+      font-size: 2rem;
+    }
+  }
+
+  .schwift-faktor {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    color: #1b1b1b;
+    height: 80px;
+    width: 200px;
+  }
+}

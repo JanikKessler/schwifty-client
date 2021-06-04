@@ -1,0 +1,9 @@
+<section class="section-main" [style.margin-top.px]="withoutTopMargin ? 0 : 40">
+    <div class="section-header">
+        {{sectionHeader}}
+    </div>
+    <div class="section-sub-header" *ngIf="sectionSubHeader">
+        {{sectionSubHeader}}
+    </div>
+    <ng-content></ng-content>
+</section>

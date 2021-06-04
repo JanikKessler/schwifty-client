@@ -1,1 +1,42 @@
-<p>releases-route works!</p>
+<app-artist-slider-small [sliderContent]="allArtists"
+                         (sliderItemSelected)="filterArtists($event)"></app-artist-slider-small>
+
+<div class="release-wrapper">
+    <ng-container *ngFor="let artist of filteredArtists">
+        <ng-container *ngFor="let album of artist.albums">
+            <mat-card class="album-card">
+                <mat-card-header>
+                    <mat-card-title>{{album.name}}</mat-card-title>
+                    <mat-card-subtitle>{{album.release | date:'yyyy'}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="row">
+                        <div class="col-4">
+                            <img [src]="album.cover">
+                        </div>
+                        <div class="col-7">
+                            <table style="width:100%">
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Time</th>
+                                    <th>Release</th>
+                                    <th>Schwiftfaktor</th>
+                                </tr>
+                                <ng-container *ngFor="let song of album.songs; let i = index">
+                                    <tr class="song-row" [class.even-list-item]=" i%2 === 0" [class.odd-list-item]="i%2 === 1">
+                                        <td>{{song.title}}</td>
+                                        <td>{{song.duration}}</td>
+                                        <td>{{song.release}}</td>
+                                        <td>{{song.schwiftFaktor}}</td>
+                                    </tr>
+                                </ng-container>
+
+                            </table>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </ng-container>
+    </ng-container>
+</div>
+

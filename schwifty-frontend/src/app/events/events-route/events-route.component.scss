@@ -1,0 +1,59 @@
+.events-wrapper{
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .event-card {
+    width: 80%;
+    margin: 20px;
+    .date-info{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      .day{
+        font-size: 1.75rem;
+      }
+      .month-year{
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+    }
+    .divider{
+      height: 130px;
+      width: 1px;
+      border: lightgray solid 1px;
+    }
+    .event-info{
+      margin-left: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: space-evenly;
+      .event-name{
+        font-weight: 400;
+        font-size: 2rem;
+      }
+    }
+    .artist-info-wrapper{
+      padding-left: 20px;
+      .artists-info{
+        display: flex;
+        padding: 20px 15px 10px 15px;
+        .artist-image{
+          img{
+            height: 100px;
+            width: 100px;
+          }
+        }
+        .artist-data {
+          display: flex;
+          align-items: center;
+          padding: 20px;
+          font-size: 1.5rem;
+
+        }
+      }
+    }
+  }
+}

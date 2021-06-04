@@ -1,5 +1,6 @@
 export enum Musikernamen {
-  JANIK = 'JANIK',
-  JONAS = 'JONAS',
-  THOMSON = 'THOMSON'
+  JONAS = 'Jonas',
+  THOMSON = 'Thomson',
+  KONDINSKY = 'Kondinsky',
+  RAWRAWTYP = 'RawRawTyp'
 }

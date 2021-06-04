@@ -1,3 +1,4 @@
 export interface Musiker {
-  name : string
+  name: string,
+  image: string,
 }

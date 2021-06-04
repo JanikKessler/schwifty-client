@@ -1,0 +1,23 @@
+.section-main{
+  background-color: lightgray;
+  margin: 40px 40px 0 40px;
+
+  .section-header{
+    display: inline-flex;
+    background-color: #1b1b1b;
+    color: white;
+    height: 40px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+  }
+  .section-sub-header{
+    display: inline-flex;
+    background-color: white;
+    color: black;
+    height: 40px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+  }
+}

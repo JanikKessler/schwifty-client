@@ -1,0 +1,30 @@
+.slider-small {
+  height: 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .drag-scroll-container {
+
+    width: 100%;
+    .scroll-left-button, .scroll-right-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      mat-icon {
+        font-size: 3rem;
+        cursor: pointer;
+      }
+    }
+
+    drag-scroll {
+      display: flex;
+      height: 500px;
+      width: 100%;
+      ::ng-deep .drag-scroll-content{
+        justify-content: space-evenly;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,25 @@
+.songs-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  .song-cover {
+    height: 50px;
+    width: 50px;
+  }
+  .even-list-item{
+    background-color: white;
+  }
+  .odd-list-item{
+    background-color: #79aec8;
+  }
+  .table-header{
+    th{
+      text-align: center;
+    }
+  }
+  .song-row{
+    td{
+      text-align: center;
+    }
+  }
+}

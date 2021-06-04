@@ -1,0 +1,10 @@
+<div class="artist-tile-wrapper">
+    <div class="artist-tile-content" [routerLink]="['/artists']" [queryParams]="{artist: artist.name}">
+        <div class="artist-cover">
+            <img [src]="artist.cover" [alt]="artist.name + 'Cover'">
+        </div>
+        <div class="artist-name">
+            {{artist.name}}
+        </div>
+    </div>
+</div>

@@ -1,4 +1,57 @@
-.artist-tile-wrapper{
-  display: inline-block;
-  margin: 10px;
+.artists-wrapper {
+  padding: 40px;
+
+  .mat-expansion-panel {
+    margin: 20px;
+  }
+
+  .artist-cover {
+    img{
+      height: 200px;
+      width: auto;
+    }
+  }
+
+  .artist-info{
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+  }
+
+  .expansion-panel-header {
+    width: 100%;
+  }
+
+  .artist-info-box{
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .artist-biografie{
+      min-height: 200px
+    }
+
+    .musiker-info{
+      display: flex;
+      padding: 20px 15px 10px 15px;
+      .musiker-image{
+        img{
+          height: 100px;
+          width: 100px;
+        }
+      }
+
+      .musiker-data {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        font-size: 1.5rem;
+
+      }
+    }
+  }
+
+  .expansion-panel-content, .expansion-panel-header {
+    padding: 30px;
+  }
+
 }

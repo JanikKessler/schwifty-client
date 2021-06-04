@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Artist } from '../../model/Artist';
-import { ARTISTS_ROUTES } from '../artists-routes';
-import { ARTIST_DATA } from '../../data/artist.data';
+import { ARTIST_MAP } from '../../data/artist.data';
 import { Observable } from 'rxjs';
 import { ArtistService } from '../../services/artist.service';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-artits-route',
@@ -12,12 +12,16 @@ import { ArtistService } from '../../services/artist.service';
 })
 export class ArtitsRouteComponent implements OnInit {
   artists$!: Observable<Artist[]>;
+  currentlySelectedArtist: Artist| undefined;
+  panelOpenState = false;
 
-  constructor(private artistService: ArtistService) { }
+  constructor(private artistService: ArtistService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.artists$ = this.artistService.getAllArtists();
-    this.artists$.subscribe(artist => console.log(artist))
-  }
 
+    this.activatedRoute.queryParams.subscribe((params: Params) => {
+     this.currentlySelectedArtist = ARTIST_MAP.get(params['artist'])!
+    });
+  }
 }

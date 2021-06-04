@@ -1,0 +1,15 @@
+.release-wrapper{
+  padding: 40px;
+  .album-card{
+    margin: 20px;
+    .song-row{
+      height: 40px;
+    }
+    .even-list-item{
+      background-color: white;
+    }
+    .odd-list-item{
+      background-color: #79aec8;
+    }
+  }
+}

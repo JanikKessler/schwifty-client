@@ -1,4 +1,45 @@
+<div class="artists-wrapper">
+    <mat-accordion>
+        <ng-container *ngFor="let artist of (artists$ | async)">
+            <mat-expansion-panel hideToggle [expanded]="currentlySelectedArtist === artist" (opened)="header.hidden = true" (closed)="header.hidden = false">
+                <mat-expansion-panel-header [collapsedHeight]="'200px'" [expandedHeight]="'0px'">
+                    <mat-panel-title>
+                        <div #header class="row expansion-panel-header">
+                            <div class="artist-cover col-2">
+                                <img [src]="artist.cover">
+                            </div>
+                            <div class="artist-info col-10">
+                                <p>{{artist.name}}</p>
+                            </div>
+                        </div>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
 
-<div class="artist-tile-wrapper" *ngFor="let artist of (artists$ | async)">
-    <app-artist-tile-route-compontent [artist]="artist"></app-artist-tile-route-compontent>
+                <div class="row expansion-panel-content">
+                    <div class="col-4">
+                        <img [src]="artist?.cover">
+                    </div>
+                    <div class="col-8 artist-info-box">
+                        <div class="row-col artist-biografie">
+                            <p>{{artist?.biografie}}</p>
+                        </div>
+                        <mat-divider></mat-divider>
+                        <div class="row">
+                            <div class="musiker-info col-6" *ngFor="let musiker of artist.mitglieder">
+                                <div class="musiker-image">
+                                    <img [src]="musiker?.image">
+                                </div>
+                                <div class="musiker-data">
+                                    {{musiker?.name}}
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </mat-expansion-panel>
+        </ng-container>
+    </mat-accordion>
 </div>
+

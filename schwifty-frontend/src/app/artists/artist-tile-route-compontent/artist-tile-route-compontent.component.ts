@@ -11,7 +11,6 @@ export class ArtistTileRouteCompontentComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.artist)
   }
 
 }

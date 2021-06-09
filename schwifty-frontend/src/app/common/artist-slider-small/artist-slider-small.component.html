@@ -1,16 +1,16 @@
 <div class="slider-small row">
-    <div class="scroll-left-button col-1">
+<!--    <div class="scroll-left-button col-1">
         <mat-icon *ngIf="!positionLeftBound" (click)="moveLeft()">arrow_back_ios</mat-icon>
-    </div>
-    <div class="drag-scroll-container col-10">
+    </div>-->
+    <div class="drag-scroll-container col-12">
         <drag-scroll (reachesLeftBound)="positionLeftBoundReached($event)"
                      (reachesRightBound)="positionRightBoundReached($event)" #artistSlider>
             <ng-container *ngFor="let contentItem of sliderContent">
-                <app-slider-item drag-scroll-item class="slider-item" [contentItem]="contentItem" (click)="onSliderItemSelected(contentItem)"></app-slider-item>
+                <app-slider-item drag-scroll-item class="col-xl-4 col-lg-6 col-md-12" [contentItem]="contentItem" (click)="onSliderItemSelected(contentItem)"></app-slider-item>
             </ng-container>
         </drag-scroll>
     </div>
-    <div class="scroll-right-button col-1">
+<!--    <div class="scroll-right-button col-1">
         <mat-icon *ngIf="!positionRightBound" (click)="moveRight()">arrow_forward_ios</mat-icon>
-    </div>
+    </div>-->
 </div>

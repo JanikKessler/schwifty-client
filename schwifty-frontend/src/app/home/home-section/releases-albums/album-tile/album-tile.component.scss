@@ -7,8 +7,9 @@
     justify-content: center;
     align-items: center;
     img{
-      height: 400px;
-      width: 400px;
+      height: auto;
+      max-width: 100%;
+      max-height: 400px;
       object-fit: cover;
     }
     .album-name{
@@ -18,7 +19,7 @@
       background-color: white;
       color: #1b1b1b;
       height: 80px;
-      width: 400px;
+      width: 100%;
     }
   }
 }

@@ -12,10 +12,11 @@ import { ArtistTileComponent } from './home-section/artists/artist-tile/artist-t
 import { DragScrollModule } from 'ngx-drag-scroll';
 import { MatIconModule } from '@angular/material/icon';
 import { AlbumTileComponent } from './home-section/releases-albums/album-tile/album-tile.component';
+import { SliderDotsComponent } from './home-section/artists/slider-dots/slider-dots.component';
 
 
 @NgModule({
-  declarations: [HomeRouteComponent, HomeSectionComponent, SchwiftOtwComponent, ArtistsComponent, ReleasesAlbumsComponent, ReleasesSongsComponent, ArtistTileComponent, AlbumTileComponent],
+  declarations: [HomeRouteComponent, HomeSectionComponent, SchwiftOtwComponent, ArtistsComponent, ReleasesAlbumsComponent, ReleasesSongsComponent, ArtistTileComponent, AlbumTileComponent, SliderDotsComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,

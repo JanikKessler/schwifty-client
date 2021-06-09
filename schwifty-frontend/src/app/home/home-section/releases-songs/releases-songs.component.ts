@@ -13,11 +13,12 @@ import { SongTableEntry } from './model/song-table-entry';
   styleUrls: ['./releases-songs.component.scss'],
 })
 export class ReleasesSongsComponent implements OnInit {
-  allSongTableEntries$!: Observable<SongTableEntry[]>;
+  allSongTableEntries$!: Observable<Song[]>;
   constructor(private songService: SongService) { }
 
   ngOnInit(): void {
     this.allSongTableEntries$ =  this.songService.getAllSongsForTable()
+    console.log(this.allSongTableEntries$)
   }
 
 }

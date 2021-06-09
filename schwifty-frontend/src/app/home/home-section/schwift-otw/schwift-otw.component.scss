@@ -3,21 +3,27 @@
   padding: 40px;
 
   .cover-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    height: 200px;
     img {
-      height: 180px;
-      width: auto;
+     max-height: 100%;
     }
   }
 
   .content {
-    padding: 0 0 0 40px;
     .song-title {
       display: flex;
       align-items: center;
       background-color: white;
       color: #1b1b1b;
       height: 80px;
-      font-size: 3rem;
+      font-size: 1rem;
+      @media (min-width: 768px) {
+        font-size: 3rem;
+      }
     }
 
     .shoutout {

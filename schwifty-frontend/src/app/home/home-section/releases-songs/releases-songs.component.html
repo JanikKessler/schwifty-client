@@ -1,25 +1,19 @@
 <div class="songs-wrapper">
     <table style="width:80%">
         <tr class="table-header">
-            <th></th>
-            <th>Title</th>
+            <th>Song</th>
             <th>Artist</th>
             <th>Album</th>
-            <th>Time</th>
-            <th>Release</th>
-            <th>Schwiftfaktor</th>
+            <th>Dauer</th>
+            <th>Link</th>
         </tr>
         <ng-container *ngFor="let songEntry of (allSongTableEntries$ | async); let i = index">
             <tr class="song-row" [class.even-list-item]=" i%2 === 0" [class.odd-list-item]="i%2 === 1">
-                <td>
-                    <img class="song-cover" [src]="songEntry.artist.cover">
-                </td>
-                <td>{{songEntry.title}}</td>
-                <td>{{songEntry.artist.name}}</td>
-                <td>{{songEntry.album.name}}</td>
+                <td>{{songEntry.song}}</td>
+                <td>{{songEntry.artist}}</td>
+                <td>{{songEntry.album}}</td>
                 <td>{{songEntry.duration}}</td>
-                <td>{{songEntry.release}}</td>
-                <td>{{songEntry.schwiftFaktor}}</td>
+                <td>{{songEntry.link}}</td>
             </tr>
         </ng-container>
 

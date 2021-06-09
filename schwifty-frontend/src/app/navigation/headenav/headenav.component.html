@@ -4,16 +4,16 @@
     </span>
     <span class="navigation-items">
         <div class="navigation-item-wrapper">
-            <a class="navigation-item" [routerLink]="['/artists']" [routerLinkActive]="'active-link'">Artists</a>
+            <a class="navigation-item" [routerLink]="['/home']" fragment="artist">Artists</a>
         </div>
         <div class="navigation-item-wrapper">
-           <a class="navigation-item" [routerLink]="['/releases']" [routerLinkActive]="'active-link'">Releases</a>
+           <a class="navigation-item" [routerLink]="['/home']" fragment="releases">Releases</a>
         </div>
         <div class="navigation-item-wrapper">
-            <a class="navigation-item" [routerLink]="['/events']" [routerLinkActive]="'active-link'">Events</a>
+            <a class="navigation-item" [routerLink]="['/events']">Events</a>
         </div>
         <div class="navigation-item-wrapper">
-            <a class="navigation-item" [routerLink]="['/news']" [routerLinkActive]="'active-link'">News</a>
+            <a class="navigation-item" [routerLink]="['/news']">News</a>
         </div>
     </span>
 </mat-toolbar>

@@ -1,10 +1,10 @@
 <div class="album-tile-wrapper">
     <div class="album-tile-content" [routerLink]="['/releases']" [queryParams]="{artist: album.artist.name}">
         <div class="album-cover">
-            <img [src]="album.cover" [alt]="album.name + 'Cover'">
+            <img [src]="album.cover" [alt]="album.album + 'Cover'">
         </div>
         <div class="album-name">
-            {{album.name}}
+            {{album.album}}
         </div>
     </div>
 </div>

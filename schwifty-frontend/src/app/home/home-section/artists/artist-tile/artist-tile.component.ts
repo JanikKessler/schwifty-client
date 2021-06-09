@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Artist } from '../../../../model/Artist';
 import { Album } from '../../../../model/Album';
+import { ArtistService } from '../../../../services/artist.service';
 
 @Component({
   selector: 'app-artist-tile',
@@ -9,9 +10,12 @@ import { Album } from '../../../../model/Album';
 })
 export class ArtistTileComponent implements OnInit {
   @Input() artist!: Artist;
-  constructor() { }
+  constructor(private artistService: ArtistService) { }
 
   ngOnInit(): void {
   }
 
+  onArtistSelected(artist: Artist){
+    this.artistService.setSelectedArtist(artist)
+  }
 }

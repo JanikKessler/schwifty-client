@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Artist } from '../../../model/Artist';
 import { DragScrollComponent } from 'ngx-drag-scroll';
@@ -17,12 +17,14 @@ export class ReleasesAlbumsComponent implements OnInit {
   @ViewChild('artistSlider', {read: DragScrollComponent}) artistSlider!: DragScrollComponent;
   positionLeftBound = true;
   positionRightBound = false;
+  currentIndex: number = 0;
+  nrOfIndexes: number = 0;
+  innerScreenWidth:number = 0;
 
   constructor(private albumService: AlbumService) { }
 
   ngOnInit(): void {
     this.allAlbums$ = this.albumService.getAllAllbums();
-    this.allAlbums$.subscribe(console.log)
   }
 
   moveLeft() {
@@ -39,5 +41,14 @@ export class ReleasesAlbumsComponent implements OnInit {
 
   positionRightBoundReached(rightBoundBool: boolean){
     this.positionRightBound = rightBoundBool;
+  }
+
+  saveIndex(index: number){
+    this.currentIndex = index;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  checkInnerWidth(){
+    this.innerScreenWidth = innerWidth;
   }
 }

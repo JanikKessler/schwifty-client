@@ -9,31 +9,7 @@ export const ARTIST_DATA: Artist[] = [
     biografie: 'blablablub',
     mitglieder: [MUSIKER_MAP.get(Musikernamen.THOMSON)!, MUSIKER_MAP.get(Musikernamen.JONAS)!],
     cover: 'assets/covers/artists/modus.png',
-    albums: [
-      {
-        name: 'Laeufer',
-        cover: 'assets/covers/albums/modus_laeufer.png',
-        release: '06/06/2021',
-        songs: [{
-          title: 'lol',
-          duration: '1:45',
-          release: '06.06.2021',
-          schwiftFaktor: 42
-        },
-          {
-            title: 'lol',
-            duration: '1:45',
-            release: '06.06.2021',
-            schwiftFaktor: 42
-          },
-          {
-            title: 'lol',
-            duration: '1:45',
-            release: '06.06.2021',
-            schwiftFaktor: 42
-          }],
-      },
-    ]
+    albums: []
     ,
   },
 
@@ -43,31 +19,7 @@ export const ARTIST_DATA: Artist[] = [
     biografie: 'blablablub',
     mitglieder: [MUSIKER_MAP.get(Musikernamen.KONDINSKY)!],
     cover: 'assets/covers/artists/kandinsky.png',
-    albums: [
-      {
-        name: 'Anis',
-        cover: 'assets/covers/albums/ravijohanis_anis.png',
-        release: '06/06/2021',
-        songs: [{
-          title: 'lol',
-          duration: '1:45',
-          release: '06.06.2021',
-          schwiftFaktor: 42
-        },
-          {
-            title: 'lol',
-            duration: '1:45',
-            release: '06.06.2021',
-            schwiftFaktor: 42
-          },
-          {
-            title: 'lol',
-            duration: '1:45',
-            release: '06.06.2021',
-            schwiftFaktor: 42
-          }],
-      },
-    ],
+    albums: [],
   },
   {
     name: 'Kandinsky',
@@ -75,33 +27,7 @@ export const ARTIST_DATA: Artist[] = [
     biografie: 'blablablub',
     mitglieder: [MUSIKER_MAP.get(Musikernamen.KONDINSKY)!],
     cover: 'assets/covers/artists/kandinsky.png',
-    albums: [
-      {
-        name: 'Anis',
-        cover: 'assets/covers/albums/ravijohanis_anis.png',
-        release: '06/06/2021',
-        songs: [
-          {
-            title: 'lol',
-            duration: '1:45',
-            release: '06.06.2021',
-            schwiftFaktor: 42
-          },
-          {
-            title: 'lol',
-            duration: '1:45',
-            release: '06.06.2021',
-            schwiftFaktor: 42
-          },
-          {
-            title: 'lol',
-            duration: '1:45',
-            release: '06.06.2021',
-            schwiftFaktor: 42
-          }
-        ],
-      },
-    ],
+    albums: [],
   },
 
   {
@@ -110,37 +36,7 @@ export const ARTIST_DATA: Artist[] = [
     biografie: 'blablablub',
     mitglieder: [MUSIKER_MAP.get(Musikernamen.RAWRAWTYP)!],
     cover: 'assets/covers/artists/rawrawcontent.png',
-    albums: [
-      {
-        name: 'Anis',
-        cover: 'assets/covers/albums/ravijohanis_anis.png',
-        release: '06/06/2021',
-        songs: [{
-          title: 'lol',
-          duration: '1:45',
-          release: '06.06.2021',
-          schwiftFaktor: 42,
-        },
-          {
-            title: 'lol',
-            duration: '1:45',
-            release: '06.06.2021',
-            schwiftFaktor: 42,
-          },
-          {
-            title: 'lol',
-            duration: '1:45',
-            release: '06.06.2021',
-            schwiftFaktor: 42,
-          },
-          {
-            title: 'lol',
-            duration: '1:45',
-            release: '06.06.2021',
-            schwiftFaktor: 42,
-          }],
-      },
-    ],
+    albums: [],
   },
 ];
 

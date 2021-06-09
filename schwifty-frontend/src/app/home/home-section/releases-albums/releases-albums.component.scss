@@ -9,6 +9,10 @@
       font-size: 3rem;
       cursor: pointer;
     }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   app-album-tile {

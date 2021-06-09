@@ -11,6 +11,4 @@ export interface Artist {
   albums?: Album []
   soundcloudLink?: Link;
   youtubeLink?: Link;
-
-
 }

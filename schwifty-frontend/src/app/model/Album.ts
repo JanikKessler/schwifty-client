@@ -1,8 +1,9 @@
 import { Song } from './Song';
 
 export interface Album {
-  name: string;
-  cover: string;
+  album: string;
+  artist: string;
+  duration: number;
   release: string;
-  songs: Song[];
+  tracks: number
 }

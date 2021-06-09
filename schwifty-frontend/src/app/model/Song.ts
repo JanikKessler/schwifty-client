@@ -1,6 +1,7 @@
 export interface Song {
-  title: string;
+  album: string;
+  artist: string;
   duration: string;
-  release: string;
-  schwiftFaktor:number;
+  link: string;
+  song: string;
 }

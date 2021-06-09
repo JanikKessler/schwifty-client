@@ -30,7 +30,9 @@ import { DragScrollModule } from 'ngx-drag-scroll';
     EventsModule,
     NavigationModule,
     AppRoutingModule,
-    RouterModule.forRoot(APP_ROUTES),
+    RouterModule.forRoot(APP_ROUTES, {
+      anchorScrolling: 'enabled'
+    }),
     BrowserAnimationsModule,
     DragScrollModule,
   ],

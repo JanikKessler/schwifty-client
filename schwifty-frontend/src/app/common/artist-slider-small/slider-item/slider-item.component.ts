@@ -16,15 +16,14 @@ export class SliderItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.contentItem)
   }
 
   showOverlay() {
     this.overlayHidden = false;
-    console.log(this.overlayHidden)
   }
 
   hideOverlay() {
     this.overlayHidden = true;
-    console.log(this.overlayHidden)
   }
 }

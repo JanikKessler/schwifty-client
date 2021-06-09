@@ -1,10 +1,10 @@
 <div class="artist-tile-wrapper">
     <div class="artist-tile-content" (click)="onArtistSelected(artist)">
         <div class="artist-cover">
-            <img [src]="artist.cover" [alt]="artist.name + 'Cover'">
+            <img [src]="'assets/covers/artists/' + artist.cover" [alt]="artist.artist + 'Cover'">
         </div>
         <div class="artist-name">
-            {{artist.name}}
+            {{artist.artist}}
         </div>
     </div>
 </div>

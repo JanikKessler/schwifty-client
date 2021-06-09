@@ -1,5 +1,5 @@
-import { Song } from '../../../../model/Song';
+import { Song_raw } from '../../../../model/Song_raw';
 import { Artist } from '../../../../model/Artist';
-import { Album } from '../../../../model/Album';
+import { Album_raw } from '../../../../model/Album_raw';
 
-export type SongTableEntry =  Song & { artist: Artist, album: Album };
+export type SongTableEntry =  Song_raw & { artist: Artist, album: Album_raw };

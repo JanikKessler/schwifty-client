@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TileComponent } from './tile/tile.component';
 import { MatCardModule } from '@angular/material/card';
 import { ArtistSliderSmallComponent } from './artist-slider-small/artist-slider-small.component';
 import { MatIconModule } from '@angular/material/icon';
@@ -9,14 +8,14 @@ import { SliderItemComponent } from './artist-slider-small/slider-item/slider-it
 
 
 @NgModule({
-  declarations: [TileComponent, ArtistSliderSmallComponent, SliderItemComponent],
+  declarations: [ArtistSliderSmallComponent, SliderItemComponent],
   imports: [
     CommonModule,
     MatCardModule,
     MatIconModule,
     DragScrollModule,
   ],
-  exports: [TileComponent, ArtistSliderSmallComponent],
+  exports: [ArtistSliderSmallComponent],
 })
 export class UiElementsModule {
 }

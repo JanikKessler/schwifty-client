@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Artist } from '../../../../model/Artist';
-import { Album } from '../../../../model/Album';
+import { Album_raw } from '../../../../model/Album_raw';
 import { ArtistService } from '../../../../services/artist.service';
 
 @Component({

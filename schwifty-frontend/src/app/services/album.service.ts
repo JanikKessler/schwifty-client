@@ -1,24 +1,40 @@
 import { Injectable } from '@angular/core';
 import { Observable, ReplaySubject } from 'rxjs';
-import { ARTIST_DATA } from '../data/artist.data';
-import { Album } from '../model/Album';
-import { AlbumEntry } from '../home/home-section/releases-albums/model/AlbumEntry';
+import { Album, Album_raw } from '../model/Album_raw';
 import album_list from '../../assets/data/albums.json';
+import artist_list from '../../assets/data/artists.json';
+import { Artist } from '../model/Artist';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root',
 })
 export class AlbumService {
 
-  private allAlbums$ = new ReplaySubject<AlbumEntry[]>(1)
+    private allAlbums$ = new ReplaySubject<Album[]>(1);
+    albumList: Album[];
 
-  constructor() {
-    let oldAlbum: Album[]= album_list
-    let newAlbum: AlbumEntry[] = oldAlbum.map(album => album.artist = ARTIST_DATA.find(artist = artist))
-    this.allAlbums$.next(album_list)
-  }
+    constructor() {
+        const oldAlbum: Album_raw[] = album_list;
+        const artists: Artist[] = artist_list;
+        this.albumList = oldAlbum.map((album): Album => {
+            return {
+                albumId: album.albumId,
+                album: album.album,
+                artist: artists.find(artist => artist.artistID === album.artistID)!,
+                release: album.release,
+                duration: album.duration,
+                tracks: album.tracks,
+                cover: album.cover,
+            };
+        });
+        this.allAlbums$.next(this.albumList);
+    }
 
-  getAllAllbums(): Observable<AlbumEntry[]>{
-    return this.allAlbums$
-  }
+    getAllAllbums(): Observable<Album[]> {
+        return this.allAlbums$;
+    }
+
+    getAlbumById(id: number): Album {
+        return this.albumList.find(album => album.albumId === id)!;
+    }
 }

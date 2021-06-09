@@ -13,15 +13,17 @@ import { DragScrollModule } from 'ngx-drag-scroll';
 import { MatIconModule } from '@angular/material/icon';
 import { AlbumTileComponent } from './home-section/releases-albums/album-tile/album-tile.component';
 import { SliderDotsComponent } from './home-section/artists/slider-dots/slider-dots.component';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
   declarations: [HomeRouteComponent, HomeSectionComponent, SchwiftOtwComponent, ArtistsComponent, ReleasesAlbumsComponent, ReleasesSongsComponent, ArtistTileComponent, AlbumTileComponent, SliderDotsComponent],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    DragScrollModule,
-    MatIconModule
-  ],
+    imports: [
+        CommonModule,
+        HomeRoutingModule,
+        DragScrollModule,
+        MatIconModule,
+        MatCardModule,
+    ],
 })
 export class HomeModule { }

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { DragScrollComponent } from 'ngx-drag-scroll';
 import { Artist } from '../../model/Artist';
-import { Album } from '../../model/Album';
+import { Album_raw } from '../../model/Album_raw';
 
 @Component({
   selector: 'app-artist-slider-small',
@@ -9,8 +9,8 @@ import { Album } from '../../model/Album';
   styleUrls: ['./artist-slider-small.component.scss']
 })
 export class ArtistSliderSmallComponent implements OnInit {
-  @Input() sliderContent: Artist[] | Album[] = []
-  @Output() sliderItemSelected = new EventEmitter<Artist | Album>();
+  @Input() sliderContent: Artist[] | Album_raw[] = []
+  @Output() sliderItemSelected = new EventEmitter<Artist | Album_raw>();
   @ViewChild('artistSlider', {read: DragScrollComponent}) artistSlider!: DragScrollComponent;
   positionLeftBound = true;
   positionRightBound = false;
@@ -36,7 +36,7 @@ export class ArtistSliderSmallComponent implements OnInit {
     this.positionRightBound = rightBoundBool;
   }
 
-  onSliderItemSelected(contentItem: Artist | Album){
+  onSliderItemSelected(contentItem: Artist | Album_raw){
     this.sliderItemSelected.emit(contentItem)
   }
 }

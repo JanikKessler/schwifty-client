@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { Song } from '../../model/Song';
+import { Song_raw } from '../../model/Song_raw';
 
 @Component({
   selector: 'app-home-route',
@@ -7,7 +7,7 @@ import { Song } from '../../model/Song';
   styleUrls: ['./home-route.component.scss']
 })
 export class HomeRouteComponent implements OnInit {
-  songs:Song[] = []
+  songs:Song_raw[] = []
   innerScreenWidth: number = 0;
   constructor() { }
 

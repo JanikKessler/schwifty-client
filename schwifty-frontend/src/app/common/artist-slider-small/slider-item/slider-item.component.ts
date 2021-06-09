@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { DragScrollComponent } from 'ngx-drag-scroll';
 import { Artist } from '../../../model/Artist';
-import { Album } from '../../../model/Album';
+import { Album_raw } from '../../../model/Album_raw';
 
 @Component({
   selector: 'app-slider-item',
@@ -9,7 +9,7 @@ import { Album } from '../../../model/Album';
   styleUrls: ['./slider-item.component.scss'],
 })
 export class SliderItemComponent implements OnInit {
-  @Input() contentItem: Artist | Album | null = null;
+  @Input() contentItem: Artist | Album_raw | null = null;
   overlayHidden = true;
 
   constructor() {

@@ -9,7 +9,7 @@
                                 <img [src]="artist.cover">
                             </div>
                             <div class="artist-info col-10">
-                                <p>{{artist.name}}</p>
+                                <p>{{artist.artist}}</p>
                             </div>
                         </div>
                     </mat-panel-title>
@@ -25,7 +25,7 @@
                         </div>
                         <mat-divider></mat-divider>
                         <div class="row">
-                            <div class="musiker-info col-6" *ngFor="let musiker of artist.mitglieder">
+                            <!--<div class="musiker-info col-6" *ngFor="let musiker of artist">
                                 <div class="musiker-image">
                                     <img [src]="musiker?.image">
                                 </div>
@@ -33,7 +33,7 @@
                                     {{musiker?.name}}
                                 </div>
 
-                            </div>
+                            </div>-->
                         </div>
 
                     </div>

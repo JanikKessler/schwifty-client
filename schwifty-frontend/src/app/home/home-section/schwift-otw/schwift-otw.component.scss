@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
-    height: 200px;
+    height: 380px;
     img {
      max-height: 100%;
     }
@@ -34,17 +34,21 @@
       font-size: 2rem;
     }
   }
+}
 
-  .schwift-faktor {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    right: 0;
-    bottom: 0;
-    background-color: white;
-    color: #1b1b1b;
-    height: 80px;
-    width: 200px;
-  }
+.schwift-faktor {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  color: #1b1b1b;
+  height: 80px;
+  width: 200px;
+}
+
+.schwift-otw-links {
+  height: 80px;
 }

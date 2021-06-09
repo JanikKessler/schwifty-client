@@ -6,8 +6,8 @@
         <drag-scroll (reachesLeftBound)="positionLeftBoundReached($event)"
                      (reachesRightBound)="positionRightBoundReached($event)"
                      (indexChanged)="saveIndex($event)" #artistSlider>
-            <ng-container *ngFor="let album of (allAlbums$ | async ) ">
-                <app-album-tile drag-scroll-item class="col-xl-4 col-lg-6 col-md-12" [album]="album"></app-album-tile>
+            <ng-container *ngFor="let album of filteredAlbums ">
+                <app-album-tile drag-scroll-item class="col-xl-4 col-lg-6 col-md-12" [album]="album" (click)="onAlbumSelected(album)"></app-album-tile>
             </ng-container>
         </drag-scroll>
         <app-slider-dots *ngIf="innerScreenWidth<992" [maxIndexes]="(allAlbums$ | async)?.length" [currentIndex]="currentIndex">

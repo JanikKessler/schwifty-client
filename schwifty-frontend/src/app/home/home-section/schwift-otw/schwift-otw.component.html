@@ -1,20 +1,27 @@
 <div class="schwift-otw-wrapper row">
-    <div class="cover-image col-lg-2 col-md-12">
-        <img [src]="'assets/covers/albums/modus_laeufer.png'" alt="Cover Image"/>
+    <div class="cover-image col-lg-3 col-md-12">
+        <img [src]="'assets/covers/albums/' + currentSchwiftOtw.album?.cover" alt="Cover Image"/>
     </div>
-    <div class="content col-lg-10 col-md-12">
+    <div class="content col-lg-9 col-md-12">
         <div class="song-title">
-            was geht ab
+            {{currentSchwiftOtw.album.artist.artist}} - {{currentSchwiftOtw.album.album}}
         </div>
-        <div class="shoutout">
-            "voll geil man"
+        <div>
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/670110729&color=%23483a32&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+
+            </iframe>
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/modus_sounds" title="MODUS" target="_blank" style="color: #cccccc; text-decoration: none;">MODUS</a> · <a [href]="'https://soundcloud.com/modus_sounds/sets/' + 'laeufer'" title="Läufer" target="_blank" style="color: #cccccc; text-decoration: none;">Läufer</a></div>
         </div>
-        <div class="shoutout-author">
-            P.immel der nice
-        </div>
-    </div>
-    <div class="schwift-faktor">
-        Schwiftfaktor:
     </div>
 </div>
+<div class="row">
+    <div class="schwift-otw-links col-11">
+
+    </div>
+    <div class="schwift-faktor">
+        Schwiftfaktor: {{currentSchwiftOtw.schwiftfaktor}}
+    </div>
+</div>
+
 

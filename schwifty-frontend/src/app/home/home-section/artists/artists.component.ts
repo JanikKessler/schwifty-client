@@ -5,6 +5,7 @@ import { ArtistService } from '../../../services/artist.service';
 import { DragScrollComponent } from 'ngx-drag-scroll';
 import { createUrlResolverWithoutPackagePrefix } from '@angular/compiler';
 import { ScreenSizeService } from '../../../services/screen-size.service';
+import { SelectionService } from '../../../services/selection.service';
 
 @Component({
   selector: 'app-artists',
@@ -21,7 +22,7 @@ export class ArtistsComponent implements OnInit {
   nrOfIndexes: number = 0;
   innerScreenWidth:number = 0;
 
-  constructor(private artistService: ArtistService) { }
+  constructor(private artistService: ArtistService, private selectionService:SelectionService) { }
 
   ngOnInit(): void {
     this.allArtists$ = this.artistService.getAllArtists();
@@ -49,7 +50,12 @@ export class ArtistsComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
+  @HostListener('window:load', ['$event'])
   checkInnerWidth(){
     this.innerScreenWidth = innerWidth;
+  }
+
+  onArtistSelected(artist: Artist){
+    this.selectionService.setSelectedArtist(artist)
   }
 }

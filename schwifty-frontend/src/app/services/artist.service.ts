@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, ReplaySubject } from 'rxjs';
 import { Artist } from '../model/Artist';
-import { ARTIST_DATA } from '../data/artist.data';
+import artist_list from '../../assets/data/artists.json';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class ArtistService {
   currentlySelectedArtist$ = new ReplaySubject<Artist>(1);
 
   constructor() {
-    this.artists$.next(ARTIST_DATA)
+    this.artists$.next(artist_list);
   }
 
   getAllArtists(): Observable<Artist[]>{

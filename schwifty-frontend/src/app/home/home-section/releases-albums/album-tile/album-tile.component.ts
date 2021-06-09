@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Album } from '../../../../model/Album';
+import { Album, Album_raw } from '../../../../model/Album_raw';
 import { Artist } from '../../../../model/Artist';
 import { AlbumEntry } from '../model/AlbumEntry';
 
@@ -9,7 +9,7 @@ import { AlbumEntry } from '../model/AlbumEntry';
   styleUrls: ['./album-tile.component.scss']
 })
 export class AlbumTileComponent implements OnInit {
-  @Input() album!: AlbumEntry;
+  @Input() album!: Album;
 
   constructor() { }
 

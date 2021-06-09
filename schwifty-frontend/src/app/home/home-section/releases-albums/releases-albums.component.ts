@@ -1,11 +1,13 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
-import { Observable } from 'rxjs';
+import { combineLatest, Observable } from 'rxjs';
 import { Artist } from '../../../model/Artist';
 import { DragScrollComponent } from 'ngx-drag-scroll';
 import { ArtistService } from '../../../services/artist.service';
 import { AlbumService } from '../../../services/album.service';
-import { Album } from '../../../model/Album';
+import { Album, Album_raw } from '../../../model/Album_raw';
 import { AlbumEntry } from './model/AlbumEntry';
+import { SelectionService } from '../../../services/selection.service';
+import { filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-releases-albums',
@@ -13,7 +15,8 @@ import { AlbumEntry } from './model/AlbumEntry';
   styleUrls: ['./releases-albums.component.scss']
 })
 export class ReleasesAlbumsComponent implements OnInit {
-  allAlbums$!: Observable<AlbumEntry[]>;
+  allAlbums$!: Observable<Album[]>;
+  filteredAlbums: Album[] = [];
   @ViewChild('artistSlider', {read: DragScrollComponent}) artistSlider!: DragScrollComponent;
   positionLeftBound = true;
   positionRightBound = false;
@@ -21,10 +24,13 @@ export class ReleasesAlbumsComponent implements OnInit {
   nrOfIndexes: number = 0;
   innerScreenWidth:number = 0;
 
-  constructor(private albumService: AlbumService) { }
+  constructor(private albumService: AlbumService, private selectionService: SelectionService) {}
 
   ngOnInit(): void {
-    this.allAlbums$ = this.albumService.getAllAllbums();
+    this.albumService.getAllAllbums().subscribe(albums => this.filteredAlbums = albums)
+    combineLatest([this.albumService.getAllAllbums(),this.selectionService.getSelectedArtist$()]).pipe(
+     map(([albums, artist]) => albums.filter(album => album.artist === artist))
+    ).subscribe(albums => this.filteredAlbums = albums)
   }
 
   moveLeft() {
@@ -48,7 +54,12 @@ export class ReleasesAlbumsComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
+  @HostListener('window:load', ['$event'])
   checkInnerWidth(){
     this.innerScreenWidth = innerWidth;
+  }
+
+  onAlbumSelected(album: Album){
+    this.selectionService.setSelectedAlbum$(album)
   }
 }

@@ -1,21 +1,17 @@
 <div class="songs-wrapper">
-    <table style="width:80%">
-        <tr class="table-header">
-            <th>Song</th>
-            <th>Artist</th>
-            <th>Album</th>
-            <th>Dauer</th>
-            <th>Link</th>
-        </tr>
-        <ng-container *ngFor="let songEntry of (allSongTableEntries$ | async); let i = index">
-            <tr class="song-row" [class.even-list-item]=" i%2 === 0" [class.odd-list-item]="i%2 === 1">
-                <td>{{songEntry.song}}</td>
-                <td>{{songEntry.artist}}</td>
-                <td>{{songEntry.album}}</td>
-                <td>{{songEntry.duration}}</td>
-                <td>{{songEntry.link}}</td>
-            </tr>
+
+        <ng-container *ngFor="let songEntry of filteredSongTableEntries">
+            <mat-card>
+
+                <mat-icon>audiotrack</mat-icon>
+                <span>{{songEntry.song}}</span>
+                <mat-icon>album</mat-icon>
+                <span>{{songEntry.artist.artist}}</span>
+                <mat-icon>group</mat-icon>
+                <span>{{songEntry.album.album}}</span>
+                <mat-icon>timer</mat-icon>
+                <span>{{songEntry.duration}}</span>
+            </mat-card>
         </ng-container>
 
-    </table>
 </div>

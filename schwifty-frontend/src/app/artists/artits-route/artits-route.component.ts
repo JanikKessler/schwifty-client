@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Artist } from '../../model/Artist';
+import { Artist, Artist_raw } from '../../model/Artist_raw';
 import { Observable } from 'rxjs';
 import { ArtistService } from '../../services/artist.service';
 import { ActivatedRoute, Params } from '@angular/router';
@@ -11,7 +11,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class ArtitsRouteComponent implements OnInit {
     artists$!: Observable<Artist[]>;
-    currentlySelectedArtist: Artist | undefined;
+    currentlySelectedArtist: Artist_raw | undefined;
     panelOpenState = false;
 
     constructor(private artistService: ArtistService, private activatedRoute: ActivatedRoute) {

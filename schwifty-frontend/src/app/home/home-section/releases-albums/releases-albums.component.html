@@ -4,6 +4,7 @@
     </div>
     <div class="drag-scroll-container col-md-10 col-sm-12">
         <drag-scroll (reachesLeftBound)="positionLeftBoundReached($event)"
+                     [scrollbar-hidden]="true"
                      (reachesRightBound)="positionRightBoundReached($event)"
                      (indexChanged)="saveIndex($event)" #artistSlider>
             <ng-container *ngFor="let album of filteredAlbums ">

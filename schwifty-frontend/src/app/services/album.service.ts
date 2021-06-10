@@ -3,7 +3,8 @@ import { Observable, ReplaySubject } from 'rxjs';
 import { Album, Album_raw } from '../model/Album_raw';
 import album_list from '../../assets/data/albums.json';
 import artist_list from '../../assets/data/artists.json';
-import { Artist } from '../model/Artist';
+import { Artist_raw } from '../model/Artist_raw';
+import { ArtistService } from './artist.service';
 
 @Injectable({
     providedIn: 'root',
@@ -13,14 +14,14 @@ export class AlbumService {
     private allAlbums$ = new ReplaySubject<Album[]>(1);
     albumList: Album[];
 
-    constructor() {
+    constructor(private artistService: ArtistService) {
         const oldAlbum: Album_raw[] = album_list;
-        const artists: Artist[] = artist_list;
+        const artists: Artist_raw[] = artist_list;
         this.albumList = oldAlbum.map((album): Album => {
             return {
                 albumId: album.albumId,
                 album: album.album,
-                artist: artists.find(artist => artist.artistID === album.artistID)!,
+                artist: this.artistService.getArtistById(album.artistID),
                 release: album.release,
                 duration: album.duration,
                 tracks: album.tracks,

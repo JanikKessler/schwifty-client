@@ -1,10 +1,8 @@
-export type Link = SoundcloudLink | YoutubeLink;
+import { LinkType } from '../enums/LinkType';
 
-
-export type SoundcloudLink = {
-
-}
-
-export type YoutubeLink = {
+export interface ExternalLink {
+    artistID: number,
+    link: string;
+    link_type: LinkType
 
 }

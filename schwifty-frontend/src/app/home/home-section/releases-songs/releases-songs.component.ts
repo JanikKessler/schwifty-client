@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { combineLatest, Observable } from 'rxjs';
-import { Album_raw } from 'src/app/model/Album_raw';
 import { SongService } from '../../../services/song.service';
-import { Song, Song_raw } from '../../../model/Song_raw';
-import { AlbumService } from '../../../services/album.service';
+import { Song } from '../../../model/Song_raw';
 import { map } from 'rxjs/operators';
-import { SongTableEntry } from './model/song-table-entry';
 import { SelectionService } from '../../../services/selection.service';
 
 @Component({

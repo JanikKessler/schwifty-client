@@ -1,11 +1,19 @@
-import { Artist } from './Artist';
+import { Artist, Artist_raw } from './Artist_raw';
+
+export interface Event_raw {
+  begin: number;
+  date: string;
+  description: string;
+  location: string;
+  name: string;
+  otherArtists: string;
+}
 
 export interface Event {
-  id: number;
-  eventTitle: string;
+  begin: number;
   date: string;
-  time: string;
+  description: string;
   location: string;
-  artists: Artist[];
-  beschreibung: string;
+  name: string;
+  otherArtists: Artist[];
 }

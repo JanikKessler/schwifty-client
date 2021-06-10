@@ -2,7 +2,7 @@
     <div class="cover-image col-lg-3 col-md-12">
         <img [src]="'assets/covers/albums/' + currentSchwiftOtw.album?.cover" alt="Cover Image"/>
     </div>
-    <div class="content col-lg-9 col-md-12">
+    <div class="content col-lg-7 col-md-12">
         <div class="song-title">
             {{currentSchwiftOtw.album.artist.artist}} - {{currentSchwiftOtw.album.album}}
         </div>
@@ -11,14 +11,60 @@
                     src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/670110729&color=%23483a32&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
 
             </iframe>
-            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/modus_sounds" title="MODUS" target="_blank" style="color: #cccccc; text-decoration: none;">MODUS</a> · <a [href]="'https://soundcloud.com/modus_sounds/sets/' + 'laeufer'" title="Läufer" target="_blank" style="color: #cccccc; text-decoration: none;">Läufer</a></div>
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                <a href="https://soundcloud.com/modus_sounds" title="MODUS" target="_blank"
+                   style="color: #cccccc; text-decoration: none;">MODUS</a> · <a
+                    [href]="'https://soundcloud.com/modus_sounds/sets/' + 'laeufer'" title="Läufer" target="_blank"
+                    style="color: #cccccc; text-decoration: none;">Läufer</a></div>
+        </div>
+    </div>
+    <div class="schwift-otw-links col-lg-2 col-md-12">
+        <div class="link-item" *ngIf="currentSchwiftOtw.album.artist.soundcloudLink">
+            <a [href]="currentSchwiftOtw.album.artist.soundcloudLink.link" target="_blank">
+                <img src="assets/links/sc.png">
+                <p>soundcloud</p>
+            </a>
+        </div>
+        <div class="link-item"  *ngIf="currentSchwiftOtw.album.artist.spotifyLink">
+            <a [href]="currentSchwiftOtw.album.artist.spotifyLink.link" target="_blank">
+                <img src="assets/links/spotify.png">
+                <p>spotify</p>
+            </a>
+        </div>
+        <div class="link-item"  *ngIf="currentSchwiftOtw.album.artist.youtubeLink">
+            <a [href]="currentSchwiftOtw.album.artist.youtubeLink.link" target="_blank">
+                 <img src="assets/links/yt.png">
+                <p>youtube</p>
+            </a>
+        </div>
+        <div class="link-item"  *ngIf="currentSchwiftOtw.album.artist.twitterLink">
+            <a [href]="currentSchwiftOtw.album.artist.twitterLink.link" target="_blank">
+                <img src="assets/links/twitter.png">
+                <p>twitter</p>
+            </a>
+        </div>
+        <div class="link-item"  *ngIf="currentSchwiftOtw.album.artist.bandcampLink">
+            <a [href]="currentSchwiftOtw.album.artist.bandcampLink.link" target="_blank">
+                <img src="assets/links/bc.png">
+                <p>bandcamp</p>
+            </a>
+        </div>
+        <div class="link-item"  *ngIf="currentSchwiftOtw.album.artist.instagramLink">
+            <a [href]="currentSchwiftOtw.album.artist.instagramLink.link" target="_blank">
+                <img src="assets/links/insta.png">
+                <p>instagram</p>
+            </a>
+        </div>
+        <div class="link-item"  *ngIf="currentSchwiftOtw.album.artist.facebookLink">
+            <a [href]="currentSchwiftOtw.album.artist.facebookLink.link" target="_blank">
+                <img src="assets/links/fb.png">
+                <p>facebook</p>
+            </a>
         </div>
     </div>
 </div>
 <div class="row">
-    <div class="schwift-otw-links col-11">
 
-    </div>
     <div class="schwift-faktor">
         Schwiftfaktor: {{currentSchwiftOtw.schwiftfaktor}}
     </div>

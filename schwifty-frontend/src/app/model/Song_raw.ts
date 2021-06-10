@@ -1,18 +1,26 @@
 import { Album, Album_raw } from './Album_raw';
-import { Artist } from './Artist';
+import { Artist, Artist_raw } from './Artist_raw';
+import { ExternalLink } from './Links';
 
 export interface Song_raw {
-  album: string;
-  artist: string;
-  duration: string;
-  link: string;
-  song: string;
+    album: string;
+    albumID: number;
+    artist: string;
+    artistID: number;
+    duration: string;
+    id: number;
+    link: string;
+    song: string;
 }
 
 export interface Song {
-  album: Album_raw;
-  artist: Artist;
-  duration: string;
-  link: string;
-  song: string;
+    id: number;
+    album: Album;
+    artist: Artist;
+    duration: string;
+    link: string;
+    song: string;
+    soundcloud_song?: ExternalLink;
+    spotify_song?: ExternalLink;
+    youtube_song?: ExternalLink;
 }

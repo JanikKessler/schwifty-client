@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { combineLatest, Observable } from 'rxjs';
-import { Artist } from '../../../model/Artist';
+import { Artist_raw } from '../../../model/Artist_raw';
 import { DragScrollComponent } from 'ngx-drag-scroll';
 import { ArtistService } from '../../../services/artist.service';
 import { AlbumService } from '../../../services/album.service';

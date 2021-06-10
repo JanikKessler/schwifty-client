@@ -1,16 +1,48 @@
-<div class="songs-wrapper">
+<div class="songs-wrapper" *ngIf="filteredSongTableEntries.length > 0">
 
         <ng-container *ngFor="let songEntry of filteredSongTableEntries">
-            <mat-card>
-
-                <mat-icon>audiotrack</mat-icon>
-                <span>{{songEntry.song}}</span>
-                <mat-icon>album</mat-icon>
-                <span>{{songEntry.artist.artist}}</span>
-                <mat-icon>group</mat-icon>
-                <span>{{songEntry.album.album}}</span>
-                <mat-icon>timer</mat-icon>
-                <span>{{songEntry.duration}}</span>
+            <mat-card class="song-card">
+                <div class="row">
+                    <div class="card-element col-md-2 col-sm-12">
+                        <mat-icon>audiotrack</mat-icon>
+                        <span>{{songEntry.song}}</span>
+                    </div>
+                    <div class="card-element col-md-2 col-sm-12">
+                        <mat-icon>album</mat-icon>
+                        <span>{{songEntry.artist.artist}}</span>
+                    </div>
+                    <div class="card-element col-md-2 col-sm-12">
+                        <mat-icon>group</mat-icon>
+                        <span>{{songEntry.album.album}}</span>
+                    </div>
+                    <div class="card-element col-md-1 col-sm-12">
+                        <mat-icon>timer</mat-icon>
+                        <span>{{songEntry.duration}}</span>
+                    </div>
+                    <div class="son_links col-md-1 col-sm-12">
+                        <div class="link-item" *ngIf="songEntry.soundcloudLink">
+                            <a [href]="songEntry.soundcloudLink.link" target="_blank">
+                                <img src="assets/links/sc.png">
+                                <p>soundcloud</p>
+                            </a>
+                        </div>
+                        <div class="link-item"  *ngIf="songEntry.spotifyLink">
+                            <a [href]="songEntry.spotifyLink.link" target="_blank">
+                                <img src="assets/links/spotify.png">
+                                <p>spotify</p>
+                            </a>
+                        </div>
+                        <div class="link-item"  *ngIf="songEntry.youtubeLink">
+                            <a [href]="songEntry.youtubeLink.link" target="_blank">
+                                <img src="assets/links/yt.png">
+                                <p>youtube</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-element col-md-4 col-sm-12">
+                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/341929231&color=%23483a32&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/modus_sounds" title="MODUS" target="_blank" style="color: #cccccc; text-decoration: none;">MODUS</a> · <a href="https://soundcloud.com/modus_sounds/gleiter" title="Gleiter" target="_blank" style="color: #cccccc; text-decoration: none;">Gleiter</a></div>
+                    </div>
+                </div>
             </mat-card>
         </ng-container>
 

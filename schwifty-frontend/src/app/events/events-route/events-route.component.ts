@@ -1,7 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ArtistService } from '../../services/artist.service';
 import { combineLatest, Observable, Subject } from 'rxjs';
-import { Artist } from '../../model/Artist';
+import { Artist, Artist_raw } from '../../model/Artist_raw';
 import { EventService } from '../../services/event.service';
 import { Event } from '../../model/Event';
 import { filter, map } from 'rxjs/operators';
@@ -26,7 +26,7 @@ export class EventsRouteComponent implements OnInit {
     this.eventService.getAllEvents().subscribe( events => {
       this.allEvents = events;
       if(this.currentlySelectedArtist){
-        this.filteredEvents = events.filter(event => event.artists.includes(this.currentlySelectedArtist!))
+        this.filteredEvents = events.filter(event => event.otherArtists.includes(this.currentlySelectedArtist!))
       } else {
         this.filteredEvents = events
       }
@@ -34,7 +34,7 @@ export class EventsRouteComponent implements OnInit {
   }
 
   filterEvents(artist: Artist){
-    this.filteredEvents = this.allEvents.filter(event => event.artists.includes(artist))
+    this.filteredEvents = this.allEvents.filter(event => event.otherArtists.includes(artist))
   }
 
 }

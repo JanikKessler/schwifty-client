@@ -1,5 +1,5 @@
 import { Song_raw } from './Song_raw';
-import { Artist } from './Artist';
+import { Artist, Artist_raw } from './Artist_raw';
 
 export interface Album_raw {
   albumId: number;

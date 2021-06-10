@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Artist } from '../../../model/Artist';
+import { Artist, Artist_raw } from '../../../model/Artist_raw';
 import { ArtistService } from '../../../services/artist.service';
 import { DragScrollComponent } from 'ngx-drag-scroll';
 import { createUrlResolverWithoutPackagePrefix } from '@angular/compiler';

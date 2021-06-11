@@ -1,0 +1,27 @@
+[
+    {
+        "artistID": 2,
+        "link": "ravijohanis",
+        "link_type": "bandcamp_artist"
+    },
+    {
+        "artistID": 1,
+        "link": "https://soundcloud.com/modus_sounds",
+        "link_type": "soundcloud_artist"
+    },
+    {
+        "artistID": 1,
+        "link": "https://modu5.bandcamp.com/releases",
+        "link_type": "bandcamp_artist"
+    },
+    {
+        "artistID": 1,
+        "link": "https://open.spotify.com/artist/6YEDmDc9kbduhLEpAG2vhV?si=HM4AmN84Qnqx9eciGmksuQ&dl_branch=1",
+        "link_type": "spotify_artist"
+    },
+    {
+        "artistID": 2,
+        "link": "https://open.spotify.com/artist/741puaZ7FTKHYyV9KXMfIE?si=MJl9v4TlSyGFrVqhkYf8aQ&dl_branch=1",
+        "link_type": "spotify_artist"
+    }
+]

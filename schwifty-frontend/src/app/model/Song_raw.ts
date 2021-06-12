@@ -9,6 +9,7 @@ export interface Song_raw {
     artistID: number;
     duration: string;
     id: number;
+    cover: string;
     link: string;
     song: string;
 }
@@ -17,6 +18,7 @@ export interface Song {
     id: number;
     album: Album;
     artist: Artist;
+    cover: string;
     duration: string;
     link: string;
     song: string;

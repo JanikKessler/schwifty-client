@@ -16,7 +16,7 @@ export class SliderItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.contentItem)
+
   }
 
   showOverlay() {

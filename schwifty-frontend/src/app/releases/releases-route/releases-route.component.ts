@@ -21,7 +21,6 @@ export class ReleasesRouteComponent implements OnInit {
     this.activatedRoute.queryParams.subscribe((params: Params) => {
       /*this.currentlySelectedArtist = ARTIST_MAP.get(params['artist'])!*/
 
-      console.log(this.currentlySelectedArtist)
     });
 
     this.artistService.getAllArtists().subscribe(artists => {

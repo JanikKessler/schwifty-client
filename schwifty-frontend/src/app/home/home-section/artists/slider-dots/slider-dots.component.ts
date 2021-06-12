@@ -15,7 +15,6 @@ export class SliderDotsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    console.log(this.maxIndexes)
     this.indexes = new Array(this.maxIndexes)
   }
 

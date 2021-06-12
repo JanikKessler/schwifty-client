@@ -14,7 +14,7 @@ export class AlbumTileComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.album.artist)
+
   }
 
 }

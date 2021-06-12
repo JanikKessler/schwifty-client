@@ -1,9 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { combineLatest, Observable } from 'rxjs';
 import { SongService } from '../../../services/song.service';
 import { Song } from '../../../model/Song_raw';
 import { map } from 'rxjs/operators';
 import { SelectionService } from '../../../services/selection.service';
+import { PlayerService } from '../../../services/player.service';
+import value from '*.json';
 
 @Component({
     selector: 'app-releases-songs',
@@ -12,10 +14,11 @@ import { SelectionService } from '../../../services/selection.service';
 })
 export class ReleasesSongsComponent implements OnInit {
     @Input() currentlySelectedSong: Song | undefined;
-    allSongTableEntries$!: Observable<Song[]>;
     filteredSongTableEntries: Song[] = [];
     @Output() onSongSelected = new EventEmitter <Song>();
-    constructor(private songService: SongService, private selectionService: SelectionService) {
+    playerRuns!: boolean;
+
+    constructor(private songService: SongService, private selectionService: SelectionService, private playerService: PlayerService, private changeDetection: ChangeDetectorRef) {
     }
 
     ngOnInit(): void {
@@ -30,12 +33,19 @@ export class ReleasesSongsComponent implements OnInit {
             map(([songs, album]) => songs.filter(song => song.album.albumName === album.albumName)),
         ).subscribe(songs => this.filteredSongTableEntries = songs);
 
-        console.log(this.allSongTableEntries$);
+        this.playerService.getPlayerRuns().subscribe(playerRunsBool => {
+            this.playerRuns = playerRunsBool
+            this.changeDetection.detectChanges()
+        } );
     }
 
     playSong(songEntry: Song) {
-        this.onSongSelected.emit(songEntry)
-        console.log(songEntry)
+        this.onSongSelected.emit(songEntry);
+        this.playerService.sendPlayerPlayEvent();
+    }
+
+    pauseSong() {
+        this.playerService.sendPlayerStopEvent();
     }
 
 }

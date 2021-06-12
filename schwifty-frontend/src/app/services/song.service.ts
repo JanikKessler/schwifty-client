@@ -23,6 +23,7 @@ export class SongService {
         id: song.id,
         artist: this.artistService.getArtistById(song.artistID),
         album: this.albumService.getAlbumById(song.albumID),
+        cover: song.cover,
         song: song.song,
         link: song.link,
         duration: song.duration,

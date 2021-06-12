@@ -1,0 +1,30 @@
+[
+    {
+        "artist": "MODUS",
+        "artistID": 1,
+        "biographie": "MODUS sind ein Multiinstrumental-Duo mit elektronischen Drums. Die beiden nehmen euch mit auf eine Reise durch verschiedenste musikalische Landschaften fern von Genregrenzen. 808, Kalimba, Triangel, Melodica, Synthie, Gitarre, Bass und ihre Stimmen sind die Fortbewegungsmittel auf diesem klanglichen Trip, der den Geist zu ausschweifender Träumerei anregt ohne dabei den Körper zu vergessen. Ihr Sound verneigt sich gleichermaßen vor psychedelischen Helden wie Jimi Hendrix und Pink Floyd und aktuellen elektronischen Acts wie Caribou, Bonobo oder Chet Faker. Die beiden bedienen sich zwar der digitalen Welt um die Begrenzung auf vier Hände aufzuheben und ihren Ideen freien Lauf zu geben, aber bis auf die Drums entstehen alle Sounds live und organisch auf der Bühne. Keine Samples oder vorproduzierte Loops, dafür umso mehr Experimentierfreude und Liebe zum Detail.",
+        "cover": "modus.png",
+        "gruendung": "2015"
+    },
+    {
+        "artist": "Ravi Johanis",
+        "artistID": 2,
+        "biographie": "Schwifty Blues / Laidback Indie",
+        "cover": "ravijohanis.png",
+        "gruendung": "2016"
+    },
+    {
+        "artist": "RawRaw Content",
+        "artistID": 3,
+        "biographie": "Schwiftpop",
+        "cover": "rawrawcontent.png",
+        "gruendung": "2017"
+    },
+    {
+        "artist": "Kandinsky",
+        "artistID": 4,
+        "biographie": "Its them Kandinsky YO.",
+        "cover": "kandinsky.png",
+        "gruendung": "2012"
+    }
+]

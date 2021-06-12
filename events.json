@@ -1,0 +1,20 @@
+[
+    {
+        "artistID": 1,
+        "begin": "18:00",
+        "date": "2021-06-06",
+        "description": "The finest schwift with a lot of surprises",
+        "location": "TamTam Record Store",
+        "name": "MODUS Birthday",
+        "otherArtists": "Kandinsky, Der Mann Mit Der Todeskralle, Barry Schizzel"
+    },
+    {
+        "artistID": 1,
+        "begin": "18:00",
+        "date": "2021-06-06",
+        "description": "The finest schwift with a lot of surprises",
+        "location": "TamTam Record Store",
+        "name": "MODUS Birthday",
+        "otherArtists": "Kandinsky, Der Mann Mit Der Todeskralle, Barry Schizzel"
+    }
+]

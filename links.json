@@ -48,5 +48,40 @@
         "artistID": 3,
         "link": "https://modus.band",
         "link_type": "website_artist"
+    },
+    {
+        "artistID": 4,
+        "link": "https://soundcloud.com/kandinsky",
+        "link_type": "soundcloud_artist"
+    },
+    {
+        "artistID": 1,
+        "link": "https://www.instagram.com/modus.band",
+        "link_type": "instagram_artist"
+    },
+    {
+        "artistID": 3,
+        "link": "https://www.instagram.com/rawrawcontent",
+        "link_type": "instagram_artist"
+    },
+    {
+        "artistID": 4,
+        "link": "https://www.instagram.com/k_ndinsky",
+        "link_type": "instagram_artist"
+    },
+    {
+        "artistID": 1,
+        "link": "https://www.youtube.com/channel/UC_ja0NNrTU9g7WAzn_pYo1w",
+        "link_type": "youtube_artist"
+    },
+    {
+        "artistID": 2,
+        "link": "https://www.youtube.com/channel/UCZN91mtgHdSNsQrsqky0Jbw",
+        "link_type": "youtube_artist"
+    },
+    {
+        "artistID": 3,
+        "link": "https://www.youtube.com/channel/UC9xpx0mgM7a0jDeemxoeS0Q",
+        "link_type": "youtube_artist"
     }
 ]

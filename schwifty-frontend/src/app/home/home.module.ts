@@ -14,10 +14,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { AlbumTileComponent } from './home-section/releases-albums/album-tile/album-tile.component';
 import { SliderDotsComponent } from './home-section/artists/slider-dots/slider-dots.component';
 import { MatCardModule } from '@angular/material/card';
+import { SongPlayerComponent } from './home-section/releases-songs/song-player/song-player.component';
 
 
 @NgModule({
-  declarations: [HomeRouteComponent, HomeSectionComponent, SchwiftOtwComponent, ArtistsComponent, ReleasesAlbumsComponent, ReleasesSongsComponent, ArtistTileComponent, AlbumTileComponent, SliderDotsComponent],
+  declarations: [HomeRouteComponent, HomeSectionComponent, SchwiftOtwComponent, ArtistsComponent, ReleasesAlbumsComponent, ReleasesSongsComponent, ArtistTileComponent, AlbumTileComponent, SliderDotsComponent, SongPlayerComponent],
     imports: [
         CommonModule,
         HomeRoutingModule,

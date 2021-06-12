@@ -17,7 +17,10 @@
     </section>
     <section>
         <app-home-section [sectionHeader]="'Releases'" [sectionSubHeader]="'Songs'" [withoutTopMargin]="true">
-            <app-releases-songs></app-releases-songs>
+            <app-releases-songs (onSongSelected)="displayPlayer($event)"></app-releases-songs>
         </app-home-section>
     </section>
 </div>
+<app-song-player *ngIf="currentlyPlayedSong" [song]="currentlyPlayedSong">
+
+</app-song-player>

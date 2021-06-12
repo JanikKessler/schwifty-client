@@ -1,17 +1,30 @@
 .songs-wrapper {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   padding: 40px;
-
-  .song-card{
-    margin: 5px;
-    .card-element{
-      display: flex;
-      align-items: center;
+  .song-cover {
+    height: 50px;
+    width: 50px;
+  }
+  .even-list-item{
+    background-color: white;
+  }
+  .odd-list-item{
+    background-color: #e5f4f7;
+  }
+  .table-header{
+    th{
+      text-align: center;
     }
-    mat-icon{
-      margin-right: 20px;
+  }
+  .song-row{
+    td{
+      text-align: center;
+
+      &#album-cover {
+        text-align: start;
+      }
     }
   }
 }
+

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { combineLatest, Observable } from 'rxjs';
 import { SongService } from '../../../services/song.service';
 import { Song } from '../../../model/Song_raw';
@@ -6,29 +6,35 @@ import { map } from 'rxjs/operators';
 import { SelectionService } from '../../../services/selection.service';
 
 @Component({
-  selector: 'app-releases-songs',
-  templateUrl: './releases-songs.component.html',
-  styleUrls: ['./releases-songs.component.scss'],
+    selector: 'app-releases-songs',
+    templateUrl: './releases-songs.component.html',
+    styleUrls: ['./releases-songs.component.scss'],
 })
 export class ReleasesSongsComponent implements OnInit {
-  allSongTableEntries$!: Observable<Song[]>;
-  filteredSongTableEntries: Song[] = [];
-  constructor(private songService: SongService, private selectionService: SelectionService) {
-  }
+    allSongTableEntries$!: Observable<Song[]>;
+    filteredSongTableEntries: Song[] = [];
+    @Output() onSongSelected = new EventEmitter <Song>();
 
-  ngOnInit(): void {
+    constructor(private songService: SongService, private selectionService: SelectionService) {
+    }
 
-    this.songService.getAllSongsForTable().subscribe(songs => this.filteredSongTableEntries = songs)
+    ngOnInit(): void {
 
-    combineLatest([this.songService.getAllSongsForTable(), this.selectionService.getSelectedArtist$()]).pipe(
-        map(([songs,artist]) => songs.filter(song => song.artist === artist))
-    ).subscribe(songs => this.filteredSongTableEntries = songs)
+        this.songService.getAllSongsForTable().subscribe(songs => this.filteredSongTableEntries = songs);
 
-    combineLatest([this.songService.getAllSongsForTable(), this.selectionService.getSelectedAlbum$()]).pipe(
-        map(([songs,album]) => songs.filter(song => song.album.album === album.album))
-    ).subscribe(songs => this.filteredSongTableEntries = songs)
+        combineLatest([this.songService.getAllSongsForTable(), this.selectionService.getSelectedArtist$()]).pipe(
+            map(([songs, artist]) => songs.filter(song => song.artist === artist)),
+        ).subscribe(songs => this.filteredSongTableEntries = songs);
 
-    console.log(this.allSongTableEntries$)
-  }
+        combineLatest([this.songService.getAllSongsForTable(), this.selectionService.getSelectedAlbum$()]).pipe(
+            map(([songs, album]) => songs.filter(song => song.album.album === album.album)),
+        ).subscribe(songs => this.filteredSongTableEntries = songs);
+
+        console.log(this.allSongTableEntries$);
+    }
+
+    playSong(songEntry: Song) {
+        this.onSongSelected.emit(songEntry)
+    }
 
 }

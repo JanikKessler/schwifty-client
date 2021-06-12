@@ -20,7 +20,7 @@ export interface Song {
     duration: string;
     link: string;
     song: string;
-    soundcloud_song?: ExternalLink;
-    spotify_song?: ExternalLink;
-    youtube_song?: ExternalLink;
+    soundcloudSong?: ExternalLink;
+    spotifySong?: ExternalLink;
+    youtubeSong?: ExternalLink;
 }

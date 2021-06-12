@@ -6,27 +6,31 @@
     width: auto;
   }
 }
-.navigation-items{
-  width:100%;
-  display: inline-flex;
-  justify-content: space-evenly;
-  .navigation-item-wrapper{
+#navbar{
+  background-color: #e5f4f7;
+  .navigation-items{
+    width:100%;
     display: inline-flex;
-    align-items: center;
-    height: 64px;
-    .navigation-item {
-      text-decoration: none;
-      color: rgba(0,0,0,0.87);
-      margin: 0 5px 0 5px;
-      &.active-link{
-        text-decoration: underline;
-        color: #8DC642;
+    justify-content: space-evenly;
+    .navigation-item-wrapper{
+      display: inline-flex;
+      align-items: center;
+      height: 64px;
+      .navigation-item {
+        text-decoration: none;
+        color: rgba(0,0,0,0.87);
+        margin: 0 5px 0 5px;
+        &.active-link{
+          text-decoration: underline;
+          color: #8DC642;
+        }
       }
-    }
-    &:hover{
-      background-color: gray;
+      &:hover{
+        background-color: #e5f4f7;
+      }
     }
   }
 }
+
 
 

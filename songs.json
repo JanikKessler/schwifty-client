@@ -1,0 +1,232 @@
+[
+    {
+        "album": "Läufer",
+        "albumID": 2,
+        "artist": "MODUS",
+        "artistID": 1,
+        "duration": "04:25",
+        "id": 14,
+        "link": 202266915,
+        "song": "Seifenblase"
+    },
+    {
+        "album": "Läufer",
+        "albumID": 2,
+        "artist": "MODUS",
+        "artistID": 1,
+        "duration": "04:54",
+        "id": 15,
+        "link": 549119562,
+        "song": "Entführer"
+    },
+    {
+        "album": "Läufer",
+        "albumID": 2,
+        "artist": "MODUS",
+        "artistID": 1,
+        "duration": "04:52",
+        "id": 16,
+        "link": 549049119,
+        "song": "Haus"
+    },
+    {
+        "album": "Läufer",
+        "albumID": 2,
+        "artist": "MODUS",
+        "artistID": 1,
+        "duration": "04:10",
+        "id": 17,
+        "link": 208087054,
+        "song": "Segel"
+    },
+    {
+        "album": "Läufer",
+        "albumID": 2,
+        "artist": "MODUS",
+        "artistID": 1,
+        "duration": "06:12",
+        "id": 18,
+        "link": 341929231,
+        "song": "Gleiter"
+    },
+    {
+        "album": "Läufer",
+        "albumID": 2,
+        "artist": "MODUS",
+        "artistID": 1,
+        "duration": "06:30",
+        "id": 19,
+        "link": 549119316,
+        "song": "Denker"
+    },
+    {
+        "album": "Läufer",
+        "albumID": 2,
+        "artist": "MODUS",
+        "artistID": 1,
+        "duration": "04:29",
+        "id": 20,
+        "link": 208543820,
+        "song": "Freudentaumel"
+    },
+    {
+        "album": "Läufer",
+        "albumID": 2,
+        "artist": "MODUS",
+        "artistID": 1,
+        "duration": "05:41",
+        "id": 21,
+        "link": 341929225,
+        "song": "Vater"
+    },
+    {
+        "album": "Läufer",
+        "albumID": 2,
+        "artist": "MODUS",
+        "artistID": 1,
+        "duration": "04:19",
+        "id": 22,
+        "link": 292134259,
+        "song": "Verleger"
+    },
+    {
+        "album": "Läufer",
+        "albumID": 2,
+        "artist": "MODUS",
+        "artistID": 1,
+        "duration": "03:36",
+        "id": 23,
+        "link": 208086949,
+        "song": "Sandkiste"
+    },
+    {
+        "album": "Anis",
+        "albumID": 1,
+        "artist": "Ravi Johanis",
+        "artistID": 2,
+        "duration": "04:20",
+        "id": 1,
+        "link": 889973644,
+        "song": "Nothing But A Dream"
+    },
+    {
+        "album": "Anis",
+        "albumID": 1,
+        "artist": "Ravi Johanis",
+        "artistID": 2,
+        "duration": "04:12",
+        "id": 2,
+        "link": 889973617,
+        "song": "Distraction"
+    },
+    {
+        "album": "Anis",
+        "albumID": 1,
+        "artist": "Ravi Johanis",
+        "artistID": 2,
+        "duration": "03:51",
+        "id": 3,
+        "link": 889973584,
+        "song": "See My Love Again"
+    },
+    {
+        "album": "Anis",
+        "albumID": 1,
+        "artist": "Ravi Johanis",
+        "artistID": 2,
+        "duration": "03:08",
+        "id": 4,
+        "link": 889973545,
+        "song": "Montpeiller"
+    },
+    {
+        "album": "Anis",
+        "albumID": 1,
+        "artist": "Ravi Johanis",
+        "artistID": 2,
+        "duration": "04:11",
+        "id": 5,
+        "link": 889973488,
+        "song": "Words"
+    },
+    {
+        "album": "Anis",
+        "albumID": 1,
+        "artist": "Ravi Johanis",
+        "artistID": 2,
+        "duration": "02:38",
+        "id": 6,
+        "link": 889973461,
+        "song": "Midatlantic Ridge"
+    },
+    {
+        "album": "Anis",
+        "albumID": 1,
+        "artist": "Ravi Johanis",
+        "artistID": 2,
+        "duration": "03:48",
+        "id": 7,
+        "link": 889973386,
+        "song": "She"
+    },
+    {
+        "album": "Anis",
+        "albumID": 1,
+        "artist": "Ravi Johanis",
+        "artistID": 2,
+        "duration": "02:44",
+        "id": 8,
+        "link": 889973323,
+        "song": "Windmill"
+    },
+    {
+        "album": "Anis",
+        "albumID": 1,
+        "artist": "Ravi Johanis",
+        "artistID": 2,
+        "duration": "04:39",
+        "id": 9,
+        "link": 889973272,
+        "song": "Pass The Pigs"
+    },
+    {
+        "album": "Anis",
+        "albumID": 1,
+        "artist": "Ravi Johanis",
+        "artistID": 2,
+        "duration": "04:20",
+        "id": 10,
+        "link": 889973236,
+        "song": "My Little Refuge"
+    },
+    {
+        "album": "Anis",
+        "albumID": 1,
+        "artist": "Ravi Johanis",
+        "artistID": 2,
+        "duration": "03:54",
+        "id": 11,
+        "link": 889973179,
+        "song": "Where The Water Is"
+    },
+    {
+        "album": "Anis",
+        "albumID": 1,
+        "artist": "Ravi Johanis",
+        "artistID": 2,
+        "duration": "04:35",
+        "id": 12,
+        "link": 889973131,
+        "song": "Visitor"
+    },
+    {
+        "album": "Anis",
+        "albumID": 1,
+        "artist": "Ravi Johanis",
+        "artistID": 2,
+        "duration": "03:45",
+        "id": 13,
+        "link": 889973089,
+        "song": "From The Screen"
+    }
+]

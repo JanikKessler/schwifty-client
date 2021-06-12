@@ -1,0 +1,22 @@
+[
+    {
+        "album": 2,
+        "album:1": "Läufer",
+        "artist": "MODUS",
+        "artistID": 1,
+        "cover": "ravijohanis_anis.png",
+        "duration": 44,
+        "release": "2021-06-06",
+        "tracks": 10
+    },
+    {
+        "album": 1,
+        "album:1": "Anis",
+        "artist": "Ravi Johanis",
+        "artistID": 2,
+        "cover": "modus_laeufer.png",
+        "duration": 43,
+        "release": "2020-08-22",
+        "tracks": 13
+    }
+]

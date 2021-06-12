@@ -1,0 +1,52 @@
+[
+    {
+        "id_artist": 2,
+        "id_artist_link": 1,
+        "id_link": 2
+    },
+    {
+        "id_artist": 1,
+        "id_artist_link": 2,
+        "id_link": 7
+    },
+    {
+        "id_artist": 1,
+        "id_artist_link": 3,
+        "id_link": 8
+    },
+    {
+        "id_artist": 1,
+        "id_artist_link": 4,
+        "id_link": 9
+    },
+    {
+        "id_artist": 2,
+        "id_artist_link": 5,
+        "id_link": 10
+    },
+    {
+        "id_artist": 2,
+        "id_artist_link": 6,
+        "id_link": 24
+    },
+    {
+        "id_artist": 3,
+        "id_artist_link": 7,
+        "id_link": 11
+    },
+    {
+        "id_artist": 3,
+        "id_artist_link": 8,
+        "id_link": 38
+    },
+    {
+        "id_artist": 1,
+        "id_artist_link": 9,
+        "id_link": 40
+    },
+    {
+        "id_artist": 3,
+        "id_artist_link": 10,
+        "id_link": 41
+    }
+]

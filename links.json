@@ -1,0 +1,52 @@
+[
+    {
+        "artistID": 2,
+        "link": "https://ravijohanis.bandcamp.com",
+        "link_type": "bandcamp_artist"
+    },
+    {
+        "artistID": 1,
+        "link": "https://soundcloud.com/modus_sounds",
+        "link_type": "soundcloud_artist"
+    },
+    {
+        "artistID": 1,
+        "link": "https://modu5.bandcamp.com/",
+        "link_type": "bandcamp_artist"
+    },
+    {
+        "artistID": 1,
+        "link": "https://open.spotify.com/artist/6YEDmDc9kbduhLEpAG2vhV",
+        "link_type": "spotify_artist"
+    },
+    {
+        "artistID": 2,
+        "link": "https://open.spotify.com/artist/741puaZ7FTKHYyV9KXMfIE",
+        "link_type": "spotify_artist"
+    },
+    {
+        "artistID": 2,
+        "link": "https://soundcloud.com/ravijohanis",
+        "link_type": "soundcloud_artist"
+    },
+    {
+        "artistID": 3,
+        "link": "https://soundcloud.com/rawrawcontent",
+        "link_type": "soundcloud_artist"
+    },
+    {
+        "artistID": 3,
+        "link": "https://open.spotify.com/artist/193Mqy3gVQKtBFREChL1V7",
+        "link_type": "spotify_artist"
+    },
+    {
+        "artistID": 1,
+        "link": "https://open.spotify.com/track/3mHjHq95JpcVH5Iv4YgxPK",
+        "link_type": "spotify_song"
+    },
+    {
+        "artistID": 3,
+        "link": "https://modus.band",
+        "link_type": "website_artist"
+    }
+]

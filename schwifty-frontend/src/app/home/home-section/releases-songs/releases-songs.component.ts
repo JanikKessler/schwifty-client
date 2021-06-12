@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { combineLatest, Observable } from 'rxjs';
 import { SongService } from '../../../services/song.service';
 import { Song } from '../../../model/Song_raw';
@@ -11,10 +11,10 @@ import { SelectionService } from '../../../services/selection.service';
     styleUrls: ['./releases-songs.component.scss'],
 })
 export class ReleasesSongsComponent implements OnInit {
+    @Input() currentlySelectedSong: Song | undefined;
     allSongTableEntries$!: Observable<Song[]>;
     filteredSongTableEntries: Song[] = [];
     @Output() onSongSelected = new EventEmitter <Song>();
-
     constructor(private songService: SongService, private selectionService: SelectionService) {
     }
 
@@ -27,7 +27,7 @@ export class ReleasesSongsComponent implements OnInit {
         ).subscribe(songs => this.filteredSongTableEntries = songs);
 
         combineLatest([this.songService.getAllSongsForTable(), this.selectionService.getSelectedAlbum$()]).pipe(
-            map(([songs, album]) => songs.filter(song => song.album.album === album.album)),
+            map(([songs, album]) => songs.filter(song => song.album.albumName === album.albumName)),
         ).subscribe(songs => this.filteredSongTableEntries = songs);
 
         console.log(this.allSongTableEntries$);
@@ -35,6 +35,7 @@ export class ReleasesSongsComponent implements OnInit {
 
     playSong(songEntry: Song) {
         this.onSongSelected.emit(songEntry)
+        console.log(songEntry)
     }
 
 }

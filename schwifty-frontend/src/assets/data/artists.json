@@ -10,7 +10,7 @@
         "artist": "Ravi Johanis",
         "artistID": 2,
         "biographie": "Schwifty Blues / Laidback Indie",
-        "cover": "ravijohanis_anis.png",
+        "cover": "ravijohanis.png",
         "gruendung": "2016"
     },
     {
@@ -19,5 +19,12 @@
         "biographie": "Schwiftpop",
         "cover": "rawrawcontent.png",
         "gruendung": "2017"
+    },
+    {
+        "artist": "Kandinsky",
+        "artistID": 4,
+        "biographie": "Its them Kandinsky YO.",
+        "cover": "kandinsky.png",
+        "gruendung": "2012"
     }
 ]

@@ -2,8 +2,8 @@ import { Song_raw } from './Song_raw';
 import { Artist, Artist_raw } from './Artist_raw';
 
 export interface Album_raw {
-  albumId: number;
-  album: string;
+  albumName: string;
+  albumID: number;
   artist: string;
   artistID: number;
   duration: number;
@@ -13,8 +13,8 @@ export interface Album_raw {
 }
 
 export interface Album {
-  albumId: number;
-  album: string;
+  albumName: string;
+  albumID: number;
   artist: Artist;
   duration: number;
   release: string;

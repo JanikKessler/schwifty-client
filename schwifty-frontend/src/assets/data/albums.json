@@ -1,7 +1,7 @@
 [
     {
-        "albumId": 2,
-        "album": "Läufer",
+        "albumName": "Läufer",
+        "albumID": 2,
         "artist": "MODUS",
         "artistID": 1,
         "cover": "modus_laeufer.png",
@@ -10,8 +10,8 @@
         "tracks": 10
     },
     {
-        "albumId": 1,
-        "album": "Anis",
+        "albumName": "Anis",
+        "albumID": 1,
         "artist": "Ravi Johanis",
         "artistID": 2,
         "cover": "ravijohanis_anis.png",

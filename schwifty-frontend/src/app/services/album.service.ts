@@ -19,8 +19,8 @@ export class AlbumService {
         const artists: Artist_raw[] = artist_list;
         this.albumList = oldAlbum.map((album): Album => {
             return {
-                albumId: album.albumId,
-                album: album.album,
+                albumID: album.albumID,
+                albumName: album.albumName,
                 artist: this.artistService.getArtistById(album.artistID),
                 release: album.release,
                 duration: album.duration,
@@ -36,6 +36,6 @@ export class AlbumService {
     }
 
     getAlbumById(id: number): Album {
-        return this.albumList.find(album => album.albumId === id)!;
+        return this.albumList.find(album => album.albumID === id)!;
     }
 }

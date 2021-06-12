@@ -2,48 +2,46 @@
     <table style="width:80%">
         <tr class="table-header">
             <th></th>
+            <th></th>
             <th>Title</th>
             <th>Artist</th>
             <th>Album</th>
             <th>Time</th>
             <th>Release</th>
             <th>Links</th>
-            <th></th>
         </tr>
         <ng-container *ngFor="let songEntry of filteredSongTableEntries; let i = index">
             <tr class="song-row" [class.even-list-item]=" i%2 === 0" [class.odd-list-item]="i%2 === 1">
                 <td id="album-cover">
-                    <img class="song-cover" [src]="'assets/covers/albums/' + songEntry.album.cover">
+                    <img class="song-cover" [src]="'assets/covers/albums/' + songEntry.album?.cover">
+                </td>
+                <td id="play-button">
+                    <mat-icon *ngIf="songEntry !== currentlySelectedSong" (click)="playSong(songEntry)">play_arrow</mat-icon>
+                    <mat-icon *ngIf="songEntry === currentlySelectedSong" (click)="playSong(songEntry)">pause</mat-icon>
                 </td>
                 <td>{{songEntry.song}}</td>
-                <td>{{songEntry.artist.artist}}</td>
-                <td>{{songEntry.album.album}}</td>
+                <td>{{songEntry.artist?.artist}}</td>
+                <td>{{songEntry.album?.albumName}}</td>
                 <td>{{songEntry.duration}}</td>
-                <td>{{songEntry.album.release}}</td>
+                <td>{{songEntry.album?.release}}</td>
                 <td>
-                    <div class="song_links col-md-1 col-sm-12">
+                    <div class="song-links col-md-1 col-sm-12">
                         <div class="link-item" *ngIf="songEntry.soundcloudSong">
                             <a [href]="songEntry.soundcloudSong.link" target="_blank">
                                 <img src="assets/links/sc.png">
-                                <p>soundcloud</p>
                             </a>
                         </div>
                         <div class="link-item"  *ngIf="songEntry.spotifySong">
                             <a [href]="songEntry.spotifySong.link" target="_blank">
                                 <img src="assets/links/spotify.png">
-                                <p>spotify</p>
                             </a>
                         </div>
                         <div class="link-item"  *ngIf="songEntry.youtubeSong">
                             <a [href]="songEntry.youtubeSong.link" target="_blank">
                                 <img src="assets/links/yt.png">
-                                <p>youtube</p>
                             </a>
                         </div>
                     </div>
-                </td>
-                <td>
-                    <mat-icon (click)="playSong(songEntry)">play_arrow</mat-icon>
                 </td>
             </tr>
         </ng-container>

@@ -1,27 +1,345 @@
 [
     {
-        "artistID": 2,
-        "link": "ravijohanis",
-        "link_type": "bandcamp_artist"
+        "albumID": 1,
+        "artistID": null,
+        "link": "https://ravijohanis.bandcamp.com/album/anis",
+        "link_type": "bandcamp_album",
+        "songID": null
     },
     {
+        "albumID": null,
+        "artistID": 2,
+        "link": "https://ravijohanis.bandcamp.com",
+        "link_type": "bandcamp_artist",
+        "songID": null
+    },
+    {
+        "albumID": 2,
+        "artistID": null,
+        "link": "https://soundcloud.com/modus_sounds/sets/laeufer",
+        "link_type": "soundcloud_album",
+        "songID": null
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/modus_sounds/seifenblase",
+        "link_type": "soundcloud_song",
+        "songID": 14
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/modus_sounds/entfuhrer",
+        "link_type": "soundcloud_song",
+        "songID": 15
+    },
+    {
+        "albumID": null,
         "artistID": 1,
         "link": "https://soundcloud.com/modus_sounds",
-        "link_type": "soundcloud_artist"
+        "link_type": "soundcloud_artist",
+        "songID": null
     },
     {
+        "albumID": null,
         "artistID": 1,
-        "link": "https://modu5.bandcamp.com/releases",
-        "link_type": "bandcamp_artist"
+        "link": "https://modu5.bandcamp.com/",
+        "link_type": "bandcamp_artist",
+        "songID": null
     },
     {
+        "albumID": null,
         "artistID": 1,
-        "link": "https://open.spotify.com/artist/6YEDmDc9kbduhLEpAG2vhV?si=HM4AmN84Qnqx9eciGmksuQ&dl_branch=1",
-        "link_type": "spotify_artist"
+        "link": "https://open.spotify.com/artist/6YEDmDc9kbduhLEpAG2vhV",
+        "link_type": "spotify_artist",
+        "songID": null
     },
     {
+        "albumID": null,
         "artistID": 2,
-        "link": "https://open.spotify.com/artist/741puaZ7FTKHYyV9KXMfIE?si=MJl9v4TlSyGFrVqhkYf8aQ&dl_branch=1",
-        "link_type": "spotify_artist"
+        "link": "https://open.spotify.com/artist/741puaZ7FTKHYyV9KXMfIE",
+        "link_type": "spotify_artist",
+        "songID": null
+    },
+    {
+        "albumID": null,
+        "artistID": 3,
+        "link": "https://soundcloud.com/rawrawcontent",
+        "link_type": "soundcloud_artist",
+        "songID": null
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://open.spotify.com/album/0ykJPBuyhzaQwM1g1V7RSf",
+        "link_type": "spotify_album",
+        "songID": null
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://modu5.bandcamp.com/album/l-ufer",
+        "link_type": "bandcamp_album",
+        "songID": null
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/modus_sounds/haus",
+        "link_type": "soundcloud_song",
+        "songID": 16
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/modus_sounds/segel",
+        "link_type": "soundcloud_song",
+        "songID": 17
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/modus_sounds/gleiter",
+        "link_type": "soundcloud_song",
+        "songID": 18
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/modus_sounds/denker",
+        "link_type": "soundcloud_song",
+        "songID": 19
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/modus_sounds/freudentaumel",
+        "link_type": "soundcloud_song",
+        "songID": 20
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/modus_sounds/vater",
+        "link_type": "soundcloud_song",
+        "songID": 21
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/modus_sounds/verleger",
+        "link_type": "soundcloud_song",
+        "songID": 22
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/modus_sounds/sandkiste",
+        "link_type": "soundcloud_song",
+        "songID": 23
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/rawrawcontent/hombres-on-another-day",
+        "link_type": "soundcloud_song",
+        "songID": 24
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/ravijohanis/sets/anis",
+        "link_type": "soundcloud_album",
+        "songID": null
+    },
+    {
+        "albumID": null,
+        "artistID": 2,
+        "link": "https://soundcloud.com/ravijohanis",
+        "link_type": "soundcloud_artist",
+        "songID": null
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/ravijohanis/nothing-but-a-dream-album",
+        "link_type": "soundcloud_song",
+        "songID": 1
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/ravijohanis/distraction-album-version",
+        "link_type": "soundcloud_song",
+        "songID": 2
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/ravijohanis/see-my-love-again-album",
+        "link_type": "soundcloud_song",
+        "songID": 3
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/ravijohanis/montpellier-album-version",
+        "link_type": "soundcloud_song",
+        "songID": 4
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/ravijohanis/words-album-version",
+        "link_type": "soundcloud_song",
+        "songID": 5
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/ravijohanis/midatlantic-ridge-album",
+        "link_type": "soundcloud_song",
+        "songID": 6
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/ravijohanis/she-album-version",
+        "link_type": "soundcloud_song",
+        "songID": 7
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/ravijohanis/windmill-album-version",
+        "link_type": "soundcloud_song",
+        "songID": 8
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/ravijohanis/pass-the-pigs-album-version",
+        "link_type": "soundcloud_song",
+        "songID": 9
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/ravijohanis/my-little-refuge-album-version",
+        "link_type": "soundcloud_song",
+        "songID": 10
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/ravijohanis/where-the-water-is-album",
+        "link_type": "soundcloud_song",
+        "songID": 11
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/ravijohanis/visitor-album-version",
+        "link_type": "soundcloud_song",
+        "songID": 12
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/ravijohanis/from-the-screen-album-version",
+        "link_type": "soundcloud_song",
+        "songID": 13
+    },
+    {
+        "albumID": null,
+        "artistID": 3,
+        "link": "https://open.spotify.com/artist/193Mqy3gVQKtBFREChL1V7",
+        "link_type": "spotify_artist",
+        "songID": null
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://open.spotify.com/album/5RxEIgKKermJFgpl1RvuH3",
+        "link_type": "spotify_album",
+        "songID": null
+    },
+    {
+        "albumID": null,
+        "artistID": 1,
+        "link": "https://open.spotify.com/track/3mHjHq95JpcVH5Iv4YgxPK",
+        "link_type": "spotify_song",
+        "songID": null
+    },
+    {
+        "albumID": null,
+        "artistID": 3,
+        "link": "https://modus.band",
+        "link_type": "website_artist",
+        "songID": null
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "http://rawrawcontent.de",
+        "link_type": "website_artist",
+        "songID": null
+    },
+    {
+        "albumID": null,
+        "artistID": 4,
+        "link": "https://soundcloud.com/kandinsky",
+        "link_type": "soundcloud_artist",
+        "songID": null
+    },
+    {
+        "albumID": null,
+        "artistID": null,
+        "link": "https://soundcloud.com/kandinsky/pellegrino",
+        "link_type": "soundcloud_song",
+        "songID": 25
+    },
+    {
+        "albumID": null,
+        "artistID": 1,
+        "link": "https://www.instagram.com/modus.band",
+        "link_type": "instagram_artist",
+        "songID": null
+    },
+    {
+        "albumID": null,
+        "artistID": 3,
+        "link": "https://www.instagram.com/rawrawcontent",
+        "link_type": "instagram_artist",
+        "songID": null
+    },
+    {
+        "albumID": null,
+        "artistID": 4,
+        "link": "https://www.instagram.com/k_ndinsky",
+        "link_type": "instagram_artist",
+        "songID": null
+    },
+    {
+        "albumID": null,
+        "artistID": 1,
+        "link": "https://www.youtube.com/channel/UC_ja0NNrTU9g7WAzn_pYo1w",
+        "link_type": "youtube_artist",
+        "songID": null
+    },
+    {
+        "albumID": null,
+        "artistID": 3,
+        "link": "https://www.youtube.com/channel/UC9xpx0mgM7a0jDeemxoeS0Q",
+        "link_type": "youtube_artist",
+        "songID": null
+    },
+    {
+        "albumID": null,
+        "artistID": 2,
+        "link": "https://www.youtube.com/channel/UCZN91mtgHdSNsQrsqky0Jbw",
+        "link_type": "youtube_artist",
+        "songID": null
     }
 ]

@@ -4,7 +4,7 @@
     </div>
     <div class="content col-lg-7 col-md-12">
         <div class="song-title">
-            {{currentSchwiftOtw.album.artist.artist}} - {{currentSchwiftOtw.album.album}}
+            {{currentSchwiftOtw.album?.artist.artist}} - {{currentSchwiftOtw.album?.albumName}}
         </div>
         <div>
             <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
@@ -19,43 +19,43 @@
         </div>
     </div>
     <div class="schwift-otw-links col-lg-2 col-md-12">
-        <div class="link-item" *ngIf="currentSchwiftOtw.album.artist.soundcloudLink">
+        <div class="link-item" *ngIf="currentSchwiftOtw.album?.artist.soundcloudLink">
             <a [href]="currentSchwiftOtw.album.artist.soundcloudLink.link" target="_blank">
                 <img src="assets/links/sc.png">
                 <p>soundcloud</p>
             </a>
         </div>
-        <div class="link-item"  *ngIf="currentSchwiftOtw.album.artist.spotifyLink">
+        <div class="link-item"  *ngIf="currentSchwiftOtw.album?.artist.spotifyLink">
             <a [href]="currentSchwiftOtw.album.artist.spotifyLink.link" target="_blank">
                 <img src="assets/links/spotify.png">
                 <p>spotify</p>
             </a>
         </div>
-        <div class="link-item"  *ngIf="currentSchwiftOtw.album.artist.youtubeLink">
+        <div class="link-item"  *ngIf="currentSchwiftOtw.album?.artist.youtubeLink">
             <a [href]="currentSchwiftOtw.album.artist.youtubeLink.link" target="_blank">
                  <img src="assets/links/yt.png">
                 <p>youtube</p>
             </a>
         </div>
-        <div class="link-item"  *ngIf="currentSchwiftOtw.album.artist.twitterLink">
+        <div class="link-item"  *ngIf="currentSchwiftOtw.album?.artist.twitterLink">
             <a [href]="currentSchwiftOtw.album.artist.twitterLink.link" target="_blank">
                 <img src="assets/links/twitter.png">
                 <p>twitter</p>
             </a>
         </div>
-        <div class="link-item"  *ngIf="currentSchwiftOtw.album.artist.bandcampLink">
+        <div class="link-item"  *ngIf="currentSchwiftOtw.album?.artist.bandcampLink">
             <a [href]="currentSchwiftOtw.album.artist.bandcampLink.link" target="_blank">
                 <img src="assets/links/bc.png">
                 <p>bandcamp</p>
             </a>
         </div>
-        <div class="link-item"  *ngIf="currentSchwiftOtw.album.artist.instagramLink">
+        <div class="link-item"  *ngIf="currentSchwiftOtw.album?.artist.instagramLink">
             <a [href]="currentSchwiftOtw.album.artist.instagramLink.link" target="_blank">
                 <img src="assets/links/insta.png">
                 <p>instagram</p>
             </a>
         </div>
-        <div class="link-item"  *ngIf="currentSchwiftOtw.album.artist.facebookLink">
+        <div class="link-item"  *ngIf="currentSchwiftOtw.album?.artist.facebookLink">
             <a [href]="currentSchwiftOtw.album.artist.facebookLink.link" target="_blank">
                 <img src="assets/links/fb.png">
                 <p>facebook</p>

@@ -23,6 +23,27 @@
 
       &#album-cover {
         text-align: start;
+        width: 40px;
+      }
+
+      &#play-button {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 45px;
+        mat-icon{
+          cursor: pointer;
+          font-size: 2rem;
+        }
+      }
+
+      .song-links{
+        .link-item{
+          img{
+            height: 50px;
+            width: 50px;
+          }
+        }
       }
     }
   }

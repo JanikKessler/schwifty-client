@@ -18,7 +18,7 @@ export class SongService {
   constructor(private artistService: ArtistService, private albumService: AlbumService) {
     const linkList: ExternalLink[] = link_list;
     let songList: Song[] = song_list.map((song: Song_raw): Song => {
-      const songLinks: ExternalLink[] = linkList.filter(link => link.artistID === song.artistID);
+      const songLinks: ExternalLink[] = linkList.filter(link => link.link_type === LinkType.SOUNDCLOUD_SONG);
       return {
         id: song.id,
         artist: this.artistService.getArtistById(song.artistID),
@@ -26,7 +26,7 @@ export class SongService {
         song: song.song,
         link: song.link,
         duration: song.duration,
-        soundcloudSong: songLinks.find(link => link.link_type === LinkType.SOUNDCLOUD_SONG),
+        soundcloudSong: songLinks.find(link => link.songID === song.id),
 
       };
     });

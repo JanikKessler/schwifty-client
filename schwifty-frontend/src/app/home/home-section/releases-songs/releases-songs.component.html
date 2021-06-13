@@ -6,8 +6,8 @@
             <th>Title</th>
             <th>Artist</th>
             <th>Album</th>
-            <th>Time</th>
-            <th>Release</th>
+            <th class="d-none d-lg-table-cell">Time</th>
+            <th class="d-none d-lg-table-cell">Release</th>
             <th>Links</th>
         </tr>
         <ng-container *ngFor="let songEntry of filteredSongTableEntries; let i = index">
@@ -29,8 +29,8 @@
                 <td>{{songEntry.song}}</td>
                 <td>{{songEntry.artist?.artist}}</td>
                 <td>{{songEntry.album?.albumName}}</td>
-                <td>{{songEntry.duration}}</td>
-                <td>{{songEntry.album?.release}}</td>
+                <td class="d-none d-lg-table-cell">{{songEntry.duration}}</td>
+                <td class="d-none d-lg-table-cell">{{songEntry.album?.release}}</td>
                 <td>
                     <div class="song-links col-md-1 col-sm-12">
                         <div class="link-item" *ngIf="songEntry.soundcloudSong">

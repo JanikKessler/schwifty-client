@@ -18,47 +18,47 @@
                     style="color: #cccccc; text-decoration: none;">Läufer</a></div>
         </div>
     </div>
-    <div class="schwift-otw-links col-lg-2 col-md-12">
+    <div class="schwift-otw-links flex-sm-row flex-md-row flex-lg-column col-lg-2 col-md-12">
         <div class="link-item" *ngIf="currentSchwiftOtw.album?.artist.soundcloudLink">
             <a [href]="currentSchwiftOtw.album.artist.soundcloudLink.link" target="_blank">
                 <img src="assets/links/sc.png">
-                <p>soundcloud</p>
+                <p class="d-sm-none d-lg-inline">soundcloud</p>
             </a>
         </div>
         <div class="link-item"  *ngIf="currentSchwiftOtw.album?.artist.spotifyLink">
             <a [href]="currentSchwiftOtw.album.artist.spotifyLink.link" target="_blank">
                 <img src="assets/links/spotify.png">
-                <p>spotify</p>
+                <p class="d-sm-none d-lg-inline">spotify</p>
             </a>
         </div>
         <div class="link-item"  *ngIf="currentSchwiftOtw.album?.artist.youtubeLink">
             <a [href]="currentSchwiftOtw.album.artist.youtubeLink.link" target="_blank">
                  <img src="assets/links/yt.png">
-                <p>youtube</p>
+                <p class="d-sm-none d-lg-inline">youtube</p>
             </a>
         </div>
         <div class="link-item"  *ngIf="currentSchwiftOtw.album?.artist.twitterLink">
             <a [href]="currentSchwiftOtw.album.artist.twitterLink.link" target="_blank">
                 <img src="assets/links/twitter.png">
-                <p>twitter</p>
+                <p class="d-sm-none d-lg-inline">twitter</p>
             </a>
         </div>
         <div class="link-item"  *ngIf="currentSchwiftOtw.album?.artist.bandcampLink">
             <a [href]="currentSchwiftOtw.album.artist.bandcampLink.link" target="_blank">
                 <img src="assets/links/bc.png">
-                <p>bandcamp</p>
+                <p class="d-sm-none d-lg-inline">bandcamp</p>
             </a>
         </div>
         <div class="link-item"  *ngIf="currentSchwiftOtw.album?.artist.instagramLink">
             <a [href]="currentSchwiftOtw.album.artist.instagramLink.link" target="_blank">
                 <img src="assets/links/insta.png">
-                <p>instagram</p>
+                <p class="d-sm-none d-lg-inline">instagram</p>
             </a>
         </div>
         <div class="link-item"  *ngIf="currentSchwiftOtw.album?.artist.facebookLink">
             <a [href]="currentSchwiftOtw.album.artist.facebookLink.link" target="_blank">
                 <img src="assets/links/fb.png">
-                <p>facebook</p>
+                <p class="d-sm-none d-lg-inline">facebook</p>
             </a>
         </div>
     </div>

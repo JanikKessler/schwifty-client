@@ -3,43 +3,45 @@
         <div class="artist-cover">
             <img [src]="'assets/covers/artists/' + artist.cover" [alt]="artist.artist + 'Cover'">
         </div>
-        <div class="artist-name">
-            {{artist.artist}}
-            <span *ngIf="artist.soundcloudLink">
+        <div class="artist-info">
+            <div class="artist-name">{{artist.artist}}</div>
+            <div class="artist-links">
+                <span *ngIf="artist.soundcloudLink">
                 <a [href]="artist.soundcloudLink.link" target="_blank">
                     <img src="assets/links/sc.png">
                 </a>
-            </span>
-            <span *ngIf="artist.spotifyLink">
+                </span>
+                <span *ngIf="artist.spotifyLink">
                 <a [href]="artist.spotifyLink.link" target="_blank">
                     <img src="assets/links/spotify.png">
                 </a>
-            </span>
-            <span *ngIf="artist.youtubeLink">
+                </span>
+                <span *ngIf="artist.youtubeLink">
                 <a [href]="artist.youtubeLink.link" target="_blank">
                      <img src="assets/links/yt.png">
                 </a>
-            </span>
-            <span *ngIf="artist.twitterLink">
+                </span>
+                <span *ngIf="artist.twitterLink">
                 <a [href]="artist.twitterLink.link" target="_blank">
                     <img src="assets/links/twitter.png">
                 </a>
-            </span>
-            <span *ngIf="artist.bandcampLink">
+                </span>
+                <span *ngIf="artist.bandcampLink">
                 <a [href]="artist.bandcampLink.link" target="_blank">
                     <img src="assets/links/bc.png">
                 </a>
-            </span>
-            <span *ngIf="artist.instagramLink">
+                </span>
+                <span *ngIf="artist.instagramLink">
                 <a [href]="artist.instagramLink.link" target="_blank">
                     <img src="assets/links/insta.png">
                 </a>
-            </span>
-            <span *ngIf="artist.facebookLink">
+                </span>
+                <span *ngIf="artist.facebookLink">
                 <a [href]="artist.facebookLink.link" target="_blank">
                     <img src="assets/links/fb.png">
                 </a>
             </span>
+            </div>
         </div>
     </div>
 </div>

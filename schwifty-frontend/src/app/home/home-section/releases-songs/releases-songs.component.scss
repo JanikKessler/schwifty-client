@@ -3,34 +3,38 @@
   justify-content: center;
   padding: 40px;
   .song-cover {
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
   }
   .even-list-item{
-    background-color: white;
+    background-color: #faffff;
   }
   .odd-list-item{
     background-color: #e5f4f7;
   }
   .table-header{
+    height: 45px;
+    font-weight: 600;
     th{
-      text-align: center;
+      text-align: start;
     }
   }
   .song-row{
     td{
-      text-align: center;
+      text-align: start;
+      font-weight: 400;
 
       &#album-cover {
         text-align: start;
-        width: 40px;
+        width: 45px;
       }
 
       &#play-button {
         align-items: center;
         display: flex;
         justify-content: center;
-        height: 45px;
+        height: 32px;
+        opacity: 50%;
         mat-icon{
           cursor: pointer;
           font-size: 2rem;
@@ -40,8 +44,9 @@
       .song-links{
         .link-item{
           img{
-            height: 50px;
-            width: 50px;
+            opacity: 50%;
+            height: 45px;
+            width: 45px;
           }
         }
       }

@@ -1,5 +1,17 @@
 [
     {
+        "album": null,
+        "albumID": null,
+        "artist": "Kandinsky",
+        "artistID": 4,
+        "cover": null,
+        "duration": "03:20",
+        "id": 25,
+        "link": 684684004,
+        "releaseType": "Song",
+        "song": "Pellegrino"
+    },
+    {
         "album": "Läufer",
         "albumID": 2,
         "artist": "MODUS",
@@ -8,6 +20,7 @@
         "duration": "04:25",
         "id": 14,
         "link": 202266915,
+        "releaseType": "Album",
         "song": "Seifenblase"
     },
     {
@@ -19,6 +32,7 @@
         "duration": "04:54",
         "id": 15,
         "link": 549119562,
+        "releaseType": "Album",
         "song": "Entführer"
     },
     {
@@ -30,6 +44,7 @@
         "duration": "04:52",
         "id": 16,
         "link": 549049119,
+        "releaseType": "Album",
         "song": "Haus"
     },
     {
@@ -41,6 +56,7 @@
         "duration": "04:10",
         "id": 17,
         "link": 208087054,
+        "releaseType": "Album",
         "song": "Segel"
     },
     {
@@ -52,6 +68,7 @@
         "duration": "06:12",
         "id": 18,
         "link": 341929231,
+        "releaseType": "Album",
         "song": "Gleiter"
     },
     {
@@ -63,6 +80,7 @@
         "duration": "06:30",
         "id": 19,
         "link": 549119316,
+        "releaseType": "Album",
         "song": "Denker"
     },
     {
@@ -74,6 +92,7 @@
         "duration": "04:29",
         "id": 20,
         "link": 208543820,
+        "releaseType": "Album",
         "song": "Freudentaumel"
     },
     {
@@ -85,6 +104,7 @@
         "duration": "05:41",
         "id": 21,
         "link": 341929225,
+        "releaseType": "Album",
         "song": "Vater"
     },
     {
@@ -96,6 +116,7 @@
         "duration": "04:19",
         "id": 22,
         "link": 292134259,
+        "releaseType": "Album",
         "song": "Verleger"
     },
     {
@@ -107,6 +128,7 @@
         "duration": "03:36",
         "id": 23,
         "link": 208086949,
+        "releaseType": "Album",
         "song": "Sandkiste"
     },
     {
@@ -118,6 +140,7 @@
         "duration": "04:20",
         "id": 1,
         "link": 889973644,
+        "releaseType": "Album",
         "song": "Nothing But A Dream"
     },
     {
@@ -129,6 +152,7 @@
         "duration": "04:12",
         "id": 2,
         "link": 889973617,
+        "releaseType": "Album",
         "song": "Distraction"
     },
     {
@@ -140,6 +164,7 @@
         "duration": "03:51",
         "id": 3,
         "link": 889973584,
+        "releaseType": "Album",
         "song": "See My Love Again"
     },
     {
@@ -151,6 +176,7 @@
         "duration": "03:08",
         "id": 4,
         "link": 889973545,
+        "releaseType": "Album",
         "song": "Montpeiller"
     },
     {
@@ -162,6 +188,7 @@
         "duration": "04:11",
         "id": 5,
         "link": 889973488,
+        "releaseType": "Album",
         "song": "Words"
     },
     {
@@ -173,6 +200,7 @@
         "duration": "02:38",
         "id": 6,
         "link": 889973461,
+        "releaseType": "Album",
         "song": "Midatlantic Ridge"
     },
     {
@@ -184,6 +212,7 @@
         "duration": "03:48",
         "id": 7,
         "link": 889973386,
+        "releaseType": "Album",
         "song": "She"
     },
     {
@@ -195,6 +224,7 @@
         "duration": "02:44",
         "id": 8,
         "link": 889973323,
+        "releaseType": "Album",
         "song": "Windmill"
     },
     {
@@ -206,6 +236,7 @@
         "duration": "04:39",
         "id": 9,
         "link": 889973272,
+        "releaseType": "Album",
         "song": "Pass The Pigs"
     },
     {
@@ -217,6 +248,7 @@
         "duration": "04:20",
         "id": 10,
         "link": 889973236,
+        "releaseType": "Album",
         "song": "My Little Refuge"
     },
     {
@@ -228,6 +260,7 @@
         "duration": "03:54",
         "id": 11,
         "link": 889973179,
+        "releaseType": "Album",
         "song": "Where The Water Is"
     },
     {
@@ -239,6 +272,7 @@
         "duration": "04:35",
         "id": 12,
         "link": 889973131,
+        "releaseType": "Album",
         "song": "Visitor"
     },
     {
@@ -250,6 +284,19 @@
         "duration": "03:45",
         "id": 13,
         "link": 889973089,
+        "releaseType": "Album",
         "song": "From The Screen"
+    },
+    {
+        "album": null,
+        "albumID": null,
+        "artist": "RawRaw Content",
+        "artistID": 3,
+        "cover": null,
+        "duration": "04:05",
+        "id": 24,
+        "link": 428577693,
+        "releaseType": "Song",
+        "song": " Hombres (On Another Day) "
     }
 ]

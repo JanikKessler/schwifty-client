@@ -36,7 +36,7 @@ export class SongPlayerComponent implements OnInit, OnChanges {
             show_comments: true,
             show_user: true,
             show_reposts: false,
-            show_teaser: false,
+          show_teaser: false,
         });
     }
 

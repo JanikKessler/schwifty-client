@@ -27,8 +27,9 @@
       .artist-name{
         display: flex;
         align-items: center;
-        height:50px;
+        height:63px;
         font-weight: 600;
+        font-size: 24px;
       }
       .artist-links{
         display: flex;
@@ -41,7 +42,7 @@
             align-self: center;
             height: auto;
             width: 70%;
-            max-height: 70px;
+            max-height: 40px;
           }
         }
       }

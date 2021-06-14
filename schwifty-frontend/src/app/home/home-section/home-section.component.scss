@@ -6,18 +6,24 @@
     display: inline-flex;
     background-color: #290024;
     color: white;
-    height: 40px;
-    width: 200px;
+    height: 63px;
+    width: auto;
+    padding: 20px;
     align-items: center;
     justify-content: center;
+    font-size: 36px;
+    font-weight: 500;
   }
   .section-sub-header{
     display: inline-flex;
     background-color: white;
     color: black;
-    height: 40px;
-    width: 200px;
+    height: 63px;
+    width: auto;
+    padding: 20px;
     align-items: center;
     justify-content: center;
+    font-size: 36px;
+    font-weight: 500;
   }
 }

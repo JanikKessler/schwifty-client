@@ -2,12 +2,14 @@
 #navbar.mat-toolbar-single-row{
   height: 100px;
   img{
-    height: 100px;
+    height: 80px;
     width: auto;
   }
 }
 #navbar{
   background-color: #e5f4f7;
+  font-weight: 500;
+  font-size: 2vw;
   .navigation-items{
     width:100%;
     display: inline-flex;

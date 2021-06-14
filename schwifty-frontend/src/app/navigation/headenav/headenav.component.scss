@@ -9,7 +9,10 @@
 #navbar{
   background-color: #e5f4f7;
   font-weight: 500;
-  font-size: 2vw;
+  font-size: 1.25em;
+  @media (min-width: 768px) {
+    font-size: 2em;
+  }
   .navigation-items{
     width:100%;
     display: inline-flex;

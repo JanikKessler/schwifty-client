@@ -1,78 +1,78 @@
 <div class="schwift-otw-wrapper row">
     <div class="cover-image col-lg-3 col-md-12">
-        <img [src]="'assets/covers/albums/' + currentSchwiftOtw.album?.cover" alt="Cover Image"/>
+        <iframe id="sc-otw-widget" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/549119562&color=%230bf880&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
     </div>
     <div class="content col-lg-7 col-md-12">
-        <div class="song-title">
-            {{currentSchwiftOtw.album?.artist.artist}} - {{currentSchwiftOtw.album?.albumName}}
+        <div class="song-title text-center text-lg-left">
+            {{currentSchwiftOtw.release?.artist.artist}} - {{currentSchwiftOtw.release?.name}}
         </div>
-        <div>
-            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/670110729&color=%23483a32&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-
-            </iframe>
-            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-                <a href="https://soundcloud.com/modus_sounds" title="MODUS" target="_blank"
-                   style="color: #cccccc; text-decoration: none;">MODUS</a> · <a
-                    [href]="'https://soundcloud.com/modus_sounds/sets/' + 'laeufer'" title="Läufer" target="_blank"
-                    style="color: #cccccc; text-decoration: none;">Läufer</a></div>
+        <div class="review text-center text-lg-left">
+            "{{currentSchwiftOtw.review}}"
+        </div>
+        <div class="reviewer-in text-center text-lg-left">
+            {{currentSchwiftOtw.reviewerin}}
         </div>
     </div>
-    <div class="schwift-otw-links flex-sm-row flex-md-row flex-lg-column col-lg-2 col-md-12">
-        <div class="link-item" *ngIf="currentSchwiftOtw.album?.artist.soundcloudLink">
-            <a [href]="currentSchwiftOtw.album.artist.soundcloudLink.link" target="_blank">
+    <div class="schwift-otw-links justify-content-around justify-content-lg-start flex-row flex-lg-column col-lg-2 col-sm-12">
+        <div class="link-item" *ngIf="currentSchwiftOtw.release?.artist.soundcloudLink">
+            <a [href]="currentSchwiftOtw.release.artist.soundcloudLink.link" target="_blank">
                 <img src="assets/links/sc.png">
-                <p class="d-sm-none d-lg-inline">soundcloud</p>
+                <p class="link-name d-none d-lg-inline">soundcloud</p>
             </a>
         </div>
-        <div class="link-item"  *ngIf="currentSchwiftOtw.album?.artist.spotifyLink">
-            <a [href]="currentSchwiftOtw.album.artist.spotifyLink.link" target="_blank">
+        <div class="link-item" *ngIf="currentSchwiftOtw.release?.artist.spotifyLink">
+            <a [href]="currentSchwiftOtw.release.artist.spotifyLink.link" target="_blank">
                 <img src="assets/links/spotify.png">
-                <p class="d-sm-none d-lg-inline">spotify</p>
+                <p class="d-none d-lg-inline">spotify</p>
             </a>
         </div>
-        <div class="link-item"  *ngIf="currentSchwiftOtw.album?.artist.youtubeLink">
-            <a [href]="currentSchwiftOtw.album.artist.youtubeLink.link" target="_blank">
-                 <img src="assets/links/yt.png">
-                <p class="d-sm-none d-lg-inline">youtube</p>
+        <div class="link-item" *ngIf="currentSchwiftOtw.release?.artist.youtubeLink">
+            <a [href]="currentSchwiftOtw.release.artist.youtubeLink.link" target="_blank">
+                <img src="assets/links/yt.png">
+                <p class="d-none d-lg-inline">youtube</p>
             </a>
         </div>
-        <div class="link-item"  *ngIf="currentSchwiftOtw.album?.artist.twitterLink">
-            <a [href]="currentSchwiftOtw.album.artist.twitterLink.link" target="_blank">
+        <div class="link-item" *ngIf="currentSchwiftOtw.release?.artist.twitterLink">
+            <a [href]="currentSchwiftOtw.release.artist.twitterLink.link" target="_blank">
                 <img src="assets/links/twitter.png">
-                <p class="d-sm-none d-lg-inline">twitter</p>
+                <p class="d-none d-lg-inline">twitter</p>
             </a>
         </div>
-        <div class="link-item"  *ngIf="currentSchwiftOtw.album?.artist.bandcampLink">
-            <a [href]="currentSchwiftOtw.album.artist.bandcampLink.link" target="_blank">
+        <div class="link-item" *ngIf="currentSchwiftOtw.release?.artist.bandcampLink">
+            <a [href]="currentSchwiftOtw.release.artist.bandcampLink.link" target="_blank">
                 <img src="assets/links/bc.png">
-                <p class="d-sm-none d-lg-inline">bandcamp</p>
+                <p class="d-none d-lg-inline">bandcamp</p>
             </a>
         </div>
-        <div class="link-item"  *ngIf="currentSchwiftOtw.album?.artist.instagramLink">
-            <a [href]="currentSchwiftOtw.album.artist.instagramLink.link" target="_blank">
+        <div class="link-item" *ngIf="currentSchwiftOtw.release?.artist.instagramLink">
+            <a [href]="currentSchwiftOtw.release.artist.instagramLink.link" target="_blank">
                 <img src="assets/links/insta.png">
-                <p class="d-sm-none d-lg-inline">instagram</p>
+                <p class="d-none d-lg-inline">instagram</p>
             </a>
         </div>
-        <div class="link-item"  *ngIf="currentSchwiftOtw.album?.artist.facebookLink">
-            <a [href]="currentSchwiftOtw.album.artist.facebookLink.link" target="_blank">
+        <div class="link-item" *ngIf="currentSchwiftOtw.release?.artist.facebookLink">
+            <a [href]="currentSchwiftOtw.release.artist.facebookLink.link" target="_blank">
                 <img src="assets/links/fb.png">
-                <p class="d-sm-none d-lg-inline">facebook</p>
+                <p class="d-none d-lg-inline">facebook</p>
             </a>
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="schwift-faktor">
-      <div class="schwift-faktor-text">
-        Schwiftfaktor:
-      </div>
+<div class="row d-flex justify-content-sm-center justify-content-lg-end">
 
-      <div class="schwift-faktor-value">
-         {{currentSchwiftOtw.schwiftfaktor}}
-       </div>
+    <div class="col-lg-4">
+        <div class="schwift-faktor">
+            <div class="schwift-faktor-text">
+                Schwiftfaktor:
+            </div>
+
+            <div class="schwift-faktor-value">
+                {{currentSchwiftOtw.schwiftfaktor}}
+            </div>
+        </div>
     </div>
 </div>
+
 
 

@@ -1,10 +1,10 @@
 <div class="album-tile-wrapper">
     <div class="album-tile-content">
         <div class="album-cover">
-            <img [src]="album.albumID !== 0 ? 'assets/covers/albums/' + album?.cover : 'assets/covers/artists/' + album?.cover" [alt]="album.albumName + 'Cover'">
+            <img [src]="album.albumID !== 0 ? 'assets/covers/albums/' + album?.cover : 'assets/covers/artists/' + album?.cover" [alt]="album.name + 'Cover'">
         </div>
-        <div class="album-name">
-            {{album.albumName}}
+        <div class="album-name" [class.selected]="selected">
+            {{album.name}}
         </div>
     </div>
 </div>

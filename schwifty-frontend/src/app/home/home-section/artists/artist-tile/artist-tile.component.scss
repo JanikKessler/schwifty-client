@@ -1,3 +1,5 @@
+
+
 .artist-tile-wrapper{
   height: 400px;
   width: 100%;
@@ -20,6 +22,10 @@
       align-items: center;
       justify-content: center;
       background-color: #faffff;
+      &.selected{
+        background-color: #290024;
+        color: white;
+      }
       color: #290024;
       height: 100px;
       width: 100%;

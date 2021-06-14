@@ -10,6 +10,7 @@ import { ArtistService } from '../../../../services/artist.service';
 })
 export class ArtistTileComponent implements OnInit {
   @Input() artist!: Artist;
+  @Input() selected: boolean = false;
   constructor(private artistService: ArtistService) { }
 
   ngOnInit(): void {

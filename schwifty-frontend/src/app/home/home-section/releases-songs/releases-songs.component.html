@@ -10,12 +10,12 @@
             <th>Links</th>
         </tr>
         <ng-container *ngFor="let songEntry of filteredSongTableEntries; let i = index">
-            <tr class="song-row" [class.even-list-item]=" i%2 === 0" [class.odd-list-item]="i%2 === 1">
+            <tr class="song-row" [class.even-list-item]=" i%2 === 0" [class.odd-list-item]="i%2 === 1" (click)="!(playerRuns && currentlySelectedSong === songEntry) ? playSong(songEntry) : pauseSong()">
                 <td id="album-cover">
                     <div id="play-button">
-                        <mat-icon *ngIf="songEntry !== currentlySelectedSong || (songEntry === currentlySelectedSong && !playerRuns)  ; else stopIcon" (click)="playSong(songEntry)">play_arrow</mat-icon>
+                        <mat-icon *ngIf="songEntry !== currentlySelectedSong || (songEntry === currentlySelectedSong && !playerRuns)  ; else stopIcon">play_arrow</mat-icon>
                         <ng-template #stopIcon>
-                            <mat-icon (click)="pauseSong()">pause</mat-icon>
+                            <mat-icon>pause</mat-icon>
                         </ng-template>
                     </div>
                     <ng-container *ngIf="songEntry.cover; else albumCover">
@@ -26,25 +26,25 @@
                     </ng-template>
 
                 </td>
-                <td>{{songEntry.song}}</td>
+                <td>{{songEntry.name}}</td>
                 <td>{{songEntry.artist?.artist}}</td>
-                <td>{{songEntry.album?.albumName}}</td>
+                <td>{{songEntry.album?.name}}</td>
                 <td class="d-none d-lg-table-cell">{{songEntry.duration}}</td>
                 <td class="d-none d-lg-table-cell">{{songEntry.album?.release}}</td>
                 <td>
-                    <div class="song-links col-md-1 col-sm-12">
-                        <div class="link-item" *ngIf="songEntry.soundcloudSong">
-                            <a [href]="songEntry.soundcloudSong.link" target="_blank">
+                    <div class="song-links">
+                        <a class="link-item d-table-cell" *ngIf="songEntry.soundcloudLink"  [href]="songEntry.soundcloudLink.link" target="_blank">
+                            <a class="w-100">
                                 <img src="assets/links/sc.png">
                             </a>
-                        </div>
-                        <div class="link-item"  *ngIf="songEntry.spotifySong">
-                            <a [href]="songEntry.spotifySong.link" target="_blank">
+                        </a>
+                        <div class="link-item"  *ngIf="songEntry.spotifyLink">
+                            <a [href]="songEntry.spotifyLink.link" target="_blank">
                                 <img src="assets/links/spotify.png">
                             </a>
                         </div>
-                        <div class="link-item"  *ngIf="songEntry.youtubeSong">
-                            <a [href]="songEntry.youtubeSong.link" target="_blank">
+                        <div class="link-item"  *ngIf="songEntry.youtubeLink">
+                            <a [href]="songEntry.youtubeLink.link" target="_blank">
                                 <img src="assets/links/yt.png">
                             </a>
                         </div>

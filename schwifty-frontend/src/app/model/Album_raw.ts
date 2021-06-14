@@ -1,5 +1,6 @@
 import { Song_raw } from './Song_raw';
 import { Artist, Artist_raw } from './Artist_raw';
+import { ExternalLink } from './Links';
 
 export interface Album_raw {
   albumName: string;
@@ -13,11 +14,13 @@ export interface Album_raw {
 }
 
 export interface Album {
-  albumName: string;
+  name: string;
   albumID: number;
   artist: Artist;
   duration?: number;
   release?: string;
   tracks?: number
   cover?:string
+  soundcloudLink?: ExternalLink;
+  spotifyLink?: ExternalLink;
 }

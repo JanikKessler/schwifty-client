@@ -7,6 +7,7 @@ import { LinkType } from '../enums/LinkType';
 import { ExternalLink } from '../model/Links';
 import link_list from '../../assets/data/links.json';
 import song_list from '../../assets/data/songs.json';
+import { SchwiftOtw } from '../model/SchwiftOtw';
 
 
 @Injectable({
@@ -14,27 +15,32 @@ import song_list from '../../assets/data/songs.json';
 })
 export class SongService {
   private allSongsForTable$ = new ReplaySubject<Song[]>(1);
+  private songList: Song[] = [];
 
   constructor(private artistService: ArtistService, private albumService: AlbumService) {
     const linkList: ExternalLink[] = link_list;
-    let songList: Song[] = song_list.map((song: Song_raw): Song => {
+    this.songList = song_list.map((song: Song_raw): Song => {
       const songLinks: ExternalLink[] = linkList.filter(link => link.link_type === LinkType.SOUNDCLOUD_SONG);
       return {
         id: song.id,
         artist: this.artistService.getArtistById(song.artistID),
         album: this.albumService.getAlbumById(song.albumID),
         cover: song.cover,
-        song: song.song,
+        name: song.song,
         link: song.link,
         duration: song.duration,
-        soundcloudSong: songLinks.find(link => link.songID === song.id),
+        soundcloudLink: songLinks.find(link => link.songID === song.id),
 
       };
     });
-    this.allSongsForTable$.next(songList);
+    this.allSongsForTable$.next(this.songList);
   }
 
   getAllSongsForTable(): Observable<Song[]> {
     return this.allSongsForTable$;
+  }
+
+  getSongById(songId: number): Song | undefined {
+    return this.songList.find(song => song.id === songId)
   }
 }

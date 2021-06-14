@@ -3,7 +3,7 @@
         <div class="artist-cover">
             <img [src]="'assets/covers/artists/' + artist.cover" [alt]="artist.artist + 'Cover'">
         </div>
-        <div class="artist-info">
+        <div class="artist-info" [class.selected]="selected">
             <div class="artist-name">{{artist.artist}}</div>
             <div class="artist-links">
                 <span *ngIf="artist.soundcloudLink">

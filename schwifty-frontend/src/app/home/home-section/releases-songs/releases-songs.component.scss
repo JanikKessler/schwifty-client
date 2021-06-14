@@ -29,6 +29,7 @@
     td {
       text-align: start;
       font-weight: 400;
+      cursor: pointer;
 
       &#album-cover {
         position: relative;
@@ -43,7 +44,6 @@
           justify-content: center;
 
           mat-icon{
-            cursor: pointer;
             font-size: 2rem;
             height: auto;
             width: auto;

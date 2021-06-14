@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
-import { combineLatest, Observable } from 'rxjs';
+import { combineLatest, Observable, ReplaySubject } from 'rxjs';
 import { Artist_raw } from '../../../model/Artist_raw';
 import { DragScrollComponent } from 'ngx-drag-scroll';
 import { ArtistService } from '../../../services/artist.service';
@@ -7,7 +7,7 @@ import { AlbumService } from '../../../services/album.service';
 import { Album, Album_raw } from '../../../model/Album_raw';
 import { AlbumEntry } from './model/AlbumEntry';
 import { SelectionService } from '../../../services/selection.service';
-import { filter, map } from 'rxjs/operators';
+import { filter, map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-releases-albums',
@@ -15,8 +15,8 @@ import { filter, map } from 'rxjs/operators';
   styleUrls: ['./releases-albums.component.scss']
 })
 export class ReleasesAlbumsComponent implements OnInit {
-  allAlbums$!: Observable<Album[]>;
-  filteredAlbums: Album[] = [];
+  selectedAlbum$: Observable<Album> = new  Observable<Album>();
+  filteredAlbums$: ReplaySubject<Album[]> = new ReplaySubject<Album[]>(1);
   @ViewChild('artistSlider', {read: DragScrollComponent}) artistSlider!: DragScrollComponent;
   positionLeftBound = true;
   positionRightBound = false;
@@ -27,7 +27,8 @@ export class ReleasesAlbumsComponent implements OnInit {
   constructor(private albumService: AlbumService, private selectionService: SelectionService) {}
 
   ngOnInit(): void {
-    this.albumService.getAllAllbums().subscribe(albums => this.filteredAlbums = albums)
+    this.selectedAlbum$ = this.selectionService.getSelectedAlbum$();
+    this.albumService.getAllAllbums().subscribe(albums => this.filteredAlbums$.next(albums))
     combineLatest([this.albumService.getAllAllbums(),this.selectionService.getSelectedArtist$()]).pipe(
      map(([albums, artist]) => {
        const filteredAlbums = albums
@@ -35,14 +36,14 @@ export class ReleasesAlbumsComponent implements OnInit {
 
        filteredAlbums.unshift({
          albumID: 0,
-         albumName: 'Alle Songs',
+         name: 'Alle Songs',
          cover: artist.cover,
          artist: artist
        })
 
        return filteredAlbums
      })
-    ).subscribe(albums => this.filteredAlbums = albums)
+    ).subscribe(albums => this.filteredAlbums$.next(albums))
   }
 
   moveLeft() {

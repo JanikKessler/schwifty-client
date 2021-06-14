@@ -1,4 +1,5 @@
 export enum LinkType {
+    SOUNDCLOUD_ALBUM = 'soundcloud_album',
     SOUNDCLOUD_ARTIST = 'soundcloud_artist',
     SOUNDCLOUD_SONG = 'soundcloud_song',
     BANDCAMP_ARTIST = 'bandcamp_artist',

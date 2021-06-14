@@ -15,6 +15,7 @@ import { SelectionService } from '../../../services/selection.service';
 export class ArtistsComponent implements OnInit {
 
   allArtists$!: Observable<Artist[]>;
+  selectedArtist$: Observable<Artist> = new Observable<Artist>();
   @ViewChild('artistSlider', {read: DragScrollComponent}) artistSlider!: DragScrollComponent;
   positionLeftBound = true;
   positionRightBound = false;
@@ -26,7 +27,7 @@ export class ArtistsComponent implements OnInit {
 
   ngOnInit(): void {
     this.allArtists$ = this.artistService.getAllArtists();
-
+    this.selectedArtist$ = this.artistService.getSelectedArtist();
   }
 
   moveLeft() {

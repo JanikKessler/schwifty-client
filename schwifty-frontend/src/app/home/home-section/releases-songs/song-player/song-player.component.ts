@@ -29,14 +29,16 @@ export class SongPlayerComponent implements OnInit, OnChanges {
 
     ngOnChanges() {
         this.widget = SC.Widget('sc-widget');
-        this.widget.load(this.song.soundcloudSong?.link, {
+        this.widget.load(this.song.soundcloudLink?.link, {
             auto_play: true,
             sharing: false,
             hide_related: true,
             show_comments: true,
             show_user: true,
             show_reposts: false,
-          show_teaser: false,
+            show_teaser: false,
+            download: false,
+            buying: false,
         });
     }
 

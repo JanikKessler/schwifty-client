@@ -10,6 +10,7 @@ import { AlbumEntry } from '../model/AlbumEntry';
 })
 export class AlbumTileComponent implements OnInit {
   @Input() album!: Album;
+  @Input() selected: boolean = false;
 
   constructor() { }
 

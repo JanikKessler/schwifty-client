@@ -1,14 +1,35 @@
 [
     {
         "albumID": 1,
+        "artistName": "Ravi Johanis",
         "date": "2021-05-31",
+        "releaseID": "1",
+        "releaseType": "Album",
         "review": "Omg. Whatathang?!",
-        "schwiftfaktor": 25
+        "reviewerin": "Albertus Einsteinicus",
+        "schwiftfaktor": 25,
+        "songID": null
     },
     {
         "albumID": 2,
+        "artistName": "MODUS",
         "date": "2021-06-06",
+        "releaseID": "2",
+        "releaseType": "Album",
         "review": "Wer hätte das gedacht! Das erste Album kommt?!",
-        "schwiftfaktor": 29
+        "reviewerin": "Angelo Merte",
+        "schwiftfaktor": 29,
+        "songID": null
+    },
+    {
+        "albumID": null,
+        "artistName": "RawRaw Content",
+        "date": "2021-06-13",
+        "releaseID": "3",
+        "releaseType": "Song",
+        "review": "Ya Man",
+        "reviewerin": "Dei Muddi",
+        "schwiftfaktor": 45,
+        "songID": 24
     }
 ]

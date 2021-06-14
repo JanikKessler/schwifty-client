@@ -1,4 +1,4 @@
-<div class="slider-dots">
+<div class="slider-dots" [style.margin.px]="marginTop">
     <div class="dot" [class.index-selected]="currentIndex === i" *ngFor="let index of indexes; let i = index">
     </div>
 </div>

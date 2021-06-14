@@ -21,8 +21,8 @@ export interface Song {
     cover: string;
     duration: string;
     link: string;
-    song: string;
-    soundcloudSong?: ExternalLink;
-    spotifySong?: ExternalLink;
-    youtubeSong?: ExternalLink;
+    name: string;
+    soundcloudLink?: ExternalLink;
+    spotifyLink?: ExternalLink;
+    youtubeLink?: ExternalLink;
 }

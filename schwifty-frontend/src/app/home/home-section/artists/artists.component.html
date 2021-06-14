@@ -8,10 +8,10 @@
                      (reachesRightBound)="positionRightBoundReached($event)"
                      (indexChanged)="saveIndex($event)" #artistSlider>
             <ng-container *ngFor="let artist of (allArtists$ | async ) ">
-                <app-artist-tile drag-scroll-item class="col-xl-4 col-lg-6 col-md-12" [artist]="artist" (click)="onArtistSelected(artist)"></app-artist-tile>
+                <app-artist-tile drag-scroll-item class="col-xl-4 col-lg-6 col-md-12" [selected]="(selectedArtist$ | async) === artist" [artist]="artist" (click)="onArtistSelected(artist)"></app-artist-tile>
             </ng-container>
         </drag-scroll>
-        <app-slider-dots *ngIf="innerScreenWidth < 992" [maxIndexes]="(allArtists$ | async)?.length" [currentIndex]="currentIndex">
+        <app-slider-dots *ngIf="innerScreenWidth < 992 && (allArtists$ | async)?.length > 1" [marginTop]="20"  [maxIndexes]="(allArtists$ | async)?.length" [currentIndex]="currentIndex">
         </app-slider-dots>
     </div>
     <div class="scroll-right-button col-1">

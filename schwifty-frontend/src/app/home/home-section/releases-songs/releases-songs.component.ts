@@ -30,7 +30,9 @@ export class ReleasesSongsComponent implements OnInit {
         ).subscribe(songs => this.filteredSongTableEntries = songs);
 
         combineLatest([this.songService.getAllSongsForTable(), this.selectionService.getSelectedAlbum$()]).pipe(
-            map(([songs, album]) => songs.filter(song => song.album.albumName === album.albumName)),
+            map(([songs, album]) => songs
+                .filter(song => song.artist === album.artist)
+                .filter(song => song.album?.albumName === album.albumName || album.albumID === 0 )),
         ).subscribe(songs => this.filteredSongTableEntries = songs);
 
         this.playerService.getPlayerRuns().subscribe(playerRunsBool => {

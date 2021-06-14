@@ -2,7 +2,6 @@
     <table style="width:100%">
         <tr class="table-header">
             <th></th>
-            <th></th>
             <th>Title</th>
             <th>Artist</th>
             <th>Album</th>
@@ -13,18 +12,19 @@
         <ng-container *ngFor="let songEntry of filteredSongTableEntries; let i = index">
             <tr class="song-row" [class.even-list-item]=" i%2 === 0" [class.odd-list-item]="i%2 === 1">
                 <td id="album-cover">
+                    <div id="play-button">
+                        <mat-icon *ngIf="songEntry !== currentlySelectedSong || (songEntry === currentlySelectedSong && !playerRuns)  ; else stopIcon" (click)="playSong(songEntry)">play_arrow</mat-icon>
+                        <ng-template #stopIcon>
+                            <mat-icon (click)="pauseSong()">pause</mat-icon>
+                        </ng-template>
+                    </div>
                     <ng-container *ngIf="songEntry.cover; else albumCover">
                         <img class="song-cover" [src]="songEntry.cover">
                     </ng-container>
                     <ng-template #albumCover>
                         <img class="song-cover" [src]="'assets/covers/albums/' + songEntry.album?.cover">
                     </ng-template>
-                </td>
-                <td id="play-button">
-                    <mat-icon *ngIf="songEntry !== currentlySelectedSong || (songEntry === currentlySelectedSong && !playerRuns)  ; else stopIcon" (click)="playSong(songEntry)">play_arrow</mat-icon>
-                    <ng-template #stopIcon>
-                        <mat-icon (click)="pauseSong()">pause</mat-icon>
-                    </ng-template>
+
                 </td>
                 <td>{{songEntry.song}}</td>
                 <td>{{songEntry.artist?.artist}}</td>

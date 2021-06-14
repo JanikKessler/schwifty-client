@@ -2,55 +2,66 @@
   display: flex;
   justify-content: center;
   padding: 40px;
+
   .song-cover {
     height: 45px;
     width: 45px;
   }
-  .even-list-item{
+
+  .even-list-item {
     background-color: #faffff;
   }
-  .odd-list-item{
+
+  .odd-list-item {
     background-color: #e5f4f7;
   }
-  .table-header{
+
+  .table-header {
     height: 45px;
     font-weight: 600;
-    th{
+
+    th {
       text-align: start;
     }
   }
-  .song-row{
-    td{
+
+  .song-row {
+    td {
       text-align: start;
       font-weight: 400;
 
       &#album-cover {
+        position: relative;
         text-align: start;
         width: 45px;
-      }
+        #play-button {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
-      &#play-button {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        height: 32px;
-        opacity: 50%;
-        mat-icon{
-          cursor: pointer;
-          font-size: 2rem;
-        }
-      }
-
-      .song-links{
-        .link-item{
-          img{
-            opacity: 50%;
-            height: 45px;
-            width: 45px;
+          mat-icon{
+            cursor: pointer;
+            font-size: 2rem;
+            height: auto;
+            width: auto;
           }
+      }
+    }
+
+    .song-links {
+      .link-item {
+        img {
+          opacity: 50%;
+          height: 45px;
+          width: 45px;
         }
       }
     }
   }
+}
+
 }
 

@@ -16,8 +16,8 @@ export interface Album {
   albumName: string;
   albumID: number;
   artist: Artist;
-  duration: number;
-  release: string;
-  tracks: number
-  cover:string
+  duration?: number;
+  release?: string;
+  tracks?: number
+  cover?:string
 }

@@ -42,7 +42,7 @@ export class SongPlayerComponent implements OnInit, OnChanges {
 
     ngOnInit(): void {
         this.playerService.getPlayerPlayEvent().subscribe(() => {
-                this.widget.play();
+            this.widget.play();
         });
 
         this.playerService.getPlayerStopEvent().subscribe(() => {

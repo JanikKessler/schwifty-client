@@ -29,7 +29,19 @@ export class ReleasesAlbumsComponent implements OnInit {
   ngOnInit(): void {
     this.albumService.getAllAllbums().subscribe(albums => this.filteredAlbums = albums)
     combineLatest([this.albumService.getAllAllbums(),this.selectionService.getSelectedArtist$()]).pipe(
-     map(([albums, artist]) => albums.filter(album => album.artist === artist))
+     map(([albums, artist]) => {
+       const filteredAlbums = albums
+           .filter(album => album.artist === artist)
+
+       filteredAlbums.unshift({
+         albumID: 0,
+         albumName: 'Alle Songs',
+         cover: artist.cover,
+         artist: artist
+       })
+
+       return filteredAlbums
+     })
     ).subscribe(albums => this.filteredAlbums = albums)
   }
 

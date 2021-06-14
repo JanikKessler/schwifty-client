@@ -1,7 +1,7 @@
 <div class="album-tile-wrapper">
     <div class="album-tile-content">
         <div class="album-cover">
-            <img [src]="'assets/covers/albums/' + album.cover" [alt]="album.albumName + 'Cover'">
+            <img [src]="album.albumID !== 0 ? 'assets/covers/albums/' + album?.cover : 'assets/covers/artists/' + album?.cover" [alt]="album.albumName + 'Cover'">
         </div>
         <div class="album-name">
             {{album.albumName}}

@@ -20,7 +20,7 @@
     .navigation-item-wrapper{
       display: inline-flex;
       align-items: center;
-      height: 64px;
+      height: auto;
       .navigation-item {
         text-decoration: none;
         color: rgba(0,0,0,0.87);
@@ -31,7 +31,7 @@
         }
       }
       &:hover{
-        background-color: #e5f4f7;
+        background-color: #ffb487;
       }
     }
   }

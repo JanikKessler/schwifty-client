@@ -26,6 +26,9 @@
   }
 
   .song-row {
+    &:hover {
+      background-color: #ffb487;
+    }
     td {
       text-align: start;
       font-weight: 400;

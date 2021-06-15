@@ -8,10 +8,13 @@
     justify-content: center;
     overflow: hidden;
     height: 380px;
-
-    img {
-      max-height: 100%;
-      object-fit: scale-down;
+    .sc-iframe {
+      height: 300px;
+      width: 300px;
+      img {
+        max-height: 100%;
+        object-fit: scale-down;
+      }
     }
   }
 
@@ -22,10 +25,10 @@
       padding: 40px;
       background-color: #faffff;
       color: #290024;
-      font-size: 0.8em;
+      font-size: 1vw;
       line-height: 50px;
       @media (min-width: 768px) {
-        font-size: 3em;
+        font-size: 2vw;
       }
     }
 
@@ -46,6 +49,7 @@
 .schwift-otw-links {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   img {
     height: 50px;

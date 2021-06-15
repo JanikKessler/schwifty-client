@@ -31,11 +31,12 @@ export class SchwiftOtwComponent implements OnInit, OnChanges {
         auto_play: false,
         sharing: false,
         hide_related: true,
-        show_comments: true,
+        show_comments: false,
         show_user: false,
         show_reposts: false,
         show_teaser: true,
         visual: true,
+        download: false
       });
     } )
   }

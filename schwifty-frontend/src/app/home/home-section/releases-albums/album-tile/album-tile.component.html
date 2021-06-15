@@ -3,8 +3,13 @@
         <div class="album-cover">
             <img [src]="album.albumID !== 0 ? 'assets/covers/albums/' + album?.cover : 'assets/covers/artists/' + album?.cover" [alt]="album.name + 'Cover'">
         </div>
-        <div class="album-name" [class.selected]="selected">
-            {{album.name}}
+      <div class="album-info" [class.selected]="selected">
+        <div class="album-name">
+          {{album.name}}
         </div>
+        <div class="artist-name">
+        {{album.artist.artist}}
+        </div>
+      </div>
     </div>
 </div>

@@ -36,7 +36,7 @@ export class SchwiftOtwComponent implements OnInit, OnChanges {
         show_reposts: false,
         show_teaser: true,
         visual: true,
-        download: false
+        download: false,
       });
     } )
   }

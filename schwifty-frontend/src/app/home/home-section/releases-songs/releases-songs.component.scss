@@ -26,20 +26,25 @@
   }
 
   .song-row {
-    &:hover {
-      background-color: #ffb487;
-    }
-    td {
-      text-align: start;
-      font-weight: 400;
-      cursor: pointer;
-
+      &:hover {
+	  background-color: #ffb487;
+      }
+      td {
+	  text-align: start;
+	  font-weight: 400;
+	  cursor: pointer;
+	  padding: 0;
+      
       &#album-cover {
         position: relative;
         text-align: start;
         width: 45px;
         #play-button {
-          position: absolute;
+	  opacity:10%;
+	  &:hover {
+	  opacity:100%;
+	  }
+	  position: absolute;
           height: 100%;
           width: 100%;
           display: flex;

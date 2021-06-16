@@ -33,18 +33,18 @@
                 <td class="d-none d-lg-table-cell">{{songEntry.album?.release}}</td>
                 <td>
                     <div class="song-links">
-                        <a class="link-item d-table-cell" *ngIf="songEntry.soundcloudLink"  [href]="songEntry.soundcloudLink.link" target="_blank">
+                        <a class="link-item d-table-cell" *ngIf="songEntry.soundcloudLink"  [href]="songEntry.soundcloudLink.link" target="_blank" Title="Soundcloud">
                             <a class="w-100">
                                 <img src="assets/links/sc.png">
                             </a>
                         </a>
                         <div class="link-item"  *ngIf="songEntry.spotifyLink">
-                            <a [href]="songEntry.spotifyLink.link" target="_blank">
+                            <a [href]="songEntry.spotifyLink.link" target="_blank" Title="Spotify">
                                 <img src="assets/links/spotify.png">
                             </a>
                         </div>
                         <div class="link-item"  *ngIf="songEntry.youtubeLink">
-                            <a [href]="songEntry.youtubeLink.link" target="_blank">
+                            <a [href]="songEntry.youtubeLink.link" target="_blank" Title="Youtube">
                                 <img src="assets/links/yt.png">
                             </a>
                         </div>

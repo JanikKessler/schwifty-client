@@ -8,12 +8,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    img{
-      width: auto;
-      height: 100%;
-      max-width: 100%;
-      max-height: 400px;
-      object-fit: fill;
+    .artist-cover{
+      opacity: 80%;
+      &.selected{
+	  opacity: 100%;
+      }
+      &:hover{
+	  opacity: 90%;
+      }
+      img{
+	  width: auto;
+	  height: 100%;
+	  max-width: 100%;
+	  max-height: 400px;
+	  object-fit: fill;
+      }
     }
     .artist-info{
       position: relative;

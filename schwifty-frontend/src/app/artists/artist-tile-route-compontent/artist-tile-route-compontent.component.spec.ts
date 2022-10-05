@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ArtistTileRouteCompontentComponent } from './artist-tile-route-compontent.component';
+import {ArtistTileRouteCompontentComponent} from './artist-tile-route-compontent.component';
 
 describe('ArtistTileRouteCompontentComponent', () => {
   let component: ArtistTileRouteCompontentComponent;

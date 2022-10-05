@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SliderItemComponent } from './slider-item.component';
+import {SliderItemComponent} from './slider-item.component';
 
 describe('SliderItemComponent', () => {
   let component: SliderItemComponent;

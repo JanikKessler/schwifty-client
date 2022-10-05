@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Observable, ReplaySubject } from 'rxjs';
-import { Event } from '../model/Event';
+import {Injectable} from '@angular/core';
+import {Observable, ReplaySubject} from 'rxjs';
+import {Event} from '../model/Event';
 
 @Injectable({
   providedIn: 'root'

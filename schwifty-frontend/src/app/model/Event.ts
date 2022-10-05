@@ -1,4 +1,4 @@
-import { Artist, Artist_raw } from './Artist_raw';
+import {Artist} from './Artist_raw';
 
 export interface Event_raw {
   begin: number;

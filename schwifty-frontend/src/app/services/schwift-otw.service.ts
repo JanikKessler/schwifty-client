@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
-import { Observable, ReplaySubject } from 'rxjs';
-import { SchwiftOtw, SchwiftOtw_Raw } from '../model/SchwiftOtw';
-import { parseDate } from 'ngx-bootstrap/chronos';
+import {Injectable} from '@angular/core';
+import {Observable, ReplaySubject} from 'rxjs';
+import {SchwiftOtw, SchwiftOtw_Raw} from '../model/SchwiftOtw';
+import {parseDate} from 'ngx-bootstrap/chronos';
 import schwift_otw from '../../assets/data/schwift_otw.json';
-import { AlbumService } from './album.service';
-import { ReleaseType } from '../enums/ReleaseType';
-import { SongService } from './song.service';
+import {AlbumService} from './album.service';
+import {ReleaseType} from '../enums/ReleaseType';
+import {SongService} from './song.service';
 
 @Injectable({
     providedIn: 'root',

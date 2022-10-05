@@ -1,13 +1,10 @@
-import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
-import { combineLatest, Observable, ReplaySubject } from 'rxjs';
-import { Artist_raw } from '../../../model/Artist_raw';
-import { DragScrollComponent } from 'ngx-drag-scroll';
-import { ArtistService } from '../../../services/artist.service';
-import { AlbumService } from '../../../services/album.service';
-import { Album, Album_raw } from '../../../model/Album_raw';
-import { AlbumEntry } from './model/AlbumEntry';
-import { SelectionService } from '../../../services/selection.service';
-import { filter, map, tap } from 'rxjs/operators';
+import {Component, HostListener, OnInit, ViewChild} from '@angular/core';
+import {combineLatest, Observable, ReplaySubject} from 'rxjs';
+import {DragScrollComponent} from 'ngx-drag-scroll';
+import {AlbumService} from '../../../services/album.service';
+import {Album} from '../../../model/Album';
+import {SelectionService} from '../../../services/selection.service';
+import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-releases-albums',
@@ -32,10 +29,12 @@ export class ReleasesAlbumsComponent implements OnInit {
     combineLatest([this.albumService.getAllAllbums(),this.selectionService.getSelectedArtist$()]).pipe(
      map(([albums, artist]) => {
        const filteredAlbums = albums
-           .filter(album => album.artist === artist)
+           .filter(album => {
+             return album.artist.artistID === artist.artistID
+           })
 
        filteredAlbums.unshift({
-         albumID: 0,
+         albumID: undefined,
          name: 'Alle Songs',
          cover: artist.cover,
          artist: artist

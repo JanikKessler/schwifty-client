@@ -1,12 +1,12 @@
-import { Album, Album_raw } from './Album_raw';
-import { Artist, Artist_raw } from './Artist_raw';
-import { ExternalLink } from './Links';
+import {Album} from './Album';
+import {Artist} from './Artist_raw';
+import {ExternalLink} from './Links';
 
 export interface Song_raw {
     album: string;
     albumID: number;
     artist: string;
-    artistID: number;
+    artistID: string;
     duration: string;
     id: number;
     cover: string;
@@ -15,12 +15,11 @@ export interface Song_raw {
 }
 
 export interface Song {
-    id: number;
+    id: string;
     album: Album;
     artist: Artist;
     cover: string;
-    duration: string;
-    link: string;
+    duration: number;
     name: string;
     soundcloudLink?: ExternalLink;
     spotifyLink?: ExternalLink;

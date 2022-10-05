@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { ScreenSizeService } from './screen-size.service';
+import {ScreenSizeService} from './screen-size.service';
 
 describe('ScreenSizeServiceService', () => {
   let service: ScreenSizeService;

@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
-import { Observable, ReplaySubject } from 'rxjs';
-import { Artist, Artist_raw } from '../model/Artist_raw';
-import { Album } from '../model/Album_raw';
+import {Injectable} from '@angular/core';
+import {ReplaySubject} from 'rxjs';
+import {Artist} from '../model/Artist_raw';
+import {Album} from '../model/Album';
 
 @Injectable({
   providedIn: 'root'

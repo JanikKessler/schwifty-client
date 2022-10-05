@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { SchwiftOtwService } from './schwift-otw.service';
+import {SchwiftOtwService} from './schwift-otw.service';
 
 describe('SchwiftOtwService', () => {
   let service: SchwiftOtwService;

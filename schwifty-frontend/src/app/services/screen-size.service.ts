@@ -1,5 +1,5 @@
-import { HostListener, Injectable } from '@angular/core';
-import { ReplaySubject } from 'rxjs';
+import {HostListener, Injectable} from '@angular/core';
+import {ReplaySubject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

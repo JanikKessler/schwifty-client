@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import {Routes} from '@angular/router';
 
 export const APP_ROUTES: Routes = [
   {path:'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)},

@@ -1,4 +1,4 @@
-import { LinkType } from '../enums/LinkType';
+import {LinkType} from '../enums/LinkType';
 
 export interface ExternalLink {
     artistID: number,

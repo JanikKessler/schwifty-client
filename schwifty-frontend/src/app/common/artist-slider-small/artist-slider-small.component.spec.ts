@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ArtistSliderSmallComponent } from './artist-slider-small.component';
+import {ArtistSliderSmallComponent} from './artist-slider-small.component';
 
 describe('ArtistSliderSmallComponent', () => {
   let component: ArtistSliderSmallComponent;

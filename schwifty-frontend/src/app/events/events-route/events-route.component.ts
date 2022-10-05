@@ -1,11 +1,9 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { ArtistService } from '../../services/artist.service';
-import { combineLatest, Observable, Subject } from 'rxjs';
-import { Artist, Artist_raw } from '../../model/Artist_raw';
-import { EventService } from '../../services/event.service';
-import { Event } from '../../model/Event';
-import { filter, map } from 'rxjs/operators';
-import { ChangeDetection } from '@angular/cli/lib/config/schema';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {ArtistService} from '../../services/artist.service';
+import {Observable} from 'rxjs';
+import {Artist} from '../../model/Artist_raw';
+import {EventService} from '../../services/event.service';
+import {Event} from '../../model/Event';
 
 @Component({
   selector: 'app-events-route',

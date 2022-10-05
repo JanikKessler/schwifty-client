@@ -1,11 +1,10 @@
-import { ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { combineLatest, Observable } from 'rxjs';
-import { SongService } from '../../../services/song.service';
-import { Song } from '../../../model/Song_raw';
-import { map } from 'rxjs/operators';
-import { SelectionService } from '../../../services/selection.service';
-import { PlayerService } from '../../../services/player.service';
-import value from '*.json';
+import {ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {combineLatest} from 'rxjs';
+import {SongService} from '../../../services/song.service';
+import {Song} from '../../../model/Song_raw';
+import {map} from 'rxjs/operators';
+import {SelectionService} from '../../../services/selection.service';
+import {PlayerService} from '../../../services/player.service';
 
 @Component({
     selector: 'app-releases-songs',
@@ -31,8 +30,8 @@ export class ReleasesSongsComponent implements OnInit {
 
         combineLatest([this.songService.getAllSongsForTable(), this.selectionService.getSelectedAlbum$()]).pipe(
             map(([songs, album]) => songs
-                .filter(song => song.artist === album.artist)
-                .filter(song => song.album?.name === album.name || album.albumID === 0 )),
+                .filter(song => song.artist.artistID === album.artist.artistID)
+                .filter(song => song.album?.name === album.name || album.albumID === undefined )),
         ).subscribe(songs => this.filteredSongTableEntries = songs);
 
         this.playerService.getPlayerRuns().subscribe(playerRunsBool => {

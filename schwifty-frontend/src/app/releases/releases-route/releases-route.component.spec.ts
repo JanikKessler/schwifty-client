@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ReleasesRouteComponent } from './releases-route.component';
+import {ReleasesRouteComponent} from './releases-route.component';
 
 describe('ReleasesRouteComponent', () => {
   let component: ReleasesRouteComponent;

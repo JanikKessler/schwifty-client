@@ -1,6 +1,5 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, ReplaySubject, Subject } from 'rxjs';
-import { coerceBooleanProperty } from '@angular/cdk/coercion';
+import {Injectable} from '@angular/core';
+import {BehaviorSubject, Observable, Subject} from 'rxjs';
 
 @Injectable({
     providedIn: 'root',

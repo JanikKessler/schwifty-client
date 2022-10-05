@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input, OnChanges, OnInit } from '@angular/core';
+import {AfterViewInit, Component, Input, OnChanges} from '@angular/core';
 
 @Component({
   selector: 'app-slider-dots',

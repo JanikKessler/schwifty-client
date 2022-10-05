@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Artist, Artist_raw } from '../../model/Artist_raw';
-import { ArtistService } from '../../services/artist.service';
-import { ActivatedRoute, Params } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Artist} from '../../model/Artist_raw';
+import {ArtistService} from '../../services/artist.service';
+import {ActivatedRoute, Params} from '@angular/router';
 
 
 @Component({

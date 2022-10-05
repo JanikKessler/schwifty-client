@@ -1,60 +1,68 @@
-import { Injectable } from '@angular/core';
-import { Observable, ReplaySubject } from 'rxjs';
-import { Artist, Artist_raw } from '../model/Artist_raw';
-import artist_list from '../../assets/data/artists.json';
-import link_list from '../../assets/data/links.json';
-import { parseDate } from 'ngx-bootstrap/chronos';
-import { ExternalLink } from '../model/Links';
-import { LinkType } from '../enums/LinkType';
-import { Album } from '../model/Album_raw';
+import {Injectable} from '@angular/core';
+import {combineLatest, Observable, ReplaySubject} from 'rxjs';
+import {Artist} from '../model/Artist_raw';
+import {parseDate} from 'ngx-bootstrap/chronos';
+import {LinkType} from '../enums/LinkType';
+import {AirtableService} from "./airtable.service";
+import {map} from "rxjs/operators";
+import {AirtableArtist} from "../model/AirtableArtist";
+import {AirtableLink} from "../model/AirtableLink";
 
 @Injectable({
-    providedIn: 'root',
+  providedIn: 'root',
 })
 export class ArtistService {
 
-    artists$ = new ReplaySubject<Artist[]>(1);
-    currentlySelectedArtist$ = new ReplaySubject<Artist>(1);
-    artistList: Artist[] = [];
+  airtableArtists$ = new Observable<AirtableArtist[]>();
+  airtableLinks$ = new Observable<AirtableLink[]>();
+  artists$ = new Observable<Artist[]>()
 
-    constructor() {
-        const oldArtists: Artist_raw[] = artist_list;
-        const linkList: ExternalLink[] = link_list;
-        this.artistList = oldArtists.map((artist): Artist => {
-            const artistLinks: ExternalLink[] = linkList.filter(link => link.artistID === artist.artistID);
-            return {
-                artistID: artist.artistID,
-                artist: artist.artist,
-                cover: artist.cover,
-                gruendung: parseDate(artist.gruendung),
-                biografie: artist.biografie,
-                soundcloudLink: artistLinks.find(link => link.link_type === LinkType.SOUNDCLOUD_ARTIST),
-                bandcampLink: artistLinks.find(link => link.link_type === LinkType.BANDCAMP_ARTIST),
-                facebookLink: artistLinks.find(link => link.link_type === LinkType.FACEBOOK_ARTIST),
-                instagramLink: artistLinks.find(link => link.link_type === LinkType.INSTAGRAM_ARTIST),
-                spotifyLink: artistLinks.find(link => link.link_type === LinkType.SPOTIFY_ARTIST),
-                twitterLink: artistLinks.find(link => link.link_type === LinkType.TWITTER_ARTIST),
-                youtubeLink: artistLinks.find(link => link.link_type === LinkType.YOUTUBE_ARTIST),
+  currentlySelectedArtist$ = new ReplaySubject<Artist>(1);
+  artistList: Artist[] = [];
 
-            };
-        });
-        this.artists$.next(this.artistList);
-    }
+  constructor(private airtableService: AirtableService) {
+    this.airtableArtists$ = this.airtableService.getAllArtists();
+    this.airtableLinks$ = this.airtableService.getAllLinks();
 
-    getAllArtists(): Observable<Artist[]> {
-        return this.artists$;
-    }
+    this.artists$ = combineLatest(this.airtableArtists$, this.airtableLinks$).pipe(map(([artistArray,linkArray]) => {
 
-    setSelectedArtist(selectedArtist: Artist) {
-        this.currentlySelectedArtist$.next(selectedArtist);
-    }
+      return artistArray.map((artist: AirtableArtist)=> {
 
-    getSelectedArtist(): Observable<Artist> {
-        return this.currentlySelectedArtist$;
+        const artistLinkArray = linkArray.filter(link => {
+          return artist.Links.includes(link.id)
+        })
 
-    }
+        return {
+          artistID: artist.id,
+          artist: artist.Band,
+          cover: artist.cover[0]?.url,
+          gruendung: parseDate(artist.established),
+          biografie: artist.description,
+          soundcloudLink: artistLinkArray.find(link => link.linkType == LinkType.SOUNDCLOUD_ARTIST)?.link,
+          bandcampLink: artistLinkArray.find(link => link.linkType == LinkType.BANDCAMP_ARTIST)?.link,
+          facebookLink: artistLinkArray.find(link => link.linkType ==  LinkType.FACEBOOK_ARTIST)?.link,
+          instagramLink: artistLinkArray.find(link => link.linkType ==  LinkType.INSTAGRAM_ARTIST)?.link,
+          spotifyLink: artistLinkArray.find(link => link.linkType == LinkType.SPOTIFY_ARTIST)?.link,
+          twitterLink: artistLinkArray.find(link => link.linkType == LinkType.TWITTER_ARTIST)?.link,
+          youtubeLink: artistLinkArray.find(link => link.linkType == LinkType.YOUTUBE_ARTIST)?.link,
+        }})
+    }));
+  };
 
-    getArtistById(id: number): Artist{
-        return this.artistList.find(artist => artist.artistID === id)!;
-    }
+  getAllArtists(): Observable<Artist[]> {
+    return this.artists$;
+  }
+
+  setSelectedArtist(selectedArtist: Artist) {
+    this.currentlySelectedArtist$.next(selectedArtist);
+  }
+
+  getSelectedArtist(): Observable<Artist> {
+    return this.currentlySelectedArtist$;
+
+  }
+
+  getArtistById(id: string): Artist {
+    return this.artistList.find(artist => artist.artistID === id)!;
+  }
 }

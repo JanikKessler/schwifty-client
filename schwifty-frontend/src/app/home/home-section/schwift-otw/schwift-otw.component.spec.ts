@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SchwiftOtwComponent } from './schwift-otw.component';
+import {SchwiftOtwComponent} from './schwift-otw.component';
 
 describe('SchwiftOtwComponent', () => {
   let component: SchwiftOtwComponent;

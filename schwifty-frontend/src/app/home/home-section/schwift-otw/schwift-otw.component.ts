@@ -1,6 +1,6 @@
-import { Component, OnChanges, OnInit } from '@angular/core';
-import { SchwiftOtwService } from '../../../services/schwift-otw.service';
-import { SchwiftOtw } from '../../../model/SchwiftOtw';
+import {Component, OnChanges, OnInit} from '@angular/core';
+import {SchwiftOtwService} from '../../../services/schwift-otw.service';
+import {SchwiftOtw} from '../../../model/SchwiftOtw';
 
 declare var SC: any;
 

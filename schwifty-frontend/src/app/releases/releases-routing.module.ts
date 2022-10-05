@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { RELEASES_ROUTES } from './releases-routes';
+import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
+import {RELEASES_ROUTES} from './releases-routes';
 
 @NgModule({
   imports: [RouterModule.forChild(RELEASES_ROUTES)],

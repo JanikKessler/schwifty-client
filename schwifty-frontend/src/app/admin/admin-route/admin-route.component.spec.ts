@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { AdminRouteComponent } from './admin-route.component';
+import {AdminRouteComponent} from './admin-route.component';
 
 describe('AdminRouteComponent', () => {
   let component: AdminRouteComponent;

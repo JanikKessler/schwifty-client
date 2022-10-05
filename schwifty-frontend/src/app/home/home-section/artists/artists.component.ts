@@ -1,11 +1,9 @@
-import { AfterViewInit, Component, HostListener, OnInit, ViewChild } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Artist, Artist_raw } from '../../../model/Artist_raw';
-import { ArtistService } from '../../../services/artist.service';
-import { DragScrollComponent } from 'ngx-drag-scroll';
-import { createUrlResolverWithoutPackagePrefix } from '@angular/compiler';
-import { ScreenSizeService } from '../../../services/screen-size.service';
-import { SelectionService } from '../../../services/selection.service';
+import {Component, HostListener, OnInit, ViewChild} from '@angular/core';
+import {Observable} from 'rxjs';
+import {Artist} from '../../../model/Artist_raw';
+import {ArtistService} from '../../../services/artist.service';
+import {DragScrollComponent} from 'ngx-drag-scroll';
+import {SelectionService} from '../../../services/selection.service';
 
 @Component({
   selector: 'app-artists',

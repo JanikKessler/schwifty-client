@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { EventsRouteComponent } from './events-route.component';
+import {EventsRouteComponent} from './events-route.component';
 
 describe('EventsRouteComponent', () => {
   let component: EventsRouteComponent;

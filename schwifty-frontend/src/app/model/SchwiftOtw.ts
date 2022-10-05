@@ -1,9 +1,9 @@
-import { Album } from './Album_raw';
-import { ReleaseType } from '../enums/ReleaseType';
-import { Song } from './Song_raw';
+import {Album} from './Album';
+import {ReleaseType} from '../enums/ReleaseType';
+import {Song} from './Song_raw';
 
 export interface SchwiftOtw_Raw {
-    albumID: number,
+    albumID: string,
     artistName: number,
     date: string,
     releaseID: number,

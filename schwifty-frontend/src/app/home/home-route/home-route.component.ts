@@ -1,5 +1,6 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import { Song, Song_raw } from '../../model/Song_raw';
+import {Component, HostListener, OnInit} from '@angular/core';
+import {Song, Song_raw} from '../../model/Song_raw';
+import {Airtable} from "ngx-airtable";
 
 @Component({
     selector: 'app-home-route',
@@ -11,11 +12,10 @@ export class HomeRouteComponent implements OnInit {
     innerScreenWidth: number = 0;
     currentlyPlayedSong: Song | undefined;
 
-    constructor() {
+    constructor(private readonly airtable: Airtable) {
     }
 
-    ngOnInit(): void {
-    }
+    ngOnInit(): void {   }
 
     @HostListener('window:resize', ['$event'])
     checkInnerWidth() {

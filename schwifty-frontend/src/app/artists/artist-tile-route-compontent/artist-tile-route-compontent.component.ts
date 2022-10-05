@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Artist, Artist_raw } from '../../model/Artist_raw';
+import {Component, Input, OnInit} from '@angular/core';
+import {Artist} from '../../model/Artist_raw';
 
 @Component({
   selector: 'app-artist-tile-route-compontent',

@@ -1,15 +1,6 @@
-import {
-    AfterViewInit,
-    Component,
-    ElementRef, EventEmitter,
-    Input,
-    OnChanges,
-    OnInit, Output,
-    ViewChild,
-    ViewContainerRef,
-} from '@angular/core';
-import { Song } from '../../../../model/Song_raw';
-import { PlayerService } from '../../../../services/player.service';
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output,} from '@angular/core';
+import {Song} from '../../../../model/Song_raw';
+import {PlayerService} from '../../../../services/player.service';
 
 declare var SC: any;
 

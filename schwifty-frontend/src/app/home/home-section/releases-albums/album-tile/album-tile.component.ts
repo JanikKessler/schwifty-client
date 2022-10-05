@@ -1,7 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Album, Album_raw } from '../../../../model/Album_raw';
-import { Artist_raw } from '../../../../model/Artist_raw';
-import { AlbumEntry } from '../model/AlbumEntry';
+import {Component, Input, OnInit} from '@angular/core';
+import {Album} from '../../../../model/Album';
 
 @Component({
   selector: 'app-album-tile',

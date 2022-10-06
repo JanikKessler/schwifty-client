@@ -5,5 +5,6 @@ export interface AirtableAlbum {
   release: string,
   duration: string,
   tracks: string,
+  Links: string[],
   cover
 }

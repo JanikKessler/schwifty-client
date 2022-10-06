@@ -1,7 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {AirtableService} from "./services/airtable.service";
+import {AirtableService} from "./services/data-sources/airtable/airtable.service";
 import {ArtistService} from "./services/artist.service";
 import {AlbumService} from "./services/album.service";
+import {AirtableConnectorService} from "./services/data-sources/airtable/airtable-connector.service";
+import {Connector} from "./services/data-sources/Connector";
 
 @Component({
   selector: 'app-root',
@@ -11,17 +13,9 @@ import {AlbumService} from "./services/album.service";
 export class AppComponent implements OnInit{
 
 
-  constructor(private artistService: ArtistService, private albumService: AlbumService, private airtableService: AirtableService) {
-    artistService.getAllArtists().subscribe(x =>
-      console.log('test',x)
-    )
-    albumService.getAllAllbums().subscribe(x =>
-      console.log('testAlbum',x)
-    )
-
-
-  }
+  constructor(private connectorService: Connector) {}
 
   ngOnInit(){
+    this.connectorService.loadData();
   }
 }

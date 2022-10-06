@@ -1,5 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import {Song, Song_raw} from '../../model/Song_raw';
+import {Song} from '../../model/Song';
 import {Airtable} from "ngx-airtable";
 
 @Component({
@@ -8,12 +8,10 @@ import {Airtable} from "ngx-airtable";
     styleUrls: ['./home-route.component.scss'],
 })
 export class HomeRouteComponent implements OnInit {
-    songs: Song_raw[] = [];
     innerScreenWidth: number = 0;
     currentlyPlayedSong: Song | undefined;
 
-    constructor(private readonly airtable: Airtable) {
-    }
+    constructor() {}
 
     ngOnInit(): void {   }
 

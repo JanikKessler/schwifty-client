@@ -6,5 +6,6 @@ export interface AirtableSong {
   releaseType: string;
   song: string;
   duration: number;
+  Links: string[];
   cover;
 }

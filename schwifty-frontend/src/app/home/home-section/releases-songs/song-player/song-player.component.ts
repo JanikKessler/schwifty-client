@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output,} from '@angular/core';
-import {Song} from '../../../../model/Song_raw';
+import {Song} from '../../../../model/Song';
 import {PlayerService} from '../../../../services/player.service';
 
 declare var SC: any;
@@ -20,7 +20,7 @@ export class SongPlayerComponent implements OnInit, OnChanges {
 
     ngOnChanges() {
         this.widget = SC.Widget('sc-widget');
-        this.widget.load(this.song.soundcloudLink?.link, {
+        this.widget.load(this.song.soundcloudLink, {
             auto_play: true,
             sharing: false,
             hide_related: true,

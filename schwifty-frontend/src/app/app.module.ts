@@ -16,6 +16,8 @@ import {RouterModule} from '@angular/router';
 import {DragScrollModule} from 'ngx-drag-scroll';
 import {NgxAirtableModule} from "ngx-airtable";
 import {HttpClientModule} from "@angular/common/http";
+import {Connector} from "./services/data-sources/Connector";
+import {AirtableConnectorService} from "./services/data-sources/airtable/airtable-connector.service";
 
 @NgModule({
   declarations: [
@@ -39,6 +41,9 @@ import {HttpClientModule} from "@angular/common/http";
     BrowserAnimationsModule,
     DragScrollModule,
     NgxAirtableModule.forRoot({apiKey: 'keyvhXFLbMs2XLzfS'}),
+  ],
+  providers:[
+    {provide: Connector, useClass: AirtableConnectorService}
   ],
   bootstrap: [AppComponent]
 })

@@ -18,12 +18,20 @@
                             <mat-icon>pause</mat-icon>
                         </ng-template>
                     </div>
-                    <ng-container *ngIf="songEntry.cover; else albumCover">
-                        <img class="song-cover" [src]="songEntry.cover">
+
+                  <ng-container *ngIf="songEntry.cover; else otherCover">
+                    <ng-container *ngIf="songEntry.cover">
+                      <img class="song-cover" [src]="songEntry.cover">
                     </ng-container>
-                    <ng-template #albumCover>
-                        <img class="song-cover" [src]="songEntry.album?.cover">
+                  </ng-container>
+                  <ng-template #otherCover>
+                    <ng-container *ngIf="songEntry.album?.cover; else artistCover">
+                      <img class="song-cover" [src]="songEntry.album.cover">
+                    </ng-container>
+                    <ng-template #artistCover>
+                      <img class="song-cover" [src]="songEntry.artist.cover">
                     </ng-template>
+                  </ng-template>
 
                 </td>
                 <td>{{songEntry.name}}</td>
@@ -33,18 +41,18 @@
                 <td class="d-none d-lg-table-cell">{{songEntry.album?.release}}</td>
                 <td>
                     <div class="song-links">
-                        <a class="link-item d-table-cell" *ngIf="songEntry.soundcloudLink"  [href]="songEntry.soundcloudLink.link" target="_blank" Title="Soundcloud">
+                        <a class="link-item d-table-cell" *ngIf="songEntry.soundcloudLink"  [href]="songEntry.soundcloudLink" target="_blank" Title="Soundcloud">
                             <a class="w-100">
                                 <img src="assets/links/sc.png">
                             </a>
                         </a>
                         <div class="link-item"  *ngIf="songEntry.spotifyLink">
-                            <a [href]="songEntry.spotifyLink.link" target="_blank" Title="Spotify">
+                            <a [href]="songEntry.spotifyLink" target="_blank" Title="Spotify">
                                 <img src="assets/links/spotify.png">
                             </a>
                         </div>
                         <div class="link-item"  *ngIf="songEntry.youtubeLink">
-                            <a [href]="songEntry.youtubeLink.link" target="_blank" Title="Youtube">
+                            <a [href]="songEntry.youtubeLink" target="_blank" Title="Youtube">
                                 <img src="assets/links/yt.png">
                             </a>
                         </div>

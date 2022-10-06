@@ -1,4 +1,4 @@
-import {Song_raw} from '../../../../model/Song_raw';
+import {Song_raw} from '../../../../model/Song';
 import {Artist_raw} from '../../../../model/Artist_raw';
 import {Album} from '../../../../model/Album';
 

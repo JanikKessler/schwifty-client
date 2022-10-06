@@ -1,7 +1,7 @@
 import {ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {combineLatest} from 'rxjs';
 import {SongService} from '../../../services/song.service';
-import {Song} from '../../../model/Song_raw';
+import {Song} from '../../../model/Song';
 import {map} from 'rxjs/operators';
 import {SelectionService} from '../../../services/selection.service';
 import {PlayerService} from '../../../services/player.service';
@@ -41,6 +41,7 @@ export class ReleasesSongsComponent implements OnInit {
     }
 
     playSong(songEntry: Song) {
+      console.log('playSong',songEntry)
         this.onSongSelected.emit(songEntry);
         this.playerService.sendPlayerPlayEvent();
     }

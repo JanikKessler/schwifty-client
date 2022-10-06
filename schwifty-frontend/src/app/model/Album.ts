@@ -9,6 +9,6 @@ export interface Album {
   release?: string;
   tracks?: number
   cover?:string
-  soundcloudLink?: ExternalLink;
-  spotifyLink?: ExternalLink;
+  soundcloudLink?: string;
+  spotifyLink?: string;
 }

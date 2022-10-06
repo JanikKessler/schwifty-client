@@ -1,6 +1,6 @@
 import {Album} from './Album';
 import {ReleaseType} from '../enums/ReleaseType';
-import {Song} from './Song_raw';
+import {Song} from './Song';
 
 export interface SchwiftOtw_Raw {
     albumID: string,

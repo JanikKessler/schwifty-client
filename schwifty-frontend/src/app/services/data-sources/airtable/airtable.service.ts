@@ -2,12 +2,12 @@ import {Injectable} from '@angular/core';
 import {Airtable} from "ngx-airtable";
 import {map} from "rxjs/operators";
 import {Observable} from "rxjs";
-import {AirtableArtist} from "../model/AirtableArtist";
-import {AirtableAlbum} from "../model/AirtableAlbum";
-import {AirtableSong} from "../model/AirtableSong";
-import {AirtableIds} from "../enums/AirtableIds";
-import {AirtableLink} from "../model/AirtableLink";
-import {AirtableSotw} from "../model/AirtableSotw";
+import {AirtableArtist} from "../../../model/AirtableArtist";
+import {AirtableAlbum} from "../../../model/AirtableAlbum";
+import {AirtableSong} from "../../../model/AirtableSong";
+import {AirtableIds} from "../../../enums/AirtableIds";
+import {AirtableLink} from "../../../model/AirtableLink";
+import {AirtableSotw} from "../../../model/AirtableSotw";
 
 @Injectable({
   providedIn: 'root'

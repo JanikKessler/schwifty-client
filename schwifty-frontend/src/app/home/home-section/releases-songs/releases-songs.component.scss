@@ -34,7 +34,7 @@
 	  font-weight: 400;
 	  cursor: pointer;
 	  padding: 0;
-      
+
       &#album-cover {
         position: relative;
         text-align: start;
@@ -60,6 +60,7 @@
     }
 
     .song-links {
+      display: flex;
       .link-item {
         img {
           opacity: 50%;

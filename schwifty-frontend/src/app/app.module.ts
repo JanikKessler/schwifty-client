@@ -18,7 +18,6 @@ import {NgxAirtableModule} from "ngx-airtable";
 import {HttpClientModule} from "@angular/common/http";
 import {Connector} from "./services/data-sources/Connector";
 import {AirtableConnectorService} from "./services/data-sources/airtable/airtable-connector.service";
-import {StrapiConnectorService} from "./services/data-sources/strapi/strapi-connector.service";
 
 @NgModule({
   declarations: [
@@ -44,7 +43,7 @@ import {StrapiConnectorService} from "./services/data-sources/strapi/strapi-conn
     NgxAirtableModule.forRoot({apiKey: 'keyvhXFLbMs2XLzfS'}),
   ],
   providers:[
-    {provide: Connector, useClass: StrapiConnectorService}
+    {provide: Connector, useClass: AirtableConnectorService}
   ],
   bootstrap: [AppComponent]
 })

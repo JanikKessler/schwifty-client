@@ -1,0 +1,63 @@
+.artist-tile-wrapper{
+  height: 400px;
+  width: 100%;
+  .artist-tile-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .artist-cover{
+      opacity: 80%;
+      &.selected{
+        opacity: 100%;
+      }
+      &:hover{
+        opacity: 90%;
+      }
+      img{
+        width: auto;
+        height: 100%;
+        max-width: 100%;
+        max-height: 400px;
+        object-fit: fill;
+      }
+    }
+    .artist-info{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #faffff;
+      &.selected{
+        background-color: #ffb487;
+      }
+      color: #290024;
+      height: 100px;
+      width: 100%;
+      max-width: 400px;
+      .artist-name{
+        display: flex;
+        align-items: center;
+        height:63px;
+        font-weight: 600;
+        font-size: 24px;
+      }
+      .artist-links{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          display: flex;
+          justify-content: center;
+          img {
+            align-self: center;
+            height: auto;
+            width: 70%;
+            max-height: 40px;
+          }
+        }
+      }
+    }
+  }
+}

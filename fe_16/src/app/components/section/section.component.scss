@@ -1,0 +1,35 @@
+.section-container{
+  background-color: #e1e9ed;
+  margin: 40px 40px 0 40px;
+  .section-header{
+    display: flex;
+    justify-content: flex-start;
+    .main-header{
+      display: inline-flex;
+      background-color: #290024;
+      color: #faffff;
+      height: 63px;
+      width: auto;
+      padding: 0 20px;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      font-weight: 500;
+    }
+    .sub-header{
+      display: inline-flex;
+      background-color: #faffff;
+      color: black;
+      height: 63px;
+      width: auto;
+      padding: 0 20px;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      font-weight: 500;
+    }
+  }
+  .section-content {
+    height: 500px;
+  }
+}

@@ -1,6 +1,22 @@
-<section id="artist">
-  Artists
-</section>
-<section id="releases">
-  Releases
-</section>
+<app-section
+  [sectionId]="'artist'"
+  [mainHeaderText]="'Artists'">
+  <app-carousel>
+    <app-artist-tile>
+
+    </app-artist-tile>
+  </app-carousel>
+</app-section>
+<app-section
+  [sectionId]="'releases-albums'"
+  [mainHeaderText]="'Artists'"
+  [subHeaderText]="'Albums'">
+  <app-carousel>
+    <app-album-tile>
+    </app-album-tile>
+  </app-carousel>
+</app-section>
+<app-section
+  [sectionId]="'releases-songs'"
+  [mainHeaderText]="'Artists'"
+  [subHeaderText]="'Songs'"/>

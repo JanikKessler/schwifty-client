@@ -1,0 +1,15 @@
+<div class="album-tile-wrapper">
+  <div class="album-tile-content">
+    <div class="album-cover" [class.selected]="selected">
+      <img [src]="album.albumID !== undefined ? album?.cover : album?.cover" [alt]="album.name + 'Cover'">
+    </div>
+    <div class="album-info" [class.selected]="selected">
+      <div class="album-name">
+        {{album.name}}
+      </div>
+      <div class="artist-name">
+        {{album.artist.artist}}
+      </div>
+    </div>
+  </div>
+</div>

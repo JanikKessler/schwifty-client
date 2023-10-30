@@ -14,16 +14,19 @@ import {MatDividerModule} from '@angular/material/divider';
 
 
 @NgModule({
-  declarations: [ArtitsRouteComponent, ArtistTileRouteCompontentComponent],
+    declarations: [ArtitsRouteComponent, ArtistTileRouteCompontentComponent],
 
-  imports: [
-    CommonModule,
-    ArtistsRoutingModule,
-    MatSidenavModule,
-    UiElementsModule,
-    MatCardModule,
-    MatExpansionModule,
-    MatDividerModule,
-  ],
+    imports: [
+        CommonModule,
+        ArtistsRoutingModule,
+        MatSidenavModule,
+        UiElementsModule,
+        MatCardModule,
+        MatExpansionModule,
+        MatDividerModule,
+    ],
+    exports: [
+        ArtistTileRouteCompontentComponent
+    ]
 })
 export class ArtistsModule { }

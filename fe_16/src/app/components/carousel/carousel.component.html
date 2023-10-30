@@ -1,0 +1,16 @@
+<div class="drag-scroll-container">
+  <p-carousel [value]="[0,1,2]"
+              [circular]="true"
+              [showIndicators]="false"
+              [showNavigators]="true"
+              [numVisible]="3"
+              [numScroll]="1"
+              [draggable]="true"
+              [responsiveOptions]="responsiveOptions">
+    <ng-template let-tile pTemplate="item">
+      <div>
+        <ng-content></ng-content>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>

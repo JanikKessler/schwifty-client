@@ -1,0 +1,15 @@
+<section [id]="sectionId">
+  <div class="section-container">
+    <div class="section-header">
+      <div class="main-header">
+        {{mainHeaderText}}
+      </div>
+      <div *ngIf="subHeaderText !== undefined" class="sub-header">
+        {{subHeaderText}}
+      </div>
+    </div>
+    <div class="section-content">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</section>

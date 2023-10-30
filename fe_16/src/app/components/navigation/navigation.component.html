@@ -1,0 +1,15 @@
+<mat-toolbar id="navbar">
+    <span>
+        <a class="navigation-item" [routerLink]="['/home']">
+          <img src="assets/logos/schwifty_records_logo.png" alt="Schwifty Records Logo">
+        </a>
+    </span>
+    <span class="navigation-items">
+        <div class="navigation-item-wrapper">
+            <a class="navigation-item" [routerLink]="['/home']" fragment="artist">Artists</a>
+        </div>
+        <div class="navigation-item-wrapper">
+           <a class="navigation-item" [routerLink]="['/home']" fragment="releases">Releases</a>
+        </div>
+      </span>
+</mat-toolbar>

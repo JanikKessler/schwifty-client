@@ -14,27 +14,44 @@ export class ArtistsComponent implements OnInit {
 
   allArtists$!: Observable<Artist[]>;
   selectedArtist$: Observable<Artist> = new Observable<Artist>();
-  @ViewChild('artistSlider', {read: DragScrollComponent}) artistSlider!: DragScrollComponent;
   positionLeftBound = true;
   positionRightBound = false;
   currentIndex: number = 0;
   nrOfIndexes: number = 0;
   innerScreenWidth:number = 0;
+  responsiveOptions = [];
 
   constructor(private artistService: ArtistService, private selectionService:SelectionService) { }
 
   ngOnInit(): void {
     this.allArtists$ = this.artistService.getAllArtists();
     this.selectedArtist$ = this.artistService.getSelectedArtist();
+    this.responsiveOptions = [
+      {
+        breakpoint: '1024px',
+        numVisible: 3,
+        numScroll: 3
+      },
+      {
+        breakpoint: '768px',
+        numVisible: 2,
+        numScroll: 2
+      },
+      {
+        breakpoint: '560px',
+        numVisible: 1,
+        numScroll: 1
+      }
+    ];
   }
 
-  moveLeft() {
-    this.artistSlider.moveLeft();
-  }
-
-  moveRight() {
-    this.artistSlider.moveRight();
-  }
+  // moveLeft() {
+  //   this.artistSlider.moveLeft();
+  // }
+  //
+  // moveRight() {
+  //   this.artistSlider.moveRight();
+  // }
 
   positionLeftBoundReached(leftBoundBool: boolean){
     this.positionLeftBound = leftBoundBool;

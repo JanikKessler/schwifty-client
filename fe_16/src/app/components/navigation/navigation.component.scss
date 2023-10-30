@@ -1,0 +1,38 @@
+
+#navbar.mat-toolbar-single-row{
+  height: 100px;
+  img{
+    height: 80px;
+    width: auto;
+  }
+}
+#navbar{
+  background-color: #e5f4f7;
+  font-weight: 500;
+  font-size: 1.25em;
+  @media (min-width: 768px) {
+    font-size: 2em;
+  }
+  .navigation-items{
+    width:100%;
+    display: inline-flex;
+    justify-content: space-evenly;
+    .navigation-item-wrapper{
+      display: inline-flex;
+      align-items: center;
+      height: auto;
+      .navigation-item {
+        text-decoration: none;
+        color: rgba(0,0,0,0.87);
+        margin: 0 5px 0 5px;
+        &.active-link{
+          text-decoration: underline;
+          color: #8DC642;
+        }
+      }
+      &:hover{
+        background-color: #ffb487;
+      }
+    }
+  }
+}

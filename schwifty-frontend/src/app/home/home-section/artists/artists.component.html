@@ -1,9 +1,19 @@
 <div class="artists-wrapper row">
-    <div class="scroll-left-button col-1">
+    <!--<div class="scroll-left-button col-1">
         <mat-icon *ngIf="!positionLeftBound" (click)="moveLeft()">arrow_back_ios</mat-icon>
-    </div>
+    </div>-->
     <div class="drag-scroll-container col-md-10 col-sm-12">
-        <drag-scroll (reachesLeftBound)="positionLeftBoundReached($event)"
+      <p-carousel [value]="allArtists$ | async"
+                  [circular]="true"
+                  [showIndicators]="true"
+                  [showNavigators]="true"
+                  [draggable]="true"
+      [responsiveOptions]="responsiveOptions">
+        <ng-template let-artist pTemplate="item">
+          <app-artist-tile class="col-xl-3 col-lg-6 col-md-12" [selected]="(selectedArtist$ | async) === artist" [artist]="artist" (click)="onArtistSelected(artist)"></app-artist-tile>
+        </ng-template>
+      </p-carousel>
+        <!--<drag-scroll (reachesLeftBound)="positionLeftBoundReached($event)"
                      [scrollbar-hidden]="true"
                      (reachesRightBound)="positionRightBoundReached($event)"
                      (indexChanged)="saveIndex($event)" #artistSlider>
@@ -12,9 +22,9 @@
             </ng-container>
         </drag-scroll>
         <app-slider-dots *ngIf="innerScreenWidth < 992 && (allArtists$ | async)?.length > 1" [marginTop]="20"  [maxIndexes]="(allArtists$ | async)?.length" [currentIndex]="currentIndex">
-        </app-slider-dots>
+        </app-slider-dots>-->
     </div>
-    <div class="scroll-right-button col-1">
+    <!--<div class="scroll-right-button col-1">
         <mat-icon *ngIf="!positionRightBound" (click)="moveRight()">arrow_forward_ios</mat-icon>
-    </div>
+    </div>-->
 </div>

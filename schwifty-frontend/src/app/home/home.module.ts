@@ -15,6 +15,7 @@ import {AlbumTileComponent} from './home-section/releases-albums/album-tile/albu
 import {SliderDotsComponent} from './home-section/artists/slider-dots/slider-dots.component';
 import {MatCardModule} from '@angular/material/card';
 import {SongPlayerComponent} from './home-section/releases-songs/song-player/song-player.component';
+import {CarouselModule} from "primeng-lts/carousel";
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import {SongPlayerComponent} from './home-section/releases-songs/song-player/son
         DragScrollModule,
         MatIconModule,
         MatCardModule,
+        CarouselModule,
     ],
 })
 export class HomeModule { }

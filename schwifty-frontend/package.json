@@ -27,6 +27,8 @@
     "ngx-airtable": "^2.0.1-next.0",
     "ngx-bootstrap": "^6.2.0",
     "ngx-drag-scroll": "^11.0.0-beta.1",
+    "primeicons": "^6.0.1",
+    "primeng-lts": "^11.4.10",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

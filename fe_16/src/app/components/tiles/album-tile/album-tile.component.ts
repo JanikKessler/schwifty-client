@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {Album} from "../../../model/album";
 
 @Component({
   selector: 'app-album-tile',
@@ -9,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./album-tile.component.scss']
 })
 export class AlbumTileComponent {
-  @Input() album!: any;
+  @Input() album!: Album;
   @Input() selected: boolean = false;
 
   constructor() { }

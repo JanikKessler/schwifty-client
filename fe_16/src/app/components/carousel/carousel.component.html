@@ -1,5 +1,5 @@
 <div class="drag-scroll-container">
-  <p-carousel [value]="[0,1,2]"
+  <p-carousel [value]="items"
               [circular]="true"
               [showIndicators]="false"
               [showNavigators]="true"
@@ -8,9 +8,7 @@
               [draggable]="true"
               [responsiveOptions]="responsiveOptions">
     <ng-template let-tile pTemplate="item">
-      <div>
-        <ng-content></ng-content>
-      </div>
+      <div *ngTemplateOutlet="templateRef; context: {item: tile}"></div>
     </ng-template>
   </p-carousel>
 </div>

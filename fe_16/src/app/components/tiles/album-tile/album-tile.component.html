@@ -1,14 +1,14 @@
-<div class="album-tile-wrapper">
+<div class="album-tile-wrapper" *ngIf="album">
   <div class="album-tile-content">
     <div class="album-cover" [class.selected]="selected">
-      <img [src]="album.albumID !== undefined ? album?.cover : album?.cover" [alt]="album.name + 'Cover'">
+      <img [src]="album.cover !== undefined ? album.cover : undefined" [alt]="album.title + 'Cover'">
     </div>
     <div class="album-info" [class.selected]="selected">
       <div class="album-name">
-        {{album.name}}
+        {{album.title}}
       </div>
       <div class="artist-name">
-        {{album.artist.artist}}
+        {{album.artist?.name}}
       </div>
     </div>
   </div>

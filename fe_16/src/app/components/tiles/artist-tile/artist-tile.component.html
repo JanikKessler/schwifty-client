@@ -1,10 +1,10 @@
-<div class="artist-tile-wrapper">
+<div class="artist-tile-wrapper" *ngIf="artist">
   <div class="artist-tile-content" (click)="onArtistSelected(artist)">
     <div class="artist-cover" [class.selected]="selected">
-      <img [src]="artist.cover" [alt]="artist.artist + 'Cover'">
+      <img [src]="artist.cover" [alt]="artist.name + 'Cover'">
     </div>
     <div class="artist-info" [class.selected]="selected">
-      <div class="artist-name">{{artist.artist}}</div>
+      <div class="artist-name">{{artist.name}}</div>
       <div class="artist-links">
                 <span *ngIf="artist.soundcloudLink">
                 <a [href]="artist.soundcloudLink" target="_blank" Title="Soundcloud">

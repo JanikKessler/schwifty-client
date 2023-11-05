@@ -1,0 +1,7 @@
+<app-carousel
+  [items]="artistData$()"
+  [templateRef]="artistTile">
+</app-carousel>
+<ng-template #artistTile let-artist="item">
+  <app-artist-tile [artist]="artist"></app-artist-tile>
+</ng-template>

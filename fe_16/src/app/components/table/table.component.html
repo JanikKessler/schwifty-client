@@ -1,0 +1,65 @@
+<div class="songs-wrapper" *ngIf="listItems.length > 0">
+  <table style="width:100%">
+    <tr class="table-header">
+      <th></th>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Album</th>
+      <th class="d-none d-lg-table-cell">Time</th>
+      <th class="d-none d-lg-table-cell">Release</th>
+      <th>Links</th>
+    </tr>
+    <ng-container *ngFor="let songEntry of listItems; let i = index">
+      <tr class="song-row" [class.even-list-item]=" i%2 === 0" [class.odd-list-item]="i%2 === 1" (click)="!(playerRuns && currentSelectedItem === songEntry) ? playSong(songEntry) : pauseSong()">
+        <td id="album-cover">
+          <div id="play-button">
+            <mat-icon *ngIf="songEntry !== currentSelectedItem || (songEntry === currentSelectedItem && !playerRuns)  ; else stopIcon">play_arrow</mat-icon>
+            <ng-template #stopIcon>
+              <mat-icon>pause</mat-icon>
+            </ng-template>
+          </div>
+
+          <ng-container *ngIf="songEntry.cover; else otherCover">
+            <ng-container *ngIf="songEntry.cover">
+              <img class="song-cover" [src]="songEntry.cover">
+            </ng-container>
+          </ng-container>
+          <ng-template #otherCover>
+            <ng-container *ngIf="songEntry.album?.cover; else artistCover">
+              <img class="song-cover" [src]="songEntry.album?.cover">
+            </ng-container>
+            <ng-template #artistCover>
+              <img class="song-cover" [src]="songEntry.artist?.cover">
+            </ng-template>
+          </ng-template>
+
+        </td>
+        <td>{{songEntry.name}}</td>
+        <td>{{songEntry.artist?.name}}</td>
+        <td>{{songEntry.album?.title}}</td>
+        <td class="d-none d-lg-table-cell">{{songEntry.duration}}</td>
+        <td class="d-none d-lg-table-cell">{{songEntry.album?.release}}</td>
+        <td>
+          <div class="song-links">
+            <a class="link-item d-table-cell" *ngIf="songEntry.soundcloudLink"  [href]="songEntry.soundcloudLink" target="_blank" Title="Soundcloud">
+              <a class="w-100">
+                <img src="assets/links/sc.png">
+              </a>
+            </a>
+            <div class="link-item"  *ngIf="songEntry.spotifyLink">
+              <a [href]="songEntry.spotifyLink" target="_blank" Title="Spotify">
+                <img src="assets/links/spotify.png">
+              </a>
+            </div>
+            <div class="link-item"  *ngIf="songEntry.youtubeLink">
+              <a [href]="songEntry.youtubeLink" target="_blank" Title="Youtube">
+                <img src="assets/links/yt.png">
+              </a>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </ng-container>
+
+  </table>
+</div>

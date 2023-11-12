@@ -18,5 +18,10 @@ import {SongsTableComponent} from "../../components/songs-table/songs-table.comp
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent{
+export class HomeComponent implements OnInit {
+ private cmsConnector = inject(Connector);
+
+  ngOnInit(): void {
+    this.cmsConnector.loadCmsData();
+  }
 }

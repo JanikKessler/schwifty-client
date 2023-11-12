@@ -1,4 +1,4 @@
-import {computed, inject, Injectable, Injector, Signal} from '@angular/core';
+import {computed, inject, Injectable, Injector, signal, Signal} from '@angular/core';
 import {StrapiService} from "./strapi.service";
 import {Connector} from "../Connector";
 import {StrapiBand} from "../../../model/strapi/strapi-band";
@@ -15,13 +15,25 @@ export class StrapiConnectorService implements Connector {
   private strapiService = inject(StrapiService);
   private injector: Injector = inject(Injector);
 
-  private allArtists = this.loadAllArtists();
-  private allAlbums = this.loadAllAlbums(this.allArtists());
-  private allSongs = this.loadAllSongs(this.allArtists(), this.allAlbums());
+  private allArtists = signal<Artist[]>([])
+  private allAlbums = signal<Album[]>([])
+  private allSongs = signal<Song[]>([])
 
-  loadAllArtists(): Signal<Artist[]> {
-    const strapiBand: Signal<StrapiBand | undefined> = this.strapiService.getAllBands();
-    return computed((): Artist[] => strapiBand()?.data.map((band): Artist => ({
+  async loadCmsData(): Promise<void> {
+    try {
+      await this.loadAllArtists();
+      await this.loadAllAlbums(this.allArtists());
+      console.log(this.allAlbums());
+      await this.loadAllSongs(this.allArtists(), this.allAlbums());
+    } catch (e) {
+      throw new Error("Error loading CMS data");
+    }
+
+  }
+
+  async loadAllArtists() {
+    const strapiBand: StrapiBand = await this.strapiService.getAllBands();
+    this.allArtists.set( strapiBand?.data.map((band): Artist => ({
       id: band.id,
       name: band.attributes.name,
       gruendung: band.attributes.established,
@@ -37,13 +49,14 @@ export class StrapiConnectorService implements Connector {
     })) ?? []);
   }
 
-  loadAllAlbums(artists: Artist[]): Signal<Album[]> {
-    const strapiAlbum: Signal<StrapiAlbum | undefined> = this.strapiService.getAllAlbums();
-    return computed((): Album[] => strapiAlbum()?.data.map((album): Album => ({
+  async loadAllAlbums(artists: Artist[]) {
+    const strapiAlbum: StrapiAlbum = await this.strapiService.getAllAlbums();
+    console.log(strapiAlbum);
+    this.allAlbums.set(strapiAlbum?.data.map((album): Album => ({
       id: album.id,
       title: album.attributes.title,
       cover: environment.apiUrl + album.attributes.cover?.data?.attributes.url,
-      artist: artists.find((artist) => artist.id === album.attributes.artist?.id),
+      artist: artists.find((artist) => artist.id === album.attributes.band?.data.id),
       duration: album.attributes.duration,
       release: album.attributes.release,
       tracks: album.attributes.tracks,
@@ -52,12 +65,14 @@ export class StrapiConnectorService implements Connector {
     })) ?? []);
   }
 
-  loadAllSongs(artists: Artist[], albums: Album[]): Signal<Song[]> {
-    const strapiSong: Signal<StrapiSong | undefined> = this.strapiService.getAllSongs();
-    return computed((): Song[] => strapiSong()?.data.map((song): Song => ({
+  async loadAllSongs(artists: Artist[], albums: Album[]){
+    const strapiSong: StrapiSong = await this.strapiService.getAllSongs();
+    console.log(strapiSong);
+
+    this.allSongs.set(strapiSong?.data.map((song): Song => ({
       id: song.id,
-      album: albums.find((album) => album.id === song.attributes.album?.id),
-      artist: artists.find((artist) => artist.id === song.attributes.artist?.id),
+      album: albums.find((album) => album.id === song.attributes.album?.data.id),
+      artist: artists.find((artist) => artist.id === song.attributes.artist?.data.id),
       cover: song.attributes.cover?.data?.attributes.url,
       name: song.attributes.title,
       duration: song.attributes.duration,

@@ -13,15 +13,19 @@ export interface StrapiSong {
       publishedAt:Date;
       link: StrapiLink;
       artist?: {
-        id: number;
-        attributes: {
-          name: string;
+        data: {
+          id: number;
+          attributes: {
+            name: string;
+          }
         }
       };
       album?: {
-        id: number;
-        attributes: {
-          name: string;
+        data: {
+          id: number;
+          attributes: {
+            title: string;
+          }
         }
       };
     }

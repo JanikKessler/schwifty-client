@@ -26,10 +26,10 @@
           </ng-container>
           <ng-template #otherCover>
             <ng-container *ngIf="songEntry.album?.cover; else artistCover">
-              <img class="song-cover" [src]="songEntry.album?.cover">
+              <img class="song-cover" [src]="environment.apiUrl + songEntry.album?.cover">
             </ng-container>
             <ng-template #artistCover>
-              <img class="song-cover" [src]="songEntry.artist?.cover">
+              <img class="song-cover" [src]="environment.apiUrl + songEntry.artist?.cover">
             </ng-template>
           </ng-template>
 

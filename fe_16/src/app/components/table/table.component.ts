@@ -2,6 +2,7 @@ import {Component, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatIconModule} from "@angular/material/icon";
 import {Song} from "../../model/song";
+import {environment} from "../../../environments/environment";
 
 @Component({
   selector: 'app-table',
@@ -22,4 +23,6 @@ export class TableComponent {
   pauseSong() {
 
   }
+
+  protected readonly environment = environment;
 }

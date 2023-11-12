@@ -7,6 +7,7 @@ import {Album} from "../../../model/album";
 import {StrapiBand} from "../../../model/strapi/strapi-band";
 import {StrapiAlbum} from "../../../model/strapi/strapi-album";
 import {StrapiSong} from "../../../model/strapi/strapi-song";
+import {firstValueFrom} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -16,24 +17,27 @@ export class StrapiService {
   private httpClient: HttpClient = inject(HttpClient);
   private injector: Injector = inject(Injector);
 
-  getAllBands(): Signal<StrapiBand | undefined> {
+  getAllBands(): Promise<StrapiBand> {
     return this.requestDataFromApi<StrapiBand>("bands", {
       'populate[0]':'links',
       'populate[1]':'bandimage'
     }, );
   }
 
-  getAllAlbums(): Signal<StrapiAlbum | undefined> {
+  getAllAlbums(): Promise<StrapiAlbum> {
     return this.requestDataFromApi<StrapiAlbum>("albums", {
       'populate[0]':'links',
-      'populate[1]':'cover'
+      'populate[1]':'cover',
+      'populate[2]':'band'
     });
   }
 
-  getAllSongs(): Signal<StrapiSong | undefined> {
+  getAllSongs(): Promise<StrapiSong> {
     return this.requestDataFromApi<StrapiSong>("songs", {
       'populate[0]':'link',
-      'populate[1]':'cover'
+      'populate[1]':'cover',
+      'populate[2]':'band',
+      'populate[3]':'album',
     });
   }
 
@@ -51,15 +55,15 @@ export class StrapiService {
   //
   // }
 
-  requestDataFromApi<T>(endpoint: 'bands' | 'albums' | 'songs', queryParams?: { [k: string]: string }): Signal<T | undefined> {
-    return toSignal(this.httpClient.get<T>(
+  async requestDataFromApi<T>(endpoint: 'bands' | 'albums' | 'songs', queryParams?: { [k: string]: string }): Promise<T> {
+    return await firstValueFrom(this.httpClient.get<T>(
       `${environment.apiUrl}/api/${endpoint}`,
       {
         params: queryParams,
         headers: {
           'Authorization': `Bearer ${environment.apiKey}`
         }
-      }), {initialValue: undefined, injector: this.injector});
+      }));
   }
 
 }

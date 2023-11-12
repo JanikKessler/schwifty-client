@@ -4,11 +4,14 @@ import {Album} from "../../model/album";
 import {Song} from "../../model/song";
 
 export abstract class Connector {
-  abstract loadAllArtists(): Signal<Artist[]>;
 
-  abstract loadAllAlbums(artists: Artist[]): Signal<Album[]>;
+  abstract loadCmsData(): Promise<void>;
 
-  abstract loadAllSongs(artists: Artist[], album: Album[]): Signal<Song[]>;
+  abstract loadAllArtists():Promise<void>;
+
+  abstract loadAllAlbums(artists: Artist[]):Promise<void>;
+
+  abstract loadAllSongs(artists: Artist[], album: Album[]):Promise<void>;
 
   abstract getAllArtists(): Signal<Artist[]>;
 

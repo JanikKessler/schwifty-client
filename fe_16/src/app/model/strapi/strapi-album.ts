@@ -5,10 +5,12 @@ export interface StrapiAlbum {
     id: number;
     attributes: {
       title: string;
-      artist?: {
-        id: number;
-        attributes: {
-          name: string;
+      band?: {
+        data:{
+          id: number;
+          attributes: {
+            name: string;
+          }
         }
       };
       duration?: number;

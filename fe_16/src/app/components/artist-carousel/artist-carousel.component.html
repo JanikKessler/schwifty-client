@@ -3,5 +3,8 @@
   [templateRef]="artistTile">
 </app-carousel>
 <ng-template #artistTile let-artist="item">
-  <app-artist-tile [artist]="artist"></app-artist-tile>
+  <app-artist-tile
+    [artist]="artist"
+    [selected]="artist.id=== selectedArtistSignal()?.id"
+    (artistSelected)="onArtistSelected(artist)"></app-artist-tile>
 </ng-template>

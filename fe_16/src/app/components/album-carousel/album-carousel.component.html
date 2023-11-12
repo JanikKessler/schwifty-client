@@ -4,5 +4,9 @@
 </app-carousel>
 
 <ng-template #albumTile let-album="item">
-  <app-album-tile [album]="album"></app-album-tile>
+  <app-album-tile
+    [selected]="album.artist.id === selectedArtistSignal()?.id"
+    [album]="album"
+    (albumSelected)="onAlbumSelected(album)"
+  ></app-album-tile>
 </ng-template>

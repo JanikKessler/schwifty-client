@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Artist} from "../../../model/artist";
 
@@ -12,10 +12,12 @@ import {Artist} from "../../../model/artist";
 export class ArtistTileComponent {
   @Input() artist!: Artist;
   @Input() selected: boolean = false;
+  @Output() artistSelected = new EventEmitter<Artist>();
 
   ngOnInit(): void {
   }
 
   onArtistSelected(artist: Artist){
+    this.artistSelected.emit(this.artist);
   }
 }

@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Album} from "../../../model/album";
 
@@ -12,10 +12,15 @@ import {Album} from "../../../model/album";
 export class AlbumTileComponent {
   @Input() album!: Album;
   @Input() selected: boolean = false;
+  @Output() albumSelected = new EventEmitter<Album>();
 
   constructor() { }
 
   ngOnInit(): void {
 
+  }
+
+  onTileClicked(album: Album){
+    this.albumSelected.emit(this.album);
   }
 }

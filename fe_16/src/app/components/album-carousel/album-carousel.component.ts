@@ -7,6 +7,9 @@ import {ArtistTileComponent} from "../tiles/artist-tile/artist-tile.component";
 import {CarouselModule} from "primeng/carousel";
 import {SharedModule} from "primeng/api";
 import {CarouselComponent} from "../carousel/carousel.component";
+import {Artist} from "../../model/artist";
+import {SelectionService} from "../../services/selection.service";
+import {Album} from "../../model/album";
 
 @Component({
   selector: 'app-album-carousel',
@@ -16,5 +19,11 @@ import {CarouselComponent} from "../carousel/carousel.component";
   styleUrls: ['./album-carousel.component.scss']
 })
 export class AlbumCarouselComponent {
+  selectionService = inject(SelectionService);
+  selectedArtistSignal = this.selectionService.getSelectedArtistSignal();
   allAlbums$ = inject(Connector).getAllAlbums();
+
+  onAlbumSelected(album: Album) {
+    this.selectionService.setSelectedAlbum(album);
+  }
 }

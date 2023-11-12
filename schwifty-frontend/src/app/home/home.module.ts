@@ -19,7 +19,7 @@ import {CarouselModule} from "primeng-lts/carousel";
 
 
 @NgModule({
-  declarations: [HomeRouteComponent, HomeSectionComponent, SchwiftOtwComponent, ArtistsComponent, ReleasesAlbumsComponent, ReleasesSongsComponent, ArtistTileComponent, AlbumTileComponent, SliderDotsComponent, SongPlayerComponent],
+    declarations: [HomeRouteComponent, HomeSectionComponent, SchwiftOtwComponent, ArtistsComponent, ReleasesAlbumsComponent, ReleasesSongsComponent, ArtistTileComponent, AlbumTileComponent, SliderDotsComponent, SongPlayerComponent],
     imports: [
         CommonModule,
         HomeRoutingModule,
@@ -28,5 +28,8 @@ import {CarouselModule} from "primeng-lts/carousel";
         MatCardModule,
         CarouselModule,
     ],
+    exports: [
+        AlbumTileComponent
+    ]
 })
 export class HomeModule { }

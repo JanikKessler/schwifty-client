@@ -1,5 +1,5 @@
 <div class="album-tile-wrapper" *ngIf="album">
-  <div class="album-tile-content">
+  <div class="album-tile-content" (click)="onTileClicked(album)">
     <div class="album-cover" [class.selected]="selected">
       <img [src]="album.cover !== undefined ? album.cover : undefined" [alt]="album.title + 'Cover'">
     </div>
